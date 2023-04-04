@@ -3,3 +3,15 @@ language:
   ui:
     chapter_name: "Chapter "
 delete_merged_file: true
+
+
+rmd_files: [
+  "index.Rmd",
+
+
+  # 基础篇
+  "01-theory.Rmd",
+
+  # 实操篇
+  "02-cfa.Rmd"
+  ]
