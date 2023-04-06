@@ -1,0 +1,13 @@
+Ch6 Model 7 four-factor HCFA using SIMPLIS syntax
+Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+Raw Data from File ch6.dat 
+Latent Variables:  Flu Fle Ori Affect Crea
+Relationships:
+FF1 VF1=Flu 
+FF2 VF2=Fle
+FF3 VF3=Ori 
+PF1-PF4=Affect
+Flu Fle Ori Affect =Crea
+Path Diagram
+LISREL Output AD=off
+End of Program

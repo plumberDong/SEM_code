@@ -1,0 +1,494 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/03/2018  12:31 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	Ch09 Multigroup CFA using MPLUS Model 1 Baseline model
+  DATA:   	
+     NGROUPS=2;
+     FILE (male) IS Ch09m.dat;
+     FILE (female) IS Ch09f.dat;
+
+  VARIABLE:	NAMES ARE a1-a3 b1-b3 c1-c3 d1-d3 e1-e3 f1-f3;
+
+  MODEL:
+   VALUE    by a1* a2-a3;
+   JOBSTYLE by b1* b2-b3;
+   TEAMWORK by c1* c2-c3;
+   LEADERSH by d1* d2-d3;
+   LEARNING by e1* e2-e3;
+   ENVIRONM by f1* f2-f3;
+   VALUE@1 JOBSTYLE@1 TEAMWORK@1 LEADERSH@1 LEARNING@1 ENVIRONM@1;
+   [a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3 e1 e2 e3 f1 f2 f3] ;
+   [VALUE@0 JOBSTYLE@0 TEAMWORK@0 LEADERSH@0 LEARNING@0 ENVIRONM@0 ];
+
+
+  MODEL male:
+   VALUE    by a1* a2-a3;
+   JOBSTYLE by b1* b2-b3;
+   TEAMWORK by c1* c2-c3;
+   LEADERSH by d1* d2-d3;
+   LEARNING by e1* e2-e3;
+   ENVIRONM by f1* f2-f3;
+    [a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3 e1 e2 e3 f1 f2 f3] ;
+
+  MODEL female:
+   VALUE    by a1* a2-a3;
+   JOBSTYLE by b1* b2-b3;
+   TEAMWORK by c1* c2-c3;
+   LEADERSH by d1* d2-d3;
+   LEARNING by e1* e2-e3;
+   ENVIRONM by f1* f2-f3;
+   [a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3 e1 e2 e3 f1 f2 f3] ;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch09 Multigroup CFA using MPLUS Model 1 Baseline model
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group MALE                                                  172
+   Group FEMALE                                                140
+   Total sample size                                           312
+
+Number of dependent variables                                   18
+Number of independent variables                                  0
+Number of continuous latent variables                            6
+
+Observed dependent variables
+
+  Continuous
+   A1          A2          A3          B1          B2          B3
+   C1          C2          C3          D1          D2          D3
+   E1          E2          E3          F1          F2          F3
+
+Continuous latent variables
+   VALUE       JOBSTYLE    TEAMWORK    LEADERSH    LEARNING    ENVIRONM
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch09m.dat
+  Ch09f.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR MALE
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     A1                    4.552      -0.433       2.000    1.74%       4.000      4.000      5.000
+             172.000       0.829      -0.103       6.000   12.79%       5.000      5.000
+     A2                    4.442      -0.497       2.000    3.49%       4.000      4.000      5.000
+             172.000       0.909      -0.052       6.000   10.47%       5.000      5.000
+     A3                    4.145      -0.337       1.000    0.58%       3.000      4.000      4.000
+             172.000       0.799      -0.014       6.000    3.49%       4.000      5.000
+     B1                    4.110      -0.240       1.000    1.74%       3.000      4.000      4.000
+             172.000       1.319      -0.475       6.000   10.47%       5.000      5.000
+     B2                    4.407      -0.533       1.000    1.16%       3.000      4.000      5.000
+             172.000       1.288      -0.254       6.000   15.70%       5.000      5.000
+     B3                    4.390      -0.538       1.000    0.58%       4.000      4.000      5.000
+             172.000       1.040       0.027       6.000   11.05%       5.000      5.000
+     C1                    4.442      -0.418       1.000    0.58%       4.000      4.000      5.000
+             172.000       0.816       0.355       6.000    9.88%       5.000      5.000
+     C2                    4.326      -0.231       2.000    4.07%       4.000      4.000      4.000
+             172.000       0.999      -0.350       6.000   11.63%       5.000      5.000
+     C3                    4.442      -0.634       1.000    1.16%       4.000      4.000      5.000
+             172.000       0.944       0.731       6.000   11.05%       5.000      5.000
+     D1                    4.831      -0.819       1.000    0.58%       4.000      5.000      5.000
+             172.000       0.849       1.283       6.000   23.84%       5.000      6.000
+     D2                    4.953      -0.583       2.000    1.16%       4.000      5.000      5.000
+             172.000       0.649       0.710       6.000   25.58%       5.000      6.000
+     D3                    4.913      -0.344       3.000    4.65%       4.000      5.000      5.000
+             172.000       0.673      -0.477       6.000   25.00%       5.000      6.000
+     E1                    4.750      -0.452       2.000    1.16%       4.000      5.000      5.000
+             172.000       0.781       0.019       6.000   19.77%       5.000      5.000
+     E2                    4.884      -0.667       2.000    1.74%       4.000      5.000      5.000
+             172.000       0.789       0.528       6.000   25.58%       5.000      6.000
+     E3                    4.797      -0.679       1.000    0.58%       4.000      5.000      5.000
+             172.000       0.883       0.715       6.000   23.84%       5.000      6.000
+     F1                    4.297      -0.544       1.000    1.74%       3.000      4.000      4.000
+             172.000       1.441      -0.080       6.000   16.28%       5.000      5.000
+     F2                    4.808      -0.739       1.000    0.58%       4.000      5.000      5.000
+             172.000       0.992       0.654       6.000   27.33%       5.000      6.000
+     F3                    4.703      -0.179       3.000    7.56%       4.000      5.000      5.000
+             172.000       0.697      -0.544       6.000   16.86%       5.000      5.000
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR FEMALE
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     A1                    4.236      -0.794       1.000    2.14%       3.000      4.000      4.000
+             140.000       1.066       0.811       6.000    6.43%       5.000      5.000
+     A2                    4.136      -0.477       1.000    0.71%       3.000      4.000      4.000
+             140.000       1.160      -0.196       6.000    7.14%       5.000      5.000
+     A3                    3.971      -0.485       1.000    2.86%       3.000      4.000      4.000
+             140.000       1.071       0.718       6.000    5.71%       4.000      5.000
+     B1                    3.893      -0.233       1.000    2.14%       3.000      3.000      4.000
+             140.000       1.339      -0.662       6.000    5.00%       4.000      5.000
+     B2                    4.050      -0.443       1.000    2.86%       3.000      4.000      4.000
+             140.000       1.305      -0.051       6.000    7.86%       4.000      5.000
+     B3                    4.043      -0.354       1.000    2.14%       3.000      4.000      4.000
+             140.000       1.270      -0.199       6.000    7.86%       4.000      5.000
+     C1                    4.279      -0.575       1.000    1.43%       3.000      4.000      4.000
+             140.000       1.087       0.344       6.000    9.29%       5.000      5.000
+     C2                    4.343      -0.537       1.000    0.71%       3.000      4.000      4.000
+             140.000       1.125       0.001       6.000   11.43%       5.000      5.000
+     C3                    4.136      -0.614       1.000    2.86%       3.000      4.000      4.000
+             140.000       1.232       0.465       6.000    8.57%       4.000      5.000
+     D1                    4.836      -0.904       1.000    0.71%       4.000      5.000      5.000
+             140.000       0.909       1.379       6.000   25.00%       5.000      6.000
+     D2                    4.936      -0.522       2.000    0.71%       4.000      5.000      5.000
+             140.000       0.760      -0.084       6.000   28.57%       5.000      6.000
+     D3                    4.736      -0.468       2.000    2.14%       4.000      5.000      5.000
+             140.000       1.009      -0.326       6.000   25.71%       5.000      6.000
+     E1                    4.479      -0.750       1.000    2.14%       4.000      4.000      5.000
+             140.000       1.092       1.196       6.000   15.71%       5.000      5.000
+     E2                    4.543      -0.586       1.000    0.71%       4.000      4.000      5.000
+             140.000       1.220       0.024       6.000   20.71%       5.000      6.000
+     E3                    4.579      -0.467       1.000    0.71%       4.000      4.000      5.000
+             140.000       1.015       0.039       6.000   18.57%       5.000      5.000
+     F1                    4.136      -0.238       1.000    2.14%       3.000      4.000      4.000
+             140.000       1.232       0.054       6.000   12.14%       4.000      5.000
+     F2                    4.393      -0.555       1.000    2.14%       4.000      4.000      4.000
+             140.000       1.339       0.322       6.000   19.29%       5.000      5.000
+     F3                    4.221      -0.409       1.000    1.43%       4.000      4.000      4.000
+             140.000       0.972       0.772       6.000    9.29%       4.000      5.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                      138
+
+Loglikelihood
+
+          H0 Value                       -6654.498
+          H1 Value                       -6447.803
+
+Information Criteria
+
+          Akaike (AIC)                   13584.997
+          Bayesian (BIC)                 14101.531
+          Sample-Size Adjusted BIC       13663.841
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            413.391
+          Degrees of Freedom                   240
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          MALE                             194.711
+          FEMALE                           218.681
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.068
+          90 Percent C.I.                    0.057  0.079
+          Probability RMSEA <= .05           0.005
+
+CFI/TLI
+
+          CFI                                0.936
+          TLI                                0.918
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           2997.338
+          Degrees of Freedom                   306
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.061
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group MALE
+
+ VALUE    BY
+    A1                 0.673      0.068      9.881      0.000
+    A2                 0.615      0.073      8.441      0.000
+    A3                 0.482      0.071      6.825      0.000
+
+ JOBSTYLE BY
+    B1                 0.701      0.088      8.002      0.000
+    B2                 0.979      0.080     12.226      0.000
+    B3                 0.751      0.075     10.026      0.000
+
+ TEAMWORK BY
+    C1                 0.612      0.069      8.839      0.000
+    C2                 0.754      0.075     10.067      0.000
+    C3                 0.609      0.075      8.073      0.000
+
+ LEADERSH BY
+    D1                 0.797      0.061     13.165      0.000
+    D2                 0.682      0.053     12.808      0.000
+    D3                 0.548      0.059      9.259      0.000
+
+ LEARNING BY
+    E1                 0.760      0.056     13.576      0.000
+    E2                 0.768      0.056     13.688      0.000
+    E3                 0.807      0.059     13.565      0.000
+
+ ENVIRONM BY
+    F1                 0.559      0.102      5.477      0.000
+    F2                 0.668      0.077      8.649      0.000
+    F3                 0.659      0.065     10.177      0.000
+
+ JOBSTYLE WITH
+    VALUE              0.604      0.077      7.877      0.000
+
+ TEAMWORK WITH
+    VALUE              0.565      0.086      6.596      0.000
+    JOBSTYLE           0.601      0.073      8.290      0.000
+
+ LEADERSH WITH
+    VALUE              0.627      0.072      8.686      0.000
+    JOBSTYLE           0.377      0.080      4.701      0.000
+    TEAMWORK           0.426      0.084      5.045      0.000
+
+ LEARNING WITH
+    VALUE              0.525      0.079      6.653      0.000
+    JOBSTYLE           0.491      0.071      6.906      0.000
+    TEAMWORK           0.555      0.072      7.695      0.000
+    LEADERSH           0.477      0.070      6.815      0.000
+
+ ENVIRONM WITH
+    VALUE              0.717      0.076      9.475      0.000
+    JOBSTYLE           0.395      0.087      4.512      0.000
+    TEAMWORK           0.596      0.083      7.182      0.000
+    LEADERSH           0.224      0.094      2.388      0.017
+    LEARNING           0.314      0.089      3.534      0.000
+
+ Means
+    VALUE              0.000      0.000    999.000    999.000
+    JOBSTYLE           0.000      0.000    999.000    999.000
+    TEAMWORK           0.000      0.000    999.000    999.000
+    LEADERSH           0.000      0.000    999.000    999.000
+    LEARNING           0.000      0.000    999.000    999.000
+    ENVIRONM           0.000      0.000    999.000    999.000
+
+ Intercepts
+    A1                 4.552      0.069     65.585      0.000
+    A2                 4.442      0.073     61.087      0.000
+    A3                 4.145      0.068     60.834      0.000
+    B1                 4.110      0.088     46.935      0.000
+    B2                 4.407      0.087     50.929      0.000
+    B3                 4.390      0.078     56.447      0.000
+    C1                 4.442      0.069     64.473      0.000
+    C2                 4.326      0.076     56.768      0.000
+    C3                 4.442      0.074     59.948      0.000
+    D1                 4.831      0.070     68.748      0.000
+    D2                 4.953      0.061     80.640      0.000
+    D3                 4.913      0.063     78.561      0.000
+    E1                 4.750      0.067     70.512      0.000
+    E2                 4.884      0.068     72.115      0.000
+    E3                 4.797      0.072     66.943      0.000
+    F1                 4.297      0.092     46.938      0.000
+    F2                 4.808      0.076     63.304      0.000
+    F3                 4.703      0.064     73.889      0.000
+
+ Variances
+    VALUE              1.000      0.000    999.000    999.000
+    JOBSTYLE           1.000      0.000    999.000    999.000
+    TEAMWORK           1.000      0.000    999.000    999.000
+    LEADERSH           1.000      0.000    999.000    999.000
+    LEARNING           1.000      0.000    999.000    999.000
+    ENVIRONM           1.000      0.000    999.000    999.000
+
+ Residual Variances
+    A1                 0.376      0.061      6.187      0.000
+    A2                 0.532      0.070      7.544      0.000
+    A3                 0.566      0.068      8.271      0.000
+    B1                 0.828      0.104      7.973      0.000
+    B2                 0.329      0.088      3.727      0.000
+    B3                 0.476      0.073      6.512      0.000
+    C1                 0.442      0.063      7.024      0.000
+    C2                 0.430      0.074      5.808      0.000
+    C3                 0.573      0.076      7.569      0.000
+    D1                 0.214      0.045      4.772      0.000
+    D2                 0.184      0.034      5.378      0.000
+    D3                 0.372      0.047      7.983      0.000
+    E1                 0.204      0.033      6.134      0.000
+    E2                 0.200      0.033      6.008      0.000
+    E3                 0.232      0.037      6.224      0.000
+    F1                 1.129      0.136      8.304      0.000
+    F2                 0.547      0.078      6.990      0.000
+    F3                 0.263      0.057      4.634      0.000
+
+Group FEMALE
+
+ VALUE    BY
+    A1                 0.939      0.076     12.290      0.000
+    A2                 0.757      0.086      8.760      0.000
+    A3                 0.734      0.080      9.150      0.000
+
+ JOBSTYLE BY
+    B1                 0.864      0.089      9.683      0.000
+    B2                 0.907      0.086     10.558      0.000
+    B3                 0.915      0.084     10.921      0.000
+
+ TEAMWORK BY
+    C1                 0.785      0.083      9.474      0.000
+    C2                 0.752      0.086      8.775      0.000
+    C3                 0.733      0.091      8.053      0.000
+
+ LEADERSH BY
+    D1                 0.842      0.065     12.892      0.000
+    D2                 0.803      0.058     13.758      0.000
+    D3                 0.770      0.074     10.416      0.000
+
+ LEARNING BY
+    E1                 0.839      0.076     11.024      0.000
+    E2                 1.028      0.074     13.822      0.000
+    E3                 0.787      0.073     10.714      0.000
+
+ ENVIRONM BY
+    F1                 0.723      0.089      8.112      0.000
+    F2                 0.947      0.087     10.880      0.000
+    F3                 0.836      0.073     11.389      0.000
+
+ JOBSTYLE WITH
+    VALUE              0.451      0.085      5.324      0.000
+
+ TEAMWORK WITH
+    VALUE              0.380      0.098      3.895      0.000
+    JOBSTYLE           0.807      0.058     13.949      0.000
+
+ LEADERSH WITH
+    VALUE              0.253      0.091      2.792      0.005
+    JOBSTYLE           0.521      0.076      6.854      0.000
+    TEAMWORK           0.606      0.073      8.341      0.000
+
+ LEARNING WITH
+    VALUE              0.453      0.085      5.338      0.000
+    JOBSTYLE           0.639      0.066      9.637      0.000
+    TEAMWORK           0.619      0.073      8.530      0.000
+    LEADERSH           0.626      0.063      9.969      0.000
+
+ ENVIRONM WITH
+    VALUE              0.628      0.068      9.272      0.000
+    JOBSTYLE           0.327      0.093      3.536      0.000
+    TEAMWORK           0.577      0.083      6.938      0.000
+    LEADERSH           0.403      0.084      4.803      0.000
+    LEARNING           0.495      0.076      6.468      0.000
+
+ Means
+    VALUE              0.000      0.000    999.000    999.000
+    JOBSTYLE           0.000      0.000    999.000    999.000
+    TEAMWORK           0.000      0.000    999.000    999.000
+    LEADERSH           0.000      0.000    999.000    999.000
+    LEARNING           0.000      0.000    999.000    999.000
+    ENVIRONM           0.000      0.000    999.000    999.000
+
+ Intercepts
+    A1                 4.236      0.087     48.545      0.000
+    A2                 4.136      0.091     45.432      0.000
+    A3                 3.971      0.087     45.415      0.000
+    B1                 3.893      0.098     39.813      0.000
+    B2                 4.050      0.097     41.955      0.000
+    B3                 4.043      0.095     42.455      0.000
+    C1                 4.279      0.088     48.564      0.000
+    C2                 4.343      0.090     48.441      0.000
+    C3                 4.136      0.094     44.095      0.000
+    D1                 4.836      0.081     60.023      0.000
+    D2                 4.936      0.074     66.984      0.000
+    D3                 4.736      0.085     55.792      0.000
+    E1                 4.479      0.088     50.701      0.000
+    E2                 4.543      0.093     48.674      0.000
+    E3                 4.579      0.085     53.767      0.000
+    F1                 4.136      0.094     44.095      0.000
+    F2                 4.393      0.098     44.927      0.000
+    F3                 4.221      0.083     50.653      0.000
+
+ Variances
+    VALUE              1.000      0.000    999.000    999.000
+    JOBSTYLE           1.000      0.000    999.000    999.000
+    TEAMWORK           1.000      0.000    999.000    999.000
+    LEADERSH           1.000      0.000    999.000    999.000
+    LEARNING           1.000      0.000    999.000    999.000
+    ENVIRONM           1.000      0.000    999.000    999.000
+
+ Residual Variances
+    A1                 0.185      0.073      2.539      0.011
+    A2                 0.587      0.088      6.666      0.000
+    A3                 0.532      0.075      7.130      0.000
+    B1                 0.592      0.091      6.533      0.000
+    B2                 0.483      0.081      5.945      0.000
+    B3                 0.433      0.076      5.684      0.000
+    C1                 0.471      0.080      5.903      0.000
+    C2                 0.559      0.087      6.466      0.000
+    C3                 0.694      0.100      6.969      0.000
+    D1                 0.200      0.038      5.312      0.000
+    D2                 0.116      0.030      3.867      0.000
+    D3                 0.416      0.058      7.181      0.000
+    E1                 0.389      0.060      6.518      0.000
+    E2                 0.163      0.054      3.039      0.002
+    E3                 0.397      0.056      7.114      0.000
+    F1                 0.709      0.096      7.346      0.000
+    F2                 0.442      0.084      5.234      0.000
+    F3                 0.274      0.061      4.520      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.444E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch09\mplus\ch09mg1.dgm
+
+     Beginning Time:  00:31:46
+        Ending Time:  00:31:46
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

@@ -1,0 +1,11 @@
+Ch6 Model 3 Three-factor CFA model using SIMPLIS syntax
+Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+Raw Data from File ch6.dat 
+Latent Variables:  Figural Verbal Affect
+Relationships:
+FF1 FF2 FF3=Figural 
+VF1 VF2 VF3=Verbal 
+PF1-PF4=Affect
+Path Diagram
+LISREL Output AD=off
+End of Program

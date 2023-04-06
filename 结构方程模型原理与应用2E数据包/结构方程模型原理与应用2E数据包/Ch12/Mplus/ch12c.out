@@ -1,0 +1,461 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/07/2018  12:29 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:      MoMe example
+  DATA:       FILE = Ch12c.csv;
+  VARIABLE:   NAMES = group y x m z;
+              USEVARIABLES=y x m z xz mz;
+  DEFINE:     CENTER x m (GRANDMEAN);
+              xz=x*z;
+              mz=m*z;
+  ANALYSIS:   ESTIMATOR IS ML;
+              BOOTSTRAP IS 5000;
+  MODEL:      m on x  (a)
+                   z  (da)
+                   xz (inta);
+              y on m  (b)
+                   x  (c)
+                   z  (dc)
+                   xz (intc)
+                   mz (intb);
+  MODEL CONSTRAINT:
+              NEW (DIR IND TOT);
+              IND=a*b;
+              DIR=c;
+              TOT=a*b+c;
+  OUTPUT:     SAMPSTAT STANDARDIZED CINTERVAL(BOOTSTRAP);
+  PLOT:       TYPE = PLOT3;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+MoMe example
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         681
+
+Number of dependent variables                                    2
+Number of independent variables                                  4
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y           M
+
+Observed independent variables
+   X           Z           XZ          MZ
+
+Variables with special functions
+
+  Centering (GRANDMEAN)
+   X           M
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Number of bootstrap draws
+    Requested                                                 5000
+    Completed                                                 5000
+
+Input data file(s)
+  Ch12c.csv
+
+Input data format  FREE
+
+
+SAMPLE STATISTICS
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              Y             M             X             Z             XZ
+              ________      ________      ________      ________      ________
+                4.203         0.000         0.000         0.275         0.025
+
+
+           Means
+              MZ
+              ________
+               -0.059
+
+
+           Covariances
+              Y             M             X             Z             XZ
+              ________      ________      ________      ________      ________
+ Y              0.658
+ M             -0.276         0.837
+ X              0.407        -0.184         0.563
+ Z              0.040        -0.059         0.025         0.199
+ XZ             0.087        -0.027         0.112         0.018         0.111
+ MZ            -0.047         0.254        -0.027        -0.043        -0.025
+
+
+           Covariances
+              MZ
+              ________
+ MZ             0.250
+
+
+           Correlations
+              Y             M             X             Z             XZ
+              ________      ________      ________      ________      ________
+ Y              1.000
+ M             -0.372         1.000
+ X              0.669        -0.268         1.000
+ Z              0.109        -0.145         0.075         1.000
+ XZ             0.320        -0.087         0.447         0.123         1.000
+ MZ            -0.117         0.554        -0.071        -0.192        -0.150
+
+
+           Correlations
+              MZ
+              ________
+ MZ             1.000
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y                     4.203      -0.484       1.500    0.29%       3.500      4.000      4.167
+             681.000       0.658       0.267       5.833    1.62%       4.333      5.000
+     M                     0.000      -0.033      -2.581    0.59%      -0.581     -0.248      0.086
+             681.000       0.837       0.235       2.419    1.03%       0.086      0.752
+     X                     0.000      -0.223      -2.879    0.15%      -0.612     -0.179      0.021
+             681.000       0.563       0.107       1.955    0.15%       0.221      0.655
+     Z                     0.275       1.010       0.000   72.54%       0.000      0.000      0.000
+             681.000       0.199      -0.980       1.000   27.46%       0.000      1.000
+     XZ                    0.025       0.013      -1.879    0.15%       0.000      0.000      0.000
+             681.000       0.111       7.477       1.621    0.29%       0.000      0.000
+     MZ                   -0.059      -0.908      -2.581    0.29%       0.000      0.000      0.000
+             681.000       0.250       6.756       2.086    0.15%       0.000      0.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       12
+
+Loglikelihood
+
+          H0 Value                       -1465.965
+          H1 Value                       -1339.231
+
+Information Criteria
+
+          Akaike (AIC)                    2955.930
+          Bayesian (BIC)                  3010.213
+          Sample-Size Adjusted BIC        2972.111
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            253.468
+          Degrees of Freedom                     1
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.609
+          90 Percent C.I.                    0.547  0.673
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.673
+          TLI                               -1.942
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            781.215
+          Degrees of Freedom                     9
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.103
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ M        ON
+    X                 -0.346      0.059     -5.873      0.000
+    Z                 -0.268      0.078     -3.435      0.001
+    XZ                 0.152      0.143      1.062      0.288
+
+ Y        ON
+    M                 -0.219      0.035     -6.281      0.000
+    X                  0.634      0.036     17.524      0.000
+    Z                  0.070      0.050      1.406      0.160
+    XZ                 0.106      0.087      1.220      0.222
+    MZ                 0.123      0.067      1.832      0.067
+
+ Intercepts
+    Y                  4.189      0.026    160.933      0.000
+    M                  0.070      0.039      1.803      0.071
+
+ Residual Variances
+    Y                  0.333      0.023     14.655      0.000
+    M                  0.762      0.043     17.825      0.000
+
+New/Additional Parameters
+    DIR                0.634      0.036     17.524      0.000
+    IND                0.076      0.017      4.375      0.000
+    TOT                0.710      0.038     18.721      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ M        ON
+    X                 -0.283      0.046     -6.135      0.000
+    Z                 -0.130      0.038     -3.474      0.001
+    XZ                 0.055      0.053      1.055      0.291
+
+ Y        ON
+    M                 -0.245      0.037     -6.659      0.000
+    X                  0.581      0.031     18.880      0.000
+    Z                  0.038      0.027      1.403      0.161
+    XZ                 0.043      0.036      1.213      0.225
+    MZ                 0.075      0.041      1.849      0.064
+
+ Intercepts
+    Y                  5.113      0.163     31.432      0.000
+    M                  0.076      0.042      1.807      0.071
+
+ Residual Variances
+    Y                  0.497      0.033     14.861      0.000
+    M                  0.910      0.024     38.093      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ M        ON
+    X                 -0.378      0.062     -6.113      0.000
+    Z                 -0.292      0.084     -3.475      0.001
+    XZ                 0.166      0.156      1.064      0.287
+
+ Y        ON
+    M                 -0.245      0.037     -6.659      0.000
+    X                  0.774      0.041     18.686      0.000
+    Z                  0.086      0.061      1.402      0.161
+    XZ                 0.129      0.106      1.220      0.222
+    MZ                 0.150      0.081      1.859      0.063
+
+ Intercepts
+    Y                  5.113      0.163     31.432      0.000
+    M                  0.076      0.042      1.807      0.071
+
+ Residual Variances
+    Y                  0.497      0.033     14.861      0.000
+    M                  0.910      0.024     38.093      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ M        ON
+    X                 -0.346      0.059     -5.873      0.000
+    Z                 -0.268      0.078     -3.435      0.001
+    XZ                 0.152      0.143      1.062      0.288
+
+ Y        ON
+    M                 -0.219      0.035     -6.281      0.000
+    X                  0.634      0.036     17.524      0.000
+    Z                  0.070      0.050      1.406      0.160
+    XZ                 0.106      0.087      1.220      0.222
+    MZ                 0.123      0.067      1.832      0.067
+
+ Intercepts
+    Y                  4.189      0.026    160.933      0.000
+    M                  0.070      0.039      1.803      0.071
+
+ Residual Variances
+    Y                  0.333      0.023     14.655      0.000
+    M                  0.762      0.043     17.825      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    Y                  0.503      0.033     15.059      0.000
+    M                  0.090      0.024      3.771      0.000
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ M        ON
+    X               -0.504      -0.458      -0.442      -0.346      -0.248      -0.230      -0.193
+    Z               -0.469      -0.421      -0.394      -0.268      -0.140      -0.113      -0.064
+    XZ              -0.223      -0.130      -0.088       0.152       0.384       0.429       0.516
+
+ Y        ON
+    M               -0.309      -0.288      -0.278      -0.219      -0.163      -0.152      -0.132
+    X                0.540       0.562       0.574       0.634       0.693       0.704       0.727
+    Z               -0.053      -0.027      -0.012       0.070       0.155       0.169       0.197
+    XZ              -0.142      -0.071      -0.045       0.106       0.240       0.266       0.312
+    MZ              -0.052      -0.015       0.009       0.123       0.233       0.249       0.284
+
+ Intercepts
+    Y                4.122       4.138       4.146       4.189       4.232       4.239       4.256
+    M               -0.026      -0.005       0.006       0.070       0.134       0.145       0.167
+
+ Residual Variances
+    Y                0.273       0.286       0.293       0.333       0.368       0.376       0.388
+    M                0.649       0.674       0.687       0.762       0.826       0.840       0.867
+
+New/Additional Parameters
+    DIR              0.540       0.562       0.574       0.634       0.693       0.704       0.727
+    IND              0.037       0.044       0.049       0.076       0.106       0.112       0.126
+    TOT              0.610       0.636       0.648       0.710       0.773       0.783       0.809
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ M        ON
+    X               -0.398      -0.372      -0.357      -0.283      -0.206      -0.190      -0.160
+    Z               -0.223      -0.204      -0.192      -0.130      -0.069      -0.056      -0.031
+    XZ              -0.079      -0.046      -0.031       0.055       0.141       0.158       0.192
+
+ Y        ON
+    M               -0.338      -0.317      -0.304      -0.245      -0.184      -0.172      -0.147
+    X                0.497       0.519       0.530       0.581       0.631       0.639       0.656
+    Z               -0.029      -0.015      -0.006       0.038       0.085       0.093       0.106
+    XZ              -0.056      -0.029      -0.018       0.043       0.098       0.109       0.129
+    MZ              -0.032      -0.009       0.005       0.075       0.141       0.151       0.171
+
+ Intercepts
+    Y                4.723       4.825       4.870       5.113       5.404       5.458       5.557
+    M               -0.029      -0.005       0.006       0.076       0.146       0.158       0.183
+
+ Residual Variances
+    Y                0.410       0.428       0.437       0.497       0.550       0.559       0.580
+    M                0.835       0.854       0.863       0.910       0.943       0.948       0.959
+
+
+STDY Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ M        ON
+    X               -0.538      -0.497      -0.478      -0.378      -0.275      -0.257      -0.215
+    Z               -0.503      -0.456      -0.429      -0.292      -0.154      -0.124      -0.069
+    XZ              -0.245      -0.143      -0.097       0.166       0.416       0.469       0.559
+
+ Y        ON
+    M               -0.338      -0.317      -0.304      -0.245      -0.184      -0.172      -0.147
+    X                0.669       0.694       0.708       0.774       0.843       0.854       0.884
+    Z               -0.064      -0.033      -0.014       0.086       0.189       0.207       0.240
+    XZ              -0.173      -0.086      -0.055       0.129       0.293       0.326       0.384
+    MZ              -0.064      -0.019       0.011       0.150       0.280       0.302       0.338
+
+ Intercepts
+    Y                4.723       4.825       4.870       5.113       5.404       5.458       5.557
+    M               -0.029      -0.005       0.006       0.076       0.146       0.158       0.183
+
+ Residual Variances
+    Y                0.410       0.428       0.437       0.497       0.550       0.559       0.580
+    M                0.835       0.854       0.863       0.910       0.943       0.948       0.959
+
+
+STD Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ M        ON
+    X               -0.504      -0.458      -0.442      -0.346      -0.248      -0.230      -0.193
+    Z               -0.469      -0.421      -0.394      -0.268      -0.140      -0.113      -0.064
+    XZ              -0.223      -0.130      -0.088       0.152       0.384       0.429       0.516
+
+ Y        ON
+    M               -0.309      -0.288      -0.278      -0.219      -0.163      -0.152      -0.132
+    X                0.540       0.562       0.574       0.634       0.693       0.704       0.727
+    Z               -0.053      -0.027      -0.012       0.070       0.155       0.169       0.197
+    XZ              -0.142      -0.071      -0.045       0.106       0.240       0.266       0.312
+    MZ              -0.052      -0.015       0.009       0.123       0.233       0.249       0.284
+
+ Intercepts
+    Y                4.122       4.138       4.146       4.189       4.232       4.239       4.256
+    M               -0.026      -0.005       0.006       0.070       0.134       0.145       0.167
+
+ Residual Variances
+    Y                0.273       0.286       0.293       0.333       0.368       0.376       0.388
+    M                0.649       0.674       0.687       0.762       0.826       0.840       0.867
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms (sample values, estimated values, residuals)
+  Scatterplots (sample values, estimated values, residuals)
+  Bootstrap distributions
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch12\mplus\ch12c.dgm
+
+     Beginning Time:  00:29:07
+        Ending Time:  00:29:12
+       Elapsed Time:  00:00:05
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

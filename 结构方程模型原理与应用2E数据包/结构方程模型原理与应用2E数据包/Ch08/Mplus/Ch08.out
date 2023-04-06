@@ -1,0 +1,704 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/02/2018   8:39 PM
+
+INPUT INSTRUCTIONS
+
+  Title: Ch08 SEM  Stage 2 Modified Model using MPLUS8
+  DATA:       File is Ch08.cov;
+              Type is covariance;
+              NOBS are 250;
+  Variable:   Names are CREAT SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2;
+  Model:
+    Crea      by CREAT;
+    Efficacy  by SEFF1-SEFF4;
+    Person    by PER1 PER2 PER3;
+    Soclized  by SOC1 SOC2;
+    Crea      on Efficacy Person Soclized;
+    Efficacy  on Person Soclized;
+    CREAT @0;
+
+  MODEL INDIRECT:
+    Crea IND Efficacy Person;
+    Crea IND Person;
+    Crea IND Efficacy Soclized;
+    Crea IND Soclized;
+
+  OUTPUT:
+      tech1; STANDARDIZED;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch08 SEM  Stage 2 Modified Model using MPLUS8
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         250
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            4
+
+Observed dependent variables
+
+  Continuous
+   CREAT       SEFF1       SEFF2       SEFF3       SEFF4       PER1
+   PER2        PER3        SOC1        SOC2
+
+Continuous latent variables
+   CREA        EFFICACY    PERSON      SOCLIZED
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch08.cov
+
+Input data format  FREE
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Loglikelihood
+
+          H0 Value                       -3943.495
+          H1 Value                       -3903.013
+
+Information Criteria
+
+          Akaike (AIC)                    7936.991
+          Bayesian (BIC)                  8025.027
+          Sample-Size Adjusted BIC        7945.775
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             80.964
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.082
+          90 Percent C.I.                    0.061  0.104
+          Probability RMSEA <= .05           0.008
+
+CFI/TLI
+
+          CFI                                0.958
+          TLI                                0.937
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1262.601
+          Degrees of Freedom                    45
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.042
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CREA     BY
+    CREAT              1.000      0.000    999.000    999.000
+
+ EFFICACY BY
+    SEFF1              1.000      0.000    999.000    999.000
+    SEFF2              0.474      0.074      6.421      0.000
+    SEFF3              0.735      0.091      8.116      0.000
+    SEFF4              0.834      0.070     11.981      0.000
+
+ PERSON   BY
+    PER1               1.000      0.000    999.000    999.000
+    PER2               1.009      0.064     15.877      0.000
+    PER3               0.875      0.062     14.129      0.000
+
+ SOCLIZED BY
+    SOC1               1.000      0.000    999.000    999.000
+    SOC2               1.064      0.149      7.148      0.000
+
+ CREA     ON
+    EFFICACY           4.364      0.807      5.407      0.000
+    PERSON             0.616      0.189      3.266      0.001
+    SOCLIZED          -0.010      0.147     -0.065      0.948
+
+ EFFICACY ON
+    PERSON             0.190      0.019      9.944      0.000
+    SOCLIZED           0.001      0.026      0.046      0.964
+
+ SOCLIZED WITH
+    PERSON             1.787      0.350      5.114      0.000
+
+ Variances
+    PERSON             5.170      0.667      7.751      0.000
+    SOCLIZED           2.185      0.438      4.992      0.000
+
+ Residual Variances
+    CREAT              0.000      0.000    999.000    999.000
+    SEFF1              0.114      0.018      6.519      0.000
+    SEFF2              0.308      0.028     10.834      0.000
+    SEFF3              0.431      0.041     10.582      0.000
+    SEFF4              0.191      0.020      9.385      0.000
+    PER1               2.365      0.283      8.355      0.000
+    PER2               1.758      0.241      7.302      0.000
+    PER3               2.354      0.261      9.033      0.000
+    SOC1               2.279      0.339      6.714      0.000
+    SOC2               0.495      0.311      1.592      0.111
+    CREA               4.941      0.600      8.238      0.000
+    EFFICACY           0.100      0.020      4.954      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CREA     BY
+    CREAT              1.000      0.000    999.000    999.000
+
+ EFFICACY BY
+    SEFF1              0.846      0.028     30.736      0.000
+    SEFF2              0.417      0.057      7.331      0.000
+    SEFF3              0.515      0.051     10.052      0.000
+    SEFF4              0.716      0.037     19.533      0.000
+
+ PERSON   BY
+    PER1               0.828      0.025     33.233      0.000
+    PER2               0.866      0.022     39.688      0.000
+    PER3               0.792      0.028     28.123      0.000
+
+ SOCLIZED BY
+    SOC1               0.700      0.054     12.922      0.000
+    SOC2               0.913      0.058     15.827      0.000
+
+ CREA     ON
+    EFFICACY           0.558      0.093      5.990      0.000
+    PERSON             0.334      0.100      3.329      0.001
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+ EFFICACY ON
+    PERSON             0.805      0.056     14.390      0.000
+    SOCLIZED           0.003      0.071      0.046      0.964
+
+ SOCLIZED WITH
+    PERSON             0.532      0.060      8.855      0.000
+
+ Variances
+    PERSON             1.000      0.000    999.000    999.000
+    SOCLIZED           1.000      0.000    999.000    999.000
+
+ Residual Variances
+    CREAT              0.000    999.000    999.000    999.000
+    SEFF1              0.284      0.047      6.087      0.000
+    SEFF2              0.826      0.047     17.399      0.000
+    SEFF3              0.734      0.053     13.893      0.000
+    SEFF4              0.488      0.052      9.306      0.000
+    PER1               0.314      0.041      7.602      0.000
+    PER2               0.250      0.038      6.630      0.000
+    PER3               0.373      0.045      8.366      0.000
+    SOC1               0.511      0.076      6.739      0.000
+    SOC2               0.167      0.105      1.581      0.114
+    CREA               0.280      0.038      7.402      0.000
+    EFFICACY           0.349      0.060      5.833      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CREA     BY
+    CREAT              1.000      0.000    999.000    999.000
+
+ EFFICACY BY
+    SEFF1              0.846      0.028     30.736      0.000
+    SEFF2              0.417      0.057      7.331      0.000
+    SEFF3              0.515      0.051     10.052      0.000
+    SEFF4              0.716      0.037     19.533      0.000
+
+ PERSON   BY
+    PER1               0.828      0.025     33.233      0.000
+    PER2               0.866      0.022     39.688      0.000
+    PER3               0.792      0.028     28.123      0.000
+
+ SOCLIZED BY
+    SOC1               0.700      0.054     12.922      0.000
+    SOC2               0.913      0.058     15.827      0.000
+
+ CREA     ON
+    EFFICACY           0.558      0.093      5.990      0.000
+    PERSON             0.334      0.100      3.329      0.001
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+ EFFICACY ON
+    PERSON             0.805      0.056     14.390      0.000
+    SOCLIZED           0.003      0.071      0.046      0.964
+
+ SOCLIZED WITH
+    PERSON             0.532      0.060      8.855      0.000
+
+ Variances
+    PERSON             1.000      0.000    999.000    999.000
+    SOCLIZED           1.000      0.000    999.000    999.000
+
+ Residual Variances
+    CREAT            999.000    999.000    999.000    999.000
+    SEFF1              0.284      0.047      6.087      0.000
+    SEFF2              0.826      0.047     17.399      0.000
+    SEFF3              0.734      0.053     13.893      0.000
+    SEFF4              0.488      0.052      9.306      0.000
+    PER1               0.314      0.041      7.602      0.000
+    PER2               0.250      0.038      6.630      0.000
+    PER3               0.373      0.045      8.366      0.000
+    SOC1               0.511      0.076      6.739      0.000
+    SOC2               0.167      0.105      1.581      0.114
+    CREA               0.280      0.038      7.402      0.000
+    EFFICACY           0.349      0.060      5.833      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CREA     BY
+    CREAT              4.200      0.188     22.361      0.000
+
+ EFFICACY BY
+    SEFF1              0.537      0.035     15.443      0.000
+    SEFF2              0.255      0.039      6.467      0.000
+    SEFF3              0.395      0.048      8.210      0.000
+    SEFF4              0.448      0.036     12.335      0.000
+
+ PERSON   BY
+    PER1               2.274      0.147     15.502      0.000
+    PER2               2.294      0.138     16.583      0.000
+    PER3               1.989      0.137     14.500      0.000
+
+ SOCLIZED BY
+    SOC1               1.478      0.148      9.984      0.000
+    SOC2               1.573      0.128     12.255      0.000
+
+ CREA     ON
+    EFFICACY           0.558      0.093      5.990      0.000
+    PERSON             0.334      0.100      3.329      0.001
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+ EFFICACY ON
+    PERSON             0.805      0.056     14.390      0.000
+    SOCLIZED           0.003      0.071      0.046      0.964
+
+ SOCLIZED WITH
+    PERSON             0.532      0.060      8.855      0.000
+
+ Variances
+    PERSON             1.000      0.000    999.000    999.000
+    SOCLIZED           1.000      0.000    999.000    999.000
+
+ Residual Variances
+    CREAT            999.000    999.000    999.000    999.000
+    SEFF1              0.114      0.018      6.519      0.000
+    SEFF2              0.308      0.028     10.834      0.000
+    SEFF3              0.431      0.041     10.582      0.000
+    SEFF4              0.191      0.020      9.385      0.000
+    PER1               2.365      0.283      8.355      0.000
+    PER2               1.758      0.241      7.302      0.000
+    PER3               2.354      0.261      9.033      0.000
+    SOC1               2.279      0.339      6.714      0.000
+    SOC2               0.495      0.311      1.592      0.111
+    CREA               0.280      0.038      7.402      0.000
+    EFFICACY           0.349      0.060      5.833      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    CREAT              1.000    999.000    999.000    999.000
+    SEFF1              0.716      0.047     15.368      0.000
+    SEFF2              0.174      0.047      3.665      0.000
+    SEFF3              0.266      0.053      5.026      0.000
+    SEFF4              0.512      0.052      9.766      0.000
+    PER1               0.686      0.041     16.617      0.000
+    PER2               0.750      0.038     19.844      0.000
+    PER3               0.627      0.045     14.062      0.000
+    SOC1               0.489      0.076      6.461      0.000
+    SOC2               0.833      0.105      7.914      0.000
+
+     Latent                                         Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    CREA               0.720      0.038     19.022      0.000
+    EFFICACY           0.651      0.060     10.897      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.369E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from PERSON to CREA
+
+  Total                1.446      0.124     11.658      0.000
+  Total indirect       0.830      0.166      5.012      0.000
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    PERSON             0.830      0.166      5.012      0.000
+
+  Direct
+    CREA
+    PERSON             0.616      0.189      3.266      0.001
+
+
+Effects from SOCLIZED to CREA
+
+  Total               -0.004      0.168     -0.027      0.979
+  Total indirect       0.005      0.112      0.046      0.964
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    SOCLIZED           0.005      0.112      0.046      0.964
+
+  Direct
+    CREA
+    SOCLIZED          -0.010      0.147     -0.065      0.948
+
+
+Effects from PERSON to CREA
+
+  Indirect             0.830      0.166      5.012      0.000
+
+Effects from SOCLIZED to CREA
+
+  Indirect             0.005      0.112      0.046      0.964
+
+
+STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from PERSON to CREA
+
+  Total                0.783      0.046     17.056      0.000
+  Total indirect       0.449      0.085      5.303      0.000
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    PERSON             0.449      0.085      5.303      0.000
+
+  Direct
+    CREA
+    PERSON             0.334      0.100      3.329      0.001
+
+
+Effects from SOCLIZED to CREA
+
+  Total               -0.002      0.059     -0.027      0.979
+  Total indirect       0.002      0.039      0.046      0.964
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    SOCLIZED           0.002      0.039      0.046      0.964
+
+  Direct
+    CREA
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+
+Effects from PERSON to CREA
+
+  Indirect             0.449      0.085      5.303      0.000
+
+Effects from SOCLIZED to CREA
+
+  Indirect             0.002      0.039      0.046      0.964
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from PERSON to CREA
+
+  Total                0.783      0.046     17.056      0.000
+  Total indirect       0.449      0.085      5.303      0.000
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    PERSON             0.449      0.085      5.303      0.000
+
+  Direct
+    CREA
+    PERSON             0.334      0.100      3.329      0.001
+
+
+Effects from SOCLIZED to CREA
+
+  Total               -0.002      0.059     -0.027      0.979
+  Total indirect       0.002      0.039      0.046      0.964
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    SOCLIZED           0.002      0.039      0.046      0.964
+
+  Direct
+    CREA
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+
+Effects from PERSON to CREA
+
+  Indirect             0.449      0.085      5.303      0.000
+
+Effects from SOCLIZED to CREA
+
+  Indirect             0.002      0.039      0.046      0.964
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from PERSON to CREA
+
+  Total                0.783      0.046     17.056      0.000
+  Total indirect       0.449      0.085      5.303      0.000
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    PERSON             0.449      0.085      5.303      0.000
+
+  Direct
+    CREA
+    PERSON             0.334      0.100      3.329      0.001
+
+
+Effects from SOCLIZED to CREA
+
+  Total               -0.002      0.059     -0.027      0.979
+  Total indirect       0.002      0.039      0.046      0.964
+
+  Specific indirect
+
+    CREA
+    EFFICACY
+    SOCLIZED           0.002      0.039      0.046      0.964
+
+  Direct
+    CREA
+    SOCLIZED          -0.003      0.052     -0.065      0.948
+
+
+Effects from PERSON to CREA
+
+  Indirect             0.449      0.085      5.303      0.000
+
+Effects from SOCLIZED to CREA
+
+  Indirect             0.002      0.039      0.046      0.964
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           LAMBDA
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREAT              0             0             0             0
+ SEFF1              0             0             0             0
+ SEFF2              0             1             0             0
+ SEFF3              0             2             0             0
+ SEFF4              0             3             0             0
+ PER1               0             0             0             0
+ PER2               0             0             4             0
+ PER3               0             0             5             0
+ SOC1               0             0             0             0
+ SOC2               0             0             0             6
+
+
+           THETA
+              CREAT         SEFF1         SEFF2         SEFF3         SEFF4
+              ________      ________      ________      ________      ________
+ CREAT              0
+ SEFF1              0             7
+ SEFF2              0             0             8
+ SEFF3              0             0             0             9
+ SEFF4              0             0             0             0            10
+ PER1               0             0             0             0             0
+ PER2               0             0             0             0             0
+ PER3               0             0             0             0             0
+ SOC1               0             0             0             0             0
+ SOC2               0             0             0             0             0
+
+
+           THETA
+              PER1          PER2          PER3          SOC1          SOC2
+              ________      ________      ________      ________      ________
+ PER1              11
+ PER2               0            12
+ PER3               0             0            13
+ SOC1               0             0             0            14
+ SOC2               0             0             0             0            15
+
+
+           BETA
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREA               0            16            17            18
+ EFFICACY           0             0            19            20
+ PERSON             0             0             0             0
+ SOCLIZED           0             0             0             0
+
+
+           PSI
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREA              21
+ EFFICACY           0            22
+ PERSON             0             0            23
+ SOCLIZED           0             0            24            25
+
+
+     STARTING VALUES
+
+
+           LAMBDA
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREAT          1.000         0.000         0.000         0.000
+ SEFF1          0.000         1.000         0.000         0.000
+ SEFF2          0.000         1.000         0.000         0.000
+ SEFF3          0.000         1.000         0.000         0.000
+ SEFF4          0.000         1.000         0.000         0.000
+ PER1           0.000         0.000         1.000         0.000
+ PER2           0.000         0.000         1.000         0.000
+ PER3           0.000         0.000         1.000         0.000
+ SOC1           0.000         0.000         0.000         1.000
+ SOC2           0.000         0.000         0.000         1.000
+
+
+           THETA
+              CREAT         SEFF1         SEFF2         SEFF3         SEFF4
+              ________      ________      ________      ________      ________
+ CREAT          0.000
+ SEFF1          0.000         0.202
+ SEFF2          0.000         0.000         0.187
+ SEFF3          0.000         0.000         0.000         0.294
+ SEFF4          0.000         0.000         0.000         0.000         0.197
+ PER1           0.000         0.000         0.000         0.000         0.000
+ PER2           0.000         0.000         0.000         0.000         0.000
+ PER3           0.000         0.000         0.000         0.000         0.000
+ SOC1           0.000         0.000         0.000         0.000         0.000
+ SOC2           0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              PER1          PER2          PER3          SOC1          SOC2
+              ________      ________      ________      ________      ________
+ PER1           3.783
+ PER2           0.000         3.523
+ PER3           0.000         0.000         3.168
+ SOC1           0.000         0.000         0.000         2.241
+ SOC2           0.000         0.000         0.000         0.000         1.491
+
+
+           BETA
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREA           0.000         0.000         0.000         0.000
+ EFFICACY       0.000         0.000         0.000         0.000
+ PERSON         0.000         0.000         0.000         0.000
+ SOCLIZED       0.000         0.000         0.000         0.000
+
+
+           PSI
+              CREA          EFFICACY      PERSON        SOCLIZED
+              ________      ________      ________      ________
+ CREA           0.050
+ EFFICACY       0.000         0.050
+ PERSON         0.000         0.000         0.050
+ SOCLIZED       0.000         0.000         0.000         0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch08\mplus\ch08.dgm
+
+     Beginning Time:  20:39:23
+        Ending Time:  20:39:23
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

@@ -1,0 +1,193 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+ Ch7a Path analysis
+DATA:
+    FILE IS ch07.dat;
+VARIABLE:
+  NAMES ARE OUTCOME COMMIT VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE;
+OUTPUT:
+tech1;
+STANDARDIZED;
+MODEL:
+ COMMIT on VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE;
+ OUTCOME on COMMIT TENURE;
+ VALUE     with TENURE @0;
+ JOBSTYLE  with TENURE @0;
+ TEAMWORK  with TENURE @0;
+ LEADERSH  with TENURE @0;
+ LEARNING  with TENURE @0;
+ ENVIRONM  with TENURE @0;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+9
+0
+0
+outcome commit value jobstyle teamwork leadersh learning environm tenure
+3
+2 1 0 0 0 0 0 0 0
+0
+0
+1 1 value commit    0.427    0.116
+1 1 jobstyle commit    0.243    0.100
+1 1 teamwork commit    0.106    0.118
+1 1 leadersh commit    0.109    0.119
+1 1 learning commit    0.362    0.115
+1 1 environm commit    0.276    0.106
+1 1 tenure commit    0.022    0.008
+1 1 commit outcome    0.172    0.021
+1 1 tenure outcome    0.011    0.004
+2 1 value tenure    0.000    0.000
+2 1 jobstyle tenure    0.000    0.000
+2 1 jobstyle value    0.367    0.051
+2 1 teamwork tenure    0.000    0.000
+2 1 teamwork value    0.271    0.043
+2 1 teamwork jobstyle    0.420    0.053
+2 1 leadersh tenure    0.000    0.000
+2 1 leadersh value    0.206    0.039
+2 1 leadersh jobstyle    0.328    0.048
+2 1 leadersh teamwork    0.319    0.043
+2 1 learning tenure    0.000    0.000
+2 1 learning value    0.344    0.047
+2 1 learning jobstyle    0.462    0.057
+2 1 learning teamwork    0.390    0.050
+2 1 learning leadersh    0.386    0.047
+2 1 environm tenure    0.000    0.000
+2 1 environm value    0.369    0.047
+2 1 environm jobstyle    0.269    0.052
+2 1 environm teamwork    0.368    0.049
+2 1 environm leadersh    0.249    0.043
+2 1 environm learning    0.332    0.050
+4 1 outcome    0.306    0.026
+4 1 commit    1.455    0.123
+5 1 value    0.647    0.055
+5 1 jobstyle    0.907    0.077
+5 1 teamwork    0.691    0.058
+5 1 leadersh    0.598    0.050
+5 1 learning    0.776    0.065
+5 1 environm    0.765    0.065
+5 1 tenure   85.027    7.173
+11 1 value commit    0.218    0.059
+11 1 jobstyle commit    0.147    0.060
+11 1 teamwork commit    0.056    0.062
+11 1 leadersh commit    0.053    0.058
+11 1 learning commit    0.202    0.064
+11 1 environm commit    0.153    0.059
+11 1 tenure commit    0.130    0.047
+11 1 commit outcome    0.430    0.048
+11 1 tenure outcome    0.157    0.053
+12 1 value tenure    0.000    0.000
+12 1 jobstyle tenure    0.000    0.000
+12 1 jobstyle value    0.479    0.046
+12 1 teamwork tenure    0.000    0.000
+12 1 teamwork value    0.405    0.050
+12 1 teamwork jobstyle    0.530    0.043
+12 1 leadersh tenure    0.000    0.000
+12 1 leadersh value    0.331    0.053
+12 1 leadersh jobstyle    0.446    0.048
+12 1 leadersh teamwork    0.496    0.045
+12 1 learning tenure    0.000    0.000
+12 1 learning value    0.486    0.046
+12 1 learning jobstyle    0.550    0.042
+12 1 learning teamwork    0.533    0.043
+12 1 learning leadersh    0.566    0.041
+12 1 environm tenure    0.000    0.000
+12 1 environm value    0.524    0.043
+12 1 environm jobstyle    0.323    0.053
+12 1 environm teamwork    0.506    0.044
+12 1 environm leadersh    0.368    0.052
+12 1 environm learning    0.430    0.049
+14 1 outcome    0.773    0.043
+14 1 commit    0.586    0.044
+15 1 value    1.000    0.000
+15 1 jobstyle    1.000    0.000
+15 1 teamwork    1.000    0.000
+15 1 leadersh    1.000    0.000
+15 1 learning    1.000    0.000
+15 1 environm    1.000    0.000
+15 1 tenure    1.000    0.000
+21 1 value commit    0.218    0.059
+21 1 jobstyle commit    0.147    0.060
+21 1 teamwork commit    0.056    0.062
+21 1 leadersh commit    0.053    0.058
+21 1 learning commit    0.202    0.064
+21 1 environm commit    0.153    0.059
+21 1 tenure commit    0.130    0.047
+21 1 commit outcome    0.430    0.048
+21 1 tenure outcome    0.157    0.053
+22 1 value tenure    0.000    0.000
+22 1 jobstyle tenure    0.000    0.000
+22 1 jobstyle value    0.479    0.046
+22 1 teamwork tenure    0.000    0.000
+22 1 teamwork value    0.405    0.050
+22 1 teamwork jobstyle    0.530    0.043
+22 1 leadersh tenure    0.000    0.000
+22 1 leadersh value    0.331    0.053
+22 1 leadersh jobstyle    0.446    0.048
+22 1 leadersh teamwork    0.496    0.045
+22 1 learning tenure    0.000    0.000
+22 1 learning value    0.486    0.046
+22 1 learning jobstyle    0.550    0.042
+22 1 learning teamwork    0.533    0.043
+22 1 learning leadersh    0.566    0.041
+22 1 environm tenure    0.000    0.000
+22 1 environm value    0.524    0.043
+22 1 environm jobstyle    0.323    0.053
+22 1 environm teamwork    0.506    0.044
+22 1 environm leadersh    0.368    0.052
+22 1 environm learning    0.430    0.049
+24 1 outcome    0.773    0.043
+24 1 commit    0.586    0.044
+25 1 value    1.000    0.000
+25 1 jobstyle    1.000    0.000
+25 1 teamwork    1.000    0.000
+25 1 leadersh    1.000    0.000
+25 1 learning    1.000    0.000
+25 1 environm    1.000    0.000
+25 1 tenure    1.000    0.000
+31 1 value commit    0.427    0.116
+31 1 jobstyle commit    0.243    0.100
+31 1 teamwork commit    0.106    0.118
+31 1 leadersh commit    0.109    0.119
+31 1 learning commit    0.362    0.115
+31 1 environm commit    0.276    0.106
+31 1 tenure commit    0.022    0.008
+31 1 commit outcome    0.172    0.021
+31 1 tenure outcome    0.011    0.004
+32 1 value tenure    0.000    0.000
+32 1 jobstyle tenure    0.000    0.000
+32 1 jobstyle value    0.367    0.051
+32 1 teamwork tenure    0.000    0.000
+32 1 teamwork value    0.271    0.043
+32 1 teamwork jobstyle    0.420    0.053
+32 1 leadersh tenure    0.000    0.000
+32 1 leadersh value    0.206    0.039
+32 1 leadersh jobstyle    0.328    0.048
+32 1 leadersh teamwork    0.319    0.043
+32 1 learning tenure    0.000    0.000
+32 1 learning value    0.344    0.047
+32 1 learning jobstyle    0.462    0.057
+32 1 learning teamwork    0.390    0.050
+32 1 learning leadersh    0.386    0.047
+32 1 environm tenure    0.000    0.000
+32 1 environm value    0.369    0.047
+32 1 environm jobstyle    0.269    0.052
+32 1 environm teamwork    0.368    0.049
+32 1 environm leadersh    0.249    0.043
+32 1 environm learning    0.332    0.050
+34 1 outcome    0.306    0.026
+34 1 commit    1.455    0.123
+35 1 value    0.647    0.055
+35 1 jobstyle    0.907    0.077
+35 1 teamwork    0.691    0.058
+35 1 leadersh    0.598    0.050
+35 1 learning    0.776    0.065
+35 1 environm    0.765    0.065
+35 1 tenure   85.027    7.173

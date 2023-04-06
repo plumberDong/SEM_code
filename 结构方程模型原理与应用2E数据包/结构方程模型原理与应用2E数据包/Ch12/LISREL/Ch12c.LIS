@@ -1,0 +1,8 @@
+TI Ch12c Moderated Mediation Analysis using LISREL syntax                     
+DA NI=6 NO=681 MA=CM
+RA  FI=Ch12MOME.csv
+LA; Y ME X MO XMO MOME
+MO NX=4 NY=2 BE=FU GA=FI PS=SY 
+FR BE(1,2) GA(1,1) GA(1,2) GA(1,3) GA(1,4) GA(2,1) GA(2,2) GA(2,3) 
+PD
+OU SC EF

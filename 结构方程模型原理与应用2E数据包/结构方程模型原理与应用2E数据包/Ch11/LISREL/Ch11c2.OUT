@@ -1,0 +1,227 @@
+
+                                DATE:  4/ 5/2018
+                                  TIME: 22:46
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch11\LISREL\Ch11c2.LIS:
+
+ Ch11 Two factorUTM using LISREL syntax
+ DATA    NI=4 NO=200
+ CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+ LA;     RT1 RT2 RT3 RT4
+ MODEL   NY=4 NE=2 PS=DI,FR TE=SY TY=FI AL=FR
+ LE;     Level Shape
+ FR  LY 2 2 LY 3 2
+ VA    1 LY 1 1 LY 2 1 Ly 3 1 Ly 4 1
+ VA    0 LY 1 2
+ VA    1 LY 4 2
+ EQ TE(4,4) TE(1,1) TE(2,2) TE(3,3)
+ PD
+ OU
+
+ Ch11 Two factorUTM using LISREL syntax                                         
+
+                           Number of Input Variables  4
+                           Number of Y - Variables    4
+                           Number of X - Variables    0
+                           Number of ETA - Variables  2
+                           Number of KSI - Variables  0
+                           Number of Observations   200
+
+ Ch11 Two factorUTM using LISREL syntax                                         
+
+         Covariance Matrix       
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+      RT1    307.460
+      RT2    296.520    377.210
+      RT3    295.020    365.100    392.470
+      RT4    291.020    355.880    358.250    376.840
+
+ Total Variance = 1453.980 Generalized Variance = 37786493.359                            
+
+ Largest Eigenvalue = 1350.649 Smallest Eigenvalue = 18.007                                  
+
+ Condition Number = 8.661
+
+         Means   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              37.480     53.300     54.820     52.630
+
+
+ Ch11 Two factorUTM using LISREL syntax                                         
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+               Level      Shape
+            --------   --------
+      RT1          0          0
+      RT2          0          1
+      RT3          0          2
+      RT4          0          0
+
+         PSI         
+
+               Level      Shape
+            --------   --------
+                   3          4
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4
+            --------   --------   --------   --------
+                   5          5          5          5
+
+         ALPHA       
+
+               Level      Shape
+            --------   --------
+                   6          7
+ 
+
+
+ Ch11 Two factorUTM using LISREL syntax                                         
+
+ Number of Iterations = 7           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+               Level      Shape   
+            --------   --------
+      RT1      1.000       - - 
+ 
+      RT2      1.000      1.033
+                        (0.029)
+                         35.313
+ 
+      RT3      1.000      1.137
+                        (0.031)
+                         36.766
+ 
+      RT4      1.000      1.000
+ 
+
+         Covariance Matrix of ETA                
+         Note: This matrix is diagonal.
+
+               Level      Shape   
+            --------   --------
+             289.648     51.725
+
+         Mean Vector of Eta-Variables
+
+               Level      Shape   
+            --------   --------
+              37.476     15.242
+
+         PSI         
+         Note: This matrix is diagonal.
+
+               Level      Shape   
+            --------   --------
+             289.648     51.725
+            (30.622)    (8.046)
+               9.459      6.429
+ 
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              22.126     22.126     22.126     22.126
+             (1.551)    (1.551)    (1.551)    (1.551)
+              14.264     14.264     14.264     14.264
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+               0.929      0.940      0.942      0.939
+
+         ALPHA       
+
+               Level      Shape   
+            --------   --------
+              37.476     15.242
+             (1.248)    (0.684)
+              30.017     22.281
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)         7                       14
+ -2ln(L)                       4298.601                 4289.492
+ AIC (Akaike, 1974)*           4312.601                 4317.492
+ BIC (Schwarz, 1978)*          4335.689                 4363.669
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      7
+ Maximum Likelihood Ratio Chi-Square (C1)              9.109 (P = 0.2450)
+ Due to Covariance Structure                           8.986
+ Due to Mean Structure                                 0.123
+ Browne's (1984) ADF Chi-Square (C2_NT)                8.943 (P = 0.2567)
+ 
+ Estimated Non-centrality Parameter (NCP)              2.109
+ 90 Percent Confidence Interval for NCP                (0.0 ; 14.147)
+ 
+ Minimum Fit Function Value                            0.0455
+ Population Discrepancy Function Value (F0)            0.0105
+ 90 Percent Confidence Interval for F0                 (0.0 ; 0.0707)
+ Root Mean Square Error of Approximation (RMSEA)       0.0388
+ 90 Percent Confidence Interval for RMSEA              (0.0 ; 0.101)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.544
+ 
+ Expected Cross-Validation Index (ECVI)                0.116
+ 90 Percent Confidence Interval for ECVI               (0.0850 ; 0.156)
+ ECVI for Saturated Model                              0.1000
+ ECVI for Independence Model                           6.158
+ 
+ Chi-Square for Independence Model (6 df)            1223.593
+ 
+ Normed Fit Index (NFI)                                0.993
+ Non-Normed Fit Index (NNFI)                           0.999
+ Parsimony Normed Fit Index (PNFI)                     1.158
+ Comparative Fit Index (CFI)                           0.998
+ Incremental Fit Index (IFI)                           0.998
+ Relative Fit Index (RFI)                              0.994
+ 
+ Critical N (CN)                                     404.650
+ 
+ 
+ Root Mean Square Residual (RMR)                       10.218
+ Standardized RMR                                      0.0279
+ Goodness of Fit Index (GFI)                           0.978
+ Adjusted Goodness of Fit Index (AGFI)                 0.969
+ Parsimony Goodness of Fit Index (PGFI)                0.685
+
+                           Time used 0.016 seconds

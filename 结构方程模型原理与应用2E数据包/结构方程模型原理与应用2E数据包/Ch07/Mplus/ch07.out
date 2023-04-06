@@ -1,0 +1,973 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/02/2018   2:14 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	Ch7a Path analysis
+  DATA:   	FILE IS ch07.dat;
+  VARIABLE:	
+    NAMES ARE OUTCOME COMMIT VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE;
+
+  MODEL:
+   COMMIT on VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE;
+   OUTCOME on COMMIT TENURE;
+   VALUE     with TENURE @0;
+   JOBSTYLE  with TENURE @0;
+   TEAMWORK  with TENURE @0;
+   LEADERSH  with TENURE @0;
+   LEARNING  with TENURE @0;
+   ENVIRONM  with TENURE @0;
+
+  MODEL INDIRECT:
+  OUTCOME IND COMMIT VALUE;
+  OUTCOME IND COMMIT JOBSTYLE;
+  OUTCOME IND COMMIT TEAMWORK;
+  OUTCOME IND COMMIT LEADERSH;
+  OUTCOME IND COMMIT LEARNING;
+  OUTCOME IND COMMIT ENVIRONM;
+  OUTCOME IND COMMIT TENURE;
+  OUTCOME IND TENURE;
+
+
+  OUTPUT:
+  tech1;
+  STANDARDIZED;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch7a Path analysis
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         281
+
+Number of dependent variables                                    2
+Number of independent variables                                  7
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   OUTCOME     COMMIT
+
+Observed independent variables
+   VALUE       JOBSTYLE    TEAMWORK    LEADERSH    LEARNING    ENVIRONM
+   TENURE
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  ch07.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     OUTCOME               4.216      -0.586       2.000    0.36%       3.670      4.000      4.330
+             281.000       0.401      -0.359       5.000   20.28%       4.330      5.000
+     COMMIT                9.491      -0.321       4.000    0.36%       8.000      9.000      9.670
+             281.000       2.527      -0.192      12.000    8.90%      10.000     11.000
+     VALUE                 4.272      -0.765       1.000    0.36%       3.670      4.000      4.330
+             281.000       0.647       0.988       6.000    0.36%       4.670      5.000
+     JOBSTYLE              4.182      -0.423       1.000    0.71%       3.330      4.000      4.330
+             281.000       0.907       0.106       6.000    2.85%       4.670      5.000
+     TEAMWORK              4.335      -0.271       1.330    0.36%       3.670      4.000      4.330
+             281.000       0.691      -0.063       6.000    2.85%       4.670      5.000
+     LEADERSH              4.874      -0.596       2.000    0.71%       4.330      4.670      5.000
+             281.000       0.598       0.745       6.000   15.66%       5.000      5.670
+     LEARNING              4.706      -0.480       1.670    0.36%       4.000      4.330      5.000
+             281.000       0.776      -0.015       6.000   12.81%       5.000      5.670
+     ENVIRONM              4.427      -0.401       1.000    0.36%       3.670      4.330      4.330
+             281.000       0.765       0.371       6.000    5.34%       4.670      5.330
+     TENURE                9.125       0.685       0.000   11.39%       1.000      2.000      4.000
+             281.000      85.027      -0.951      32.000    0.71%      10.000     20.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       42
+
+Loglikelihood
+
+          H0 Value                       -3522.703
+          H1 Value                       -3509.090
+
+Information Criteria
+
+          Akaike (AIC)                    7129.406
+          Bayesian (BIC)                  7282.217
+          Sample-Size Adjusted BIC        7149.037
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             27.225
+          Degrees of Freedom                    12
+          P-Value                           0.0072
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.067
+          90 Percent C.I.                    0.033  0.101
+          Probability RMSEA <= .05           0.177
+
+CFI/TLI
+
+          CFI                                0.935
+          TLI                                0.919
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            250.354
+          Degrees of Freedom                    15
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.056
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ COMMIT   ON
+    VALUE              0.427      0.116      3.673      0.000
+    JOBSTYLE           0.243      0.100      2.421      0.015
+    TEAMWORK           0.106      0.118      0.894      0.371
+    LEADERSH           0.109      0.119      0.915      0.360
+    LEARNING           0.362      0.115      3.146      0.002
+    ENVIRONM           0.276      0.106      2.598      0.009
+    TENURE             0.022      0.008      2.799      0.005
+
+ OUTCOME  ON
+    COMMIT             0.172      0.021      8.109      0.000
+    TENURE             0.011      0.004      2.926      0.003
+
+ VALUE    WITH
+    TENURE             0.000      0.000    999.000    999.000
+
+ JOBSTYLE WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.367      0.051      7.246      0.000
+
+ TEAMWORK WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.271      0.043      6.288      0.000
+    JOBSTYLE           0.420      0.053      7.850      0.000
+
+ LEADERSH WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.206      0.039      5.271      0.000
+    JOBSTYLE           0.328      0.048      6.826      0.000
+    TEAMWORK           0.319      0.043      7.445      0.000
+
+ LEARNING WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.344      0.047      7.328      0.000
+    JOBSTYLE           0.462      0.057      8.080      0.000
+    TEAMWORK           0.390      0.050      7.884      0.000
+    LEADERSH           0.386      0.047      8.257      0.000
+
+ ENVIRONM WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.369      0.047      7.777      0.000
+    JOBSTYLE           0.269      0.052      5.149      0.000
+    TEAMWORK           0.368      0.049      7.568      0.000
+    LEADERSH           0.249      0.043      5.796      0.000
+    LEARNING           0.332      0.050      6.625      0.000
+
+ Means
+    VALUE              4.272      0.048     89.019      0.000
+    JOBSTYLE           4.182      0.057     73.584      0.000
+    TEAMWORK           4.335      0.050     87.415      0.000
+    LEADERSH           4.874      0.046    105.674      0.000
+    LEARNING           4.706      0.053     89.530      0.000
+    ENVIRONM           4.427      0.052     84.833      0.000
+    TENURE             9.125      0.550     16.588      0.000
+
+ Intercepts
+    OUTCOME            2.489      0.200     12.458      0.000
+    COMMIT             2.538      0.539      4.707      0.000
+
+ Variances
+    VALUE              0.647      0.055     11.853      0.000
+    JOBSTYLE           0.907      0.077     11.853      0.000
+    TEAMWORK           0.691      0.058     11.853      0.000
+    LEADERSH           0.598      0.050     11.853      0.000
+    LEARNING           0.776      0.065     11.853      0.000
+    ENVIRONM           0.765      0.065     11.853      0.000
+    TENURE            85.027      7.173     11.853      0.000
+
+ Residual Variances
+    OUTCOME            0.306      0.026     11.853      0.000
+    COMMIT             1.455      0.123     11.853      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ COMMIT   ON
+    VALUE              0.218      0.059      3.709      0.000
+    JOBSTYLE           0.147      0.060      2.432      0.015
+    TEAMWORK           0.056      0.062      0.895      0.371
+    LEADERSH           0.053      0.058      0.915      0.360
+    LEARNING           0.202      0.064      3.171      0.002
+    ENVIRONM           0.153      0.059      2.609      0.009
+    TENURE             0.130      0.047      2.783      0.005
+
+ OUTCOME  ON
+    COMMIT             0.430      0.048      8.883      0.000
+    TENURE             0.157      0.053      2.941      0.003
+
+ VALUE    WITH
+    TENURE             0.000      0.000    999.000    999.000
+
+ JOBSTYLE WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.479      0.046     10.434      0.000
+
+ TEAMWORK WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.405      0.050      8.112      0.000
+    JOBSTYLE           0.530      0.043     12.353      0.000
+
+ LEADERSH WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.331      0.053      6.237      0.000
+    JOBSTYLE           0.446      0.048      9.327      0.000
+    TEAMWORK           0.496      0.045     11.017      0.000
+
+ LEARNING WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.486      0.046     10.667      0.000
+    JOBSTYLE           0.550      0.042     13.225      0.000
+    TEAMWORK           0.533      0.043     12.479      0.000
+    LEADERSH           0.566      0.041     13.962      0.000
+
+ ENVIRONM WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.524      0.043     12.097      0.000
+    JOBSTYLE           0.323      0.053      6.040      0.000
+    TEAMWORK           0.506      0.044     11.402      0.000
+    LEADERSH           0.368      0.052      7.147      0.000
+    LEARNING           0.430      0.049      8.851      0.000
+
+ Means
+    VALUE              5.310      0.232     22.908      0.000
+    JOBSTYLE           4.390      0.195     22.564      0.000
+    TEAMWORK           5.215      0.228     22.880      0.000
+    LEADERSH           6.304      0.273     23.132      0.000
+    LEARNING           5.341      0.233     22.917      0.000
+    ENVIRONM           5.061      0.222     22.832      0.000
+    TENURE             0.990      0.073     13.591      0.000
+
+ Intercepts
+    OUTCOME            3.958      0.431      9.189      0.000
+    COMMIT             1.611      0.388      4.152      0.000
+
+ Variances
+    VALUE              1.000      0.000    999.000    999.000
+    JOBSTYLE           1.000      0.000    999.000    999.000
+    TEAMWORK           1.000      0.000    999.000    999.000
+    LEADERSH           1.000      0.000    999.000    999.000
+    LEARNING           1.000      0.000    999.000    999.000
+    ENVIRONM           1.000      0.000    999.000    999.000
+    TENURE             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUTCOME            0.773      0.043     18.147      0.000
+    COMMIT             0.586      0.044     13.263      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ COMMIT   ON
+    VALUE              0.218      0.059      3.709      0.000
+    JOBSTYLE           0.147      0.060      2.432      0.015
+    TEAMWORK           0.056      0.062      0.895      0.371
+    LEADERSH           0.053      0.058      0.915      0.360
+    LEARNING           0.202      0.064      3.171      0.002
+    ENVIRONM           0.153      0.059      2.609      0.009
+    TENURE             0.130      0.047      2.783      0.005
+
+ OUTCOME  ON
+    COMMIT             0.430      0.048      8.883      0.000
+    TENURE             0.157      0.053      2.941      0.003
+
+ VALUE    WITH
+    TENURE             0.000      0.000    999.000    999.000
+
+ JOBSTYLE WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.479      0.046     10.434      0.000
+
+ TEAMWORK WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.405      0.050      8.112      0.000
+    JOBSTYLE           0.530      0.043     12.353      0.000
+
+ LEADERSH WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.331      0.053      6.237      0.000
+    JOBSTYLE           0.446      0.048      9.327      0.000
+    TEAMWORK           0.496      0.045     11.017      0.000
+
+ LEARNING WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.486      0.046     10.667      0.000
+    JOBSTYLE           0.550      0.042     13.225      0.000
+    TEAMWORK           0.533      0.043     12.479      0.000
+    LEADERSH           0.566      0.041     13.962      0.000
+
+ ENVIRONM WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.524      0.043     12.097      0.000
+    JOBSTYLE           0.323      0.053      6.040      0.000
+    TEAMWORK           0.506      0.044     11.402      0.000
+    LEADERSH           0.368      0.052      7.147      0.000
+    LEARNING           0.430      0.049      8.851      0.000
+
+ Means
+    VALUE              5.310      0.232     22.908      0.000
+    JOBSTYLE           4.390      0.195     22.564      0.000
+    TEAMWORK           5.215      0.228     22.880      0.000
+    LEADERSH           6.304      0.273     23.132      0.000
+    LEARNING           5.341      0.233     22.917      0.000
+    ENVIRONM           5.061      0.222     22.832      0.000
+    TENURE             0.990      0.073     13.591      0.000
+
+ Intercepts
+    OUTCOME            3.958      0.431      9.189      0.000
+    COMMIT             1.611      0.388      4.152      0.000
+
+ Variances
+    VALUE              1.000      0.000    999.000    999.000
+    JOBSTYLE           1.000      0.000    999.000    999.000
+    TEAMWORK           1.000      0.000    999.000    999.000
+    LEADERSH           1.000      0.000    999.000    999.000
+    LEARNING           1.000      0.000    999.000    999.000
+    ENVIRONM           1.000      0.000    999.000    999.000
+    TENURE             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUTCOME            0.773      0.043     18.147      0.000
+    COMMIT             0.586      0.044     13.263      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ COMMIT   ON
+    VALUE              0.427      0.116      3.673      0.000
+    JOBSTYLE           0.243      0.100      2.421      0.015
+    TEAMWORK           0.106      0.118      0.894      0.371
+    LEADERSH           0.109      0.119      0.915      0.360
+    LEARNING           0.362      0.115      3.146      0.002
+    ENVIRONM           0.276      0.106      2.598      0.009
+    TENURE             0.022      0.008      2.799      0.005
+
+ OUTCOME  ON
+    COMMIT             0.172      0.021      8.109      0.000
+    TENURE             0.011      0.004      2.926      0.003
+
+ VALUE    WITH
+    TENURE             0.000      0.000    999.000    999.000
+
+ JOBSTYLE WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.367      0.051      7.246      0.000
+
+ TEAMWORK WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.271      0.043      6.288      0.000
+    JOBSTYLE           0.420      0.053      7.850      0.000
+
+ LEADERSH WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.206      0.039      5.271      0.000
+    JOBSTYLE           0.328      0.048      6.826      0.000
+    TEAMWORK           0.319      0.043      7.445      0.000
+
+ LEARNING WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.344      0.047      7.328      0.000
+    JOBSTYLE           0.462      0.057      8.080      0.000
+    TEAMWORK           0.390      0.050      7.884      0.000
+    LEADERSH           0.386      0.047      8.257      0.000
+
+ ENVIRONM WITH
+    TENURE             0.000      0.000    999.000    999.000
+    VALUE              0.369      0.047      7.777      0.000
+    JOBSTYLE           0.269      0.052      5.149      0.000
+    TEAMWORK           0.368      0.049      7.568      0.000
+    LEADERSH           0.249      0.043      5.796      0.000
+    LEARNING           0.332      0.050      6.625      0.000
+
+ Means
+    VALUE              4.272      0.048     89.019      0.000
+    JOBSTYLE           4.182      0.057     73.584      0.000
+    TEAMWORK           4.335      0.050     87.415      0.000
+    LEADERSH           4.874      0.046    105.674      0.000
+    LEARNING           4.706      0.053     89.530      0.000
+    ENVIRONM           4.427      0.052     84.833      0.000
+    TENURE             9.125      0.550     16.588      0.000
+
+ Intercepts
+    OUTCOME            2.489      0.200     12.458      0.000
+    COMMIT             2.538      0.539      4.707      0.000
+
+ Variances
+    VALUE              0.647      0.055     11.853      0.000
+    JOBSTYLE           0.907      0.077     11.853      0.000
+    TEAMWORK           0.691      0.058     11.853      0.000
+    LEADERSH           0.598      0.050     11.853      0.000
+    LEARNING           0.776      0.065     11.853      0.000
+    ENVIRONM           0.765      0.065     11.853      0.000
+    TENURE            85.027      7.173     11.853      0.000
+
+ Residual Variances
+    OUTCOME            0.306      0.026     11.853      0.000
+    COMMIT             1.455      0.123     11.853      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    OUTCOME            0.227      0.043      5.327      0.000
+    COMMIT             0.414      0.044      9.362      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.258E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from TENURE to OUTCOME
+
+  Total                0.014      0.004      3.776      0.000
+  Total indirect       0.004      0.001      2.646      0.008
+
+  Specific indirect
+
+    OUTCOME
+    COMMIT
+    TENURE             0.004      0.001      2.646      0.008
+
+  Direct
+    OUTCOME
+    TENURE             0.011      0.004      2.926      0.003
+
+
+Effects from VALUE to OUTCOME
+
+  Indirect             0.073      0.022      3.346      0.001
+
+Effects from JOBSTYLE to OUTCOME
+
+  Indirect             0.042      0.018      2.320      0.020
+
+Effects from TEAMWORK to OUTCOME
+
+  Indirect             0.018      0.020      0.889      0.374
+
+Effects from LEADERSH to OUTCOME
+
+  Indirect             0.019      0.021      0.909      0.363
+
+Effects from LEARNING to OUTCOME
+
+  Indirect             0.062      0.021      2.933      0.003
+
+Effects from ENVIRONM to OUTCOME
+
+  Indirect             0.047      0.019      2.474      0.013
+
+Effects from TENURE to OUTCOME
+
+  Indirect             0.004      0.001      2.646      0.008
+
+
+STANDARDIZED TOTAL, TOTAL INDIRECT, SPECIFIC INDIRECT, AND DIRECT EFFECTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from TENURE to OUTCOME
+
+  Total                0.212      0.055      3.833      0.000
+  Total indirect       0.056      0.021      2.689      0.007
+
+  Specific indirect
+
+    OUTCOME
+    COMMIT
+    TENURE             0.056      0.021      2.689      0.007
+
+  Direct
+    OUTCOME
+    TENURE             0.157      0.053      2.941      0.003
+
+
+Effects from VALUE to OUTCOME
+
+  Indirect             0.094      0.028      3.395      0.001
+
+Effects from JOBSTYLE to OUTCOME
+
+  Indirect             0.063      0.027      2.338      0.019
+
+Effects from TEAMWORK to OUTCOME
+
+  Indirect             0.024      0.027      0.890      0.373
+
+Effects from LEADERSH to OUTCOME
+
+  Indirect             0.023      0.025      0.910      0.363
+
+Effects from LEARNING to OUTCOME
+
+  Indirect             0.087      0.029      2.968      0.003
+
+Effects from ENVIRONM to OUTCOME
+
+  Indirect             0.066      0.026      2.493      0.013
+
+Effects from TENURE to OUTCOME
+
+  Indirect             0.056      0.021      2.689      0.007
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from TENURE to OUTCOME
+
+  Total                0.212      0.055      3.833      0.000
+  Total indirect       0.056      0.021      2.689      0.007
+
+  Specific indirect
+
+    OUTCOME
+    COMMIT
+    TENURE             0.056      0.021      2.689      0.007
+
+  Direct
+    OUTCOME
+    TENURE             0.157      0.053      2.941      0.003
+
+
+Effects from VALUE to OUTCOME
+
+  Indirect             0.094      0.028      3.395      0.001
+
+Effects from JOBSTYLE to OUTCOME
+
+  Indirect             0.063      0.027      2.338      0.019
+
+Effects from TEAMWORK to OUTCOME
+
+  Indirect             0.024      0.027      0.890      0.373
+
+Effects from LEADERSH to OUTCOME
+
+  Indirect             0.023      0.025      0.910      0.363
+
+Effects from LEARNING to OUTCOME
+
+  Indirect             0.087      0.029      2.968      0.003
+
+Effects from ENVIRONM to OUTCOME
+
+  Indirect             0.066      0.026      2.493      0.013
+
+Effects from TENURE to OUTCOME
+
+  Indirect             0.056      0.021      2.689      0.007
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Effects from TENURE to OUTCOME
+
+  Total                0.014      0.004      3.776      0.000
+  Total indirect       0.004      0.001      2.646      0.008
+
+  Specific indirect
+
+    OUTCOME
+    COMMIT
+    TENURE             0.004      0.001      2.646      0.008
+
+  Direct
+    OUTCOME
+    TENURE             0.011      0.004      2.926      0.003
+
+
+Effects from VALUE to OUTCOME
+
+  Indirect             0.073      0.022      3.346      0.001
+
+Effects from JOBSTYLE to OUTCOME
+
+  Indirect             0.042      0.018      2.320      0.020
+
+Effects from TEAMWORK to OUTCOME
+
+  Indirect             0.018      0.020      0.889      0.374
+
+Effects from LEADERSH to OUTCOME
+
+  Indirect             0.019      0.021      0.909      0.363
+
+Effects from LEARNING to OUTCOME
+
+  Indirect             0.062      0.021      2.933      0.003
+
+Effects from ENVIRONM to OUTCOME
+
+  Indirect             0.047      0.019      2.474      0.013
+
+Effects from TENURE to OUTCOME
+
+  Indirect             0.004      0.001      2.646      0.008
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+                  0             0             0             0             0
+
+
+           NU
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+                  0             0             0             0
+
+
+           LAMBDA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME            0             0             0             0             0
+ COMMIT             0             0             0             0             0
+ VALUE              0             0             0             0             0
+ JOBSTYLE           0             0             0             0             0
+ TEAMWORK           0             0             0             0             0
+ LEADERSH           0             0             0             0             0
+ LEARNING           0             0             0             0             0
+ ENVIRONM           0             0             0             0             0
+ TENURE             0             0             0             0             0
+
+
+           LAMBDA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ OUTCOME            0             0             0             0
+ COMMIT             0             0             0             0
+ VALUE              0             0             0             0
+ JOBSTYLE           0             0             0             0
+ TEAMWORK           0             0             0             0
+ LEADERSH           0             0             0             0
+ LEARNING           0             0             0             0
+ ENVIRONM           0             0             0             0
+ TENURE             0             0             0             0
+
+
+           THETA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME            0
+ COMMIT             0             0
+ VALUE              0             0             0
+ JOBSTYLE           0             0             0             0
+ TEAMWORK           0             0             0             0             0
+ LEADERSH           0             0             0             0             0
+ LEARNING           0             0             0             0             0
+ ENVIRONM           0             0             0             0             0
+ TENURE             0             0             0             0             0
+
+
+           THETA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ LEADERSH           0
+ LEARNING           0             0
+ ENVIRONM           0             0             0
+ TENURE             0             0             0             0
+
+
+           ALPHA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+                  1             2             3             4             5
+
+
+           ALPHA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+                  6             7             8             9
+
+
+           BETA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME            0            10             0             0             0
+ COMMIT             0             0            12            13            14
+ VALUE              0             0             0             0             0
+ JOBSTYLE           0             0             0             0             0
+ TEAMWORK           0             0             0             0             0
+ LEADERSH           0             0             0             0             0
+ LEARNING           0             0             0             0             0
+ ENVIRONM           0             0             0             0             0
+ TENURE             0             0             0             0             0
+
+
+           BETA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ OUTCOME            0             0             0            11
+ COMMIT            15            16            17            18
+ VALUE              0             0             0             0
+ JOBSTYLE           0             0             0             0
+ TEAMWORK           0             0             0             0
+ LEADERSH           0             0             0             0
+ LEARNING           0             0             0             0
+ ENVIRONM           0             0             0             0
+ TENURE             0             0             0             0
+
+
+           PSI
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME           19
+ COMMIT             0            20
+ VALUE              0             0            21
+ JOBSTYLE           0             0            22            23
+ TEAMWORK           0             0            24            25            26
+ LEADERSH           0             0            27            28            29
+ LEARNING           0             0            31            32            33
+ ENVIRONM           0             0            36            37            38
+ TENURE             0             0             0             0             0
+
+
+           PSI
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ LEADERSH          30
+ LEARNING          34            35
+ ENVIRONM          39            40            41
+ TENURE             0             0             0            42
+
+
+     STARTING VALUES
+
+
+           NU
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+                0.000         0.000         0.000         0.000         0.000
+
+
+           NU
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+                0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME        1.000         0.000         0.000         0.000         0.000
+ COMMIT         0.000         1.000         0.000         0.000         0.000
+ VALUE          0.000         0.000         1.000         0.000         0.000
+ JOBSTYLE       0.000         0.000         0.000         1.000         0.000
+ TEAMWORK       0.000         0.000         0.000         0.000         1.000
+ LEADERSH       0.000         0.000         0.000         0.000         0.000
+ LEARNING       0.000         0.000         0.000         0.000         0.000
+ ENVIRONM       0.000         0.000         0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ OUTCOME        0.000         0.000         0.000         0.000
+ COMMIT         0.000         0.000         0.000         0.000
+ VALUE          0.000         0.000         0.000         0.000
+ JOBSTYLE       0.000         0.000         0.000         0.000
+ TEAMWORK       0.000         0.000         0.000         0.000
+ LEADERSH       1.000         0.000         0.000         0.000
+ LEARNING       0.000         1.000         0.000         0.000
+ ENVIRONM       0.000         0.000         1.000         0.000
+ TENURE         0.000         0.000         0.000         1.000
+
+
+           THETA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME        0.000
+ COMMIT         0.000         0.000
+ VALUE          0.000         0.000         0.000
+ JOBSTYLE       0.000         0.000         0.000         0.000
+ TEAMWORK       0.000         0.000         0.000         0.000         0.000
+ LEADERSH       0.000         0.000         0.000         0.000         0.000
+ LEARNING       0.000         0.000         0.000         0.000         0.000
+ ENVIRONM       0.000         0.000         0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ LEADERSH       0.000
+ LEARNING       0.000         0.000
+ ENVIRONM       0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000
+
+
+           ALPHA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+                4.216         9.491         4.272         4.182         4.335
+
+
+           ALPHA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+                4.874         4.706         4.427         9.125
+
+
+           BETA
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME        0.000         0.000         0.000         0.000         0.000
+ COMMIT         0.000         0.000         0.000         0.000         0.000
+ VALUE          0.000         0.000         0.000         0.000         0.000
+ JOBSTYLE       0.000         0.000         0.000         0.000         0.000
+ TEAMWORK       0.000         0.000         0.000         0.000         0.000
+ LEADERSH       0.000         0.000         0.000         0.000         0.000
+ LEARNING       0.000         0.000         0.000         0.000         0.000
+ ENVIRONM       0.000         0.000         0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000         0.000
+
+
+           BETA
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ OUTCOME        0.000         0.000         0.000         0.000
+ COMMIT         0.000         0.000         0.000         0.000
+ VALUE          0.000         0.000         0.000         0.000
+ JOBSTYLE       0.000         0.000         0.000         0.000
+ TEAMWORK       0.000         0.000         0.000         0.000
+ LEADERSH       0.000         0.000         0.000         0.000
+ LEARNING       0.000         0.000         0.000         0.000
+ ENVIRONM       0.000         0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000
+
+
+           PSI
+              OUTCOME       COMMIT        VALUE         JOBSTYLE      TEAMWORK
+              ________      ________      ________      ________      ________
+ OUTCOME        0.200
+ COMMIT         0.000         1.264
+ VALUE          0.000         0.000         0.324
+ JOBSTYLE       0.000         0.000         0.000         0.454
+ TEAMWORK       0.000         0.000         0.000         0.000         0.345
+ LEADERSH       0.000         0.000         0.000         0.000         0.000
+ LEARNING       0.000         0.000         0.000         0.000         0.000
+ ENVIRONM       0.000         0.000         0.000         0.000         0.000
+ TENURE         0.000         0.000         0.000         0.000         0.000
+
+
+           PSI
+              LEADERSH      LEARNING      ENVIRONM      TENURE
+              ________      ________      ________      ________
+ LEADERSH       0.299
+ LEARNING       0.000         0.388
+ ENVIRONM       0.000         0.000         0.383
+ TENURE         0.000         0.000         0.000        42.514
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch07\mplus\ch7a.dgm
+
+     Beginning Time:  14:14:10
+        Ending Time:  14:14:10
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

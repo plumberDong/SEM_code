@@ -1,0 +1,11 @@
+Title Model 4 four-factor CFA model using LISREL syntax
+DATA   NI=10 NO=804
+RA FI=ch6.dat
+LA
+FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+MO  NY=10 NE=4 PS=SY,FR
+LE;   Flu Fle Ori Affect 
+FR       LY 4 1 LY 5 2 LY 6 3 LY 8 4 LY 9 4 LY 10 4
+VA  1   LY 1 1 LY 2 2 LY 3 3 LY 7 4
+PD
+OUTPUT AD=off SE TV SS MI

@@ -1,0 +1,1088 @@
+
+                                DATE:  4/ 7/2018
+                                  TIME:  9:53
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch08\LISREL\Ch08d.LIS:
+
+ Ch8 SEM  Stage 2 Modified Model D using LISREL syntax
+ DATA    NI=10 NO=250
+ CM SY   FI=Ch08.cov
+ LA;  CREA SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2
+ MODEL   NY=5 NE=2 NK=2 NX=5 PS=DI GA=FU BE=FU TE=SY,FI
+ LE;   Crea Efficacy
+ LK;   Person Soclized
+ FREE    LY(3,2) LY(4,2) LY(5,2) LX(2,1) LX(3,1) LX(5,2) BE (1,2) LY 5 1
+ FREE    TE 1 1 TE 2 2 TE 3 3 TE 4 4 TE 5 5 TE 4 5
+ FIX     TE 1 1
+ VALUE 1 LY 1 1 LY 2 2 LX 1 1 LX 4 2
+ PD
+ OUTPUT  SE TV RS FS EF SS SC MI
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+                           Number of Input Variables 10
+                           Number of Y - Variables    5
+                           Number of X - Variables    5
+                           Number of ETA - Variables  2
+                           Number of KSI - Variables  2
+                           Number of Observations   250
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+         Covariance Matrix       
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     CREA     17.711
+    SEFF1      1.843      0.404
+    SEFF2      0.801      0.146      0.374
+    SEFF3      1.243      0.227      0.110      0.589
+    SEFF4      1.692      0.226      0.115      0.208      0.393
+     PER1      7.518      1.074      0.301      0.531      0.741      7.565
+     PER2      7.585      1.062      0.538      0.609      0.806      5.202
+     PER3      6.499      0.906      0.388      0.434      0.664      4.530
+     SOC1      3.020      0.369      0.237      0.322      0.196      1.947
+     SOC2      2.663      0.318      0.307      0.335      0.326      2.092
+
+         Covariance Matrix       
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     PER2      7.046
+     PER3      4.626      6.335
+     SOC1      1.524      1.649      4.482
+     SOC2      1.824      1.662      2.335      2.982
+
+ Total Variance = 47.881 Generalized Variance = 17.911                                  
+
+ Largest Eigenvalue = 31.566 Smallest Eigenvalue = 0.136                                   
+
+ Condition Number = 15.246
+
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+                Crea   Efficacy
+            --------   --------
+     CREA          0          0
+    SEFF1          0          0
+    SEFF2          0          1
+    SEFF3          0          2
+    SEFF4          3          4
+
+         LAMBDA-X    
+
+              Person   Soclized
+            --------   --------
+     PER1          0          0
+     PER2          5          0
+     PER3          6          0
+     SOC1          0          0
+     SOC2          0          7
+
+         BETA        
+
+                Crea   Efficacy
+            --------   --------
+     Crea          0          8
+ Efficacy          0          0
+
+         GAMMA       
+
+              Person   Soclized
+            --------   --------
+     Crea          9         10
+ Efficacy         11         12
+
+         PHI         
+
+              Person   Soclized
+            --------   --------
+   Person         13
+ Soclized         14         15
+
+         PSI         
+
+                Crea   Efficacy
+            --------   --------
+                  16         17
+
+         THETA-EPS   
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4
+            --------   --------   --------   --------   --------
+     CREA          0
+    SEFF1          0         18
+    SEFF2          0          0         19
+    SEFF3          0          0          0         20
+    SEFF4          0          0          0         21         22
+
+         THETA-DELTA 
+
+                PER1       PER2       PER3       SOC1       SOC2
+            --------   --------   --------   --------   --------
+                  23         24         25         26         27
+ 
+
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Number of Iterations = 17          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      1.000       - - 
+ 
+    SEFF1       - -       1.000
+ 
+    SEFF2       - -       0.414
+                        (0.068)
+                          6.122
+ 
+    SEFF3       - -       0.631
+                        (0.085)
+                          7.403
+ 
+    SEFF4      0.062      0.311
+             (0.011)    (0.090)
+               5.502      3.470
+ 
+
+         LAMBDA-X    
+
+              Person   Soclized   
+            --------   --------
+     PER1      1.000       - - 
+ 
+     PER2      1.001       - - 
+             (0.063)
+              15.987
+ 
+     PER3      0.871       - - 
+             (0.061)
+              14.233
+ 
+     SOC1       - -       1.000
+ 
+     SOC2       - -       1.059
+                        (0.148)
+                          7.166
+ 
+
+         BETA        
+
+                Crea   Efficacy   
+            --------   --------
+     Crea       - -       2.301
+                        (0.672)
+                          3.423
+ 
+ Efficacy       - -        - - 
+ 
+
+         GAMMA       
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.960      0.047
+             (0.186)    (0.155)
+               5.148      0.306
+ 
+ Efficacy      0.209     -0.023
+             (0.020)    (0.027)
+              10.678     -0.847
+ 
+
+         Covariance Matrix of ETA and KSI        
+
+                Crea   Efficacy     Person   Soclized   
+            --------   --------   --------   --------
+     Crea     17.711
+ Efficacy      1.850      0.358
+   Person      7.530      1.053      5.233
+ Soclized      2.599      0.328      1.813      2.205
+
+         PHI         
+
+              Person   Soclized   
+            --------   --------
+   Person      5.233
+             (0.670)
+               7.811
+ 
+ Soclized      1.813      2.205
+             (0.353)    (0.440)
+               5.139      5.007
+ 
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                Crea   Efficacy   
+            --------   --------
+               6.106      0.146
+             (0.644)    (0.032)
+               9.477      4.555
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+                Crea   Efficacy   
+            --------   --------
+               0.655      0.593
+
+ NOTE: R² for Structural Equatios are Hayduk's (2006) Blocked-Error R²
+
+         Reduced Form                
+
+              Person   Soclized   
+            --------   --------
+     Crea      1.441     -0.006
+             (0.124)    (0.169)
+              11.658     -0.034
+ 
+ Efficacy      0.209     -0.023
+             (0.020)    (0.027)
+              10.657     -0.845
+ 
+
+         Squared Multiple Correlations for Reduced Form          
+
+                Crea   Efficacy   
+            --------   --------
+               0.612      0.593
+
+         THETA-EPS   
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     CREA       - - 
+ 
+    SEFF1       - -       0.046
+                        (0.027)
+                          1.676
+ 
+    SEFF2       - -        - -       0.313
+                                   (0.029)
+                                    10.905
+ 
+    SEFF3       - -        - -        - -       0.446
+                                              (0.042)
+                                               10.669
+ 
+    SEFF4       - -        - -        - -       0.060      0.216
+                                              (0.021)    (0.020)
+                                                2.864     10.911
+ 
+
+ W_A_R_N_I_N_G: THETA-EPS is not positive definite
+
+         Squared Multiple Correlations for Y - Variables         
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+               1.000      0.887      0.164      0.242      0.448
+
+         THETA-DELTA 
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+               2.332      1.801      2.367      2.277      0.510
+             (0.279)    (0.240)    (0.260)    (0.341)    (0.310)
+               8.348      7.490      9.089      6.679      1.644
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+               0.692      0.744      0.626      0.492      0.829
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        27                       55
+ -2ln(L)                       3280.443                 3221.354
+ AIC (Akaike, 1974)*           3334.443                 3331.354
+ BIC (Schwarz, 1978)*          3429.522                 3525.034
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      28
+ Maximum Likelihood Ratio Chi-Square (C1)              59.089 (P = 0.0005)
+ Browne's (1984) ADF Chi-Square (C2_NT)                55.813 (P = 0.0014)
+ 
+ Estimated Non-centrality Parameter (NCP)              31.089
+ 90 Percent Confidence Interval for NCP                (12.772 ; 57.156)
+ 
+ Minimum Fit Function Value                            0.236
+ Population Discrepancy Function Value (F0)            0.124
+ 90 Percent Confidence Interval for F0                 (0.0511 ; 0.229)
+ Root Mean Square Error of Approximation (RMSEA)       0.0666
+ 90 Percent Confidence Interval for RMSEA              (0.0427 ; 0.0904)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.117
+ 
+ Expected Cross-Validation Index (ECVI)                0.452
+ 90 Percent Confidence Interval for ECVI               (0.379 ; 0.557)
+ ECVI for Saturated Model                              0.440
+ ECVI for Independence Model                           5.130
+ 
+ Chi-Square for Independence Model (45 df)          1262.601
+ 
+ Normed Fit Index (NFI)                                0.953
+ Non-Normed Fit Index (NNFI)                           0.959
+ Parsimony Normed Fit Index (PNFI)                     0.593
+ Comparative Fit Index (CFI)                           0.974
+ Incremental Fit Index (IFI)                           0.975
+ Relative Fit Index (RFI)                              0.925
+ 
+ Critical N (CN)                                     204.444
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.0953
+ Standardized RMR                                      0.0391
+ Goodness of Fit Index (GFI)                           0.957
+ Adjusted Goodness of Fit Index (AGFI)                 0.916
+ Parsimony Goodness of Fit Index (PGFI)                0.487
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+         Fitted Covariance Matrix
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     CREA     17.711
+    SEFF1      1.850      0.404
+    SEFF2      0.766      0.148      0.374
+    SEFF3      1.167      0.226      0.094      0.589
+    SEFF4      1.682      0.227      0.094      0.203      0.392
+     PER1      7.530      1.053      0.436      0.664      0.798      7.565
+     PER2      7.538      1.054      0.437      0.665      0.799      5.239
+     PER3      6.557      0.917      0.380      0.578      0.695      4.557
+     SOC1      2.599      0.328      0.136      0.207      0.264      1.813
+     SOC2      2.752      0.347      0.144      0.219      0.280      1.919
+
+         Fitted Covariance Matrix
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     PER2      7.046
+     PER3      4.562      6.335
+     SOC1      1.815      1.578      4.482
+     SOC2      1.921      1.671      2.335      2.982
+
+         Fitted Residuals
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     CREA      0.000
+    SEFF1     -0.007      0.000
+    SEFF2      0.035     -0.002      0.000
+    SEFF3      0.076      0.001      0.016      0.000
+    SEFF4      0.010     -0.001      0.021      0.005      0.001
+     PER1     -0.012      0.021     -0.135     -0.133     -0.057      0.000
+     PER2      0.047      0.008      0.101     -0.056      0.007     -0.037
+     PER3     -0.058     -0.011      0.008     -0.144     -0.031     -0.027
+     SOC1      0.421      0.041      0.101      0.115     -0.068      0.134
+     SOC2     -0.089     -0.029      0.163      0.116      0.046      0.173
+
+         Fitted Residuals
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     PER2      0.000
+     PER3      0.064      0.000
+     SOC1     -0.291      0.071      0.000
+     SOC2     -0.097     -0.009      0.000      0.000
+
+ Summary Statistics for Fitted Residuals
+
+ Smallest Fitted Residual =   -0.291
+   Median Fitted Residual =    0.000
+  Largest Fitted Residual =    0.421
+
+ Stemleaf Plot
+
+ - 2|9 
+ - 1|4430 
+ - 0|9766643331111000000000000000 
+   0|11112223455678 
+   1|0022367 
+   2| 
+   3| 
+   4|2
+
+         Standardized Residuals  
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     CREA      0.000
+    SEFF1     -0.035      0.000
+    SEFF2      0.290     -0.079      0.000
+    SEFF3      0.353      0.034       - -        - - 
+    SEFF4      0.059     -0.023       - -       0.216       - - 
+     PER1     -0.013      0.114       - -        - -        - -       0.000
+     PER2      0.056      0.083     13.901     -0.556       - -        - - 
+     PER3     -0.065     -0.077       - -        - -      -0.369     -0.051
+     SOC1      0.717       - -       2.304      1.113       - -       0.320
+     SOC2     -0.187       - -       2.459       - -        - -        - - 
+
+         Standardized Residuals  
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     PER2      0.000
+     PER3      0.125      0.000
+     SOC1     -0.836      0.200      0.000
+     SOC2       - -        - -       0.000      0.000
+
+ Summary Statistics for Standardized Residuals
+
+ Smallest Standardized Residual =   -0.836
+   Median Standardized Residual =    0.000
+  Largest Standardized Residual =   13.901
+
+ Stemleaf Plot
+
+ - 0|8642111100000000000000000000000000000000 
+   0|111112233471 
+   2|35 
+   4| 
+   6| 
+   8| 
+  10| 
+  12|9
+ Largest Positive Standardized Residuals
+ Residual for     PER2 and    SEFF2  13.901
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+                         Qplot of Standardized Residuals
+
+  3.5..........................................................................
+     .                                                                       ..
+     .                                                                      . .
+     .                                                                    .   .
+     .                                                                  .     .
+     .                                                                 .      .
+     .                                                               .        .
+     .                                                             .          .
+     .                                                            .           .
+     .                                                          .             .
+     .                                                        .               .
+     .                                                       .                x
+     .                                                     .                  .
+     .                                                   .         x          .
+     .                                                  .                     .
+ N   .                                                .           x           .
+ o   .                                              .x                        .
+ r   .                                       x   x .                          .
+ m   .                                       x   .                            .
+ a   .                                      xx .                              .
+ l   .                                      x .                               .
+     .                                     *.                                 .
+ Q   .                                    *                                   .
+ u   .                                   .x                                   .
+ a   .                                 . xx                                   .
+ n   .                               .   x                                    .
+ t   .                              .    *                                    .
+ i   .                            .      x                                    .
+ l   .                          .        *                                    .
+ e   .                         .        x                                     .
+ s   .                       .        x                                       .
+     .                     .                                                  .
+     .                    .         x                                         .
+     .                  .                                                     .
+     .                .          x                                            .
+     .               .                                                        .
+     .             .                                                          .
+     .           .                                                            .
+     .          .                                                             .
+     .        .                                                               .
+     .      .                                                                 .
+     .     .                                                                  .
+     .   .                                                                    .
+     . .                                                                      .
+ -3.5..........................................................................
+   -3.5                                                                      3.5
+                             Standardized Residuals
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Modification Indices and Expected Change
+
+         Modification Indices for LAMBDA-Y       
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -        - - 
+    SEFF1      1.547       - - 
+    SEFF2      0.175       - - 
+    SEFF3      0.751       - - 
+    SEFF4       - -        - - 
+
+         Expected Change for LAMBDA-Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -        - - 
+    SEFF1     -0.040       - - 
+    SEFF2      0.006       - - 
+    SEFF3      0.018       - - 
+    SEFF4       - -        - - 
+
+         Standardized Expected Change for LAMBDA-Y       
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -        - - 
+    SEFF1     -0.170       - - 
+    SEFF2      0.027       - - 
+    SEFF3      0.074       - - 
+    SEFF4       - -        - - 
+
+         Completely Standardized Expected Change for LAMBDA-Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -        - - 
+    SEFF1     -0.268       - - 
+    SEFF2      0.044       - - 
+    SEFF3      0.097       - - 
+    SEFF4       - -        - - 
+
+         Modification Indices for LAMBDA-X       
+
+              Person   Soclized   
+            --------   --------
+     PER1       - -       2.175
+     PER2       - -       2.089
+     PER3       - -       0.002
+     SOC1      0.521       - - 
+     SOC2      0.521       - - 
+
+         Expected Change for LAMBDA-X    
+
+              Person   Soclized   
+            --------   --------
+     PER1       - -       0.160
+     PER2       - -      -0.150
+     PER3       - -       0.005
+     SOC1      0.311       - - 
+     SOC2     -0.329       - - 
+
+         Standardized Expected Change for LAMBDA-X       
+
+              Person   Soclized   
+            --------   --------
+     PER1       - -       0.237
+     PER2       - -      -0.222
+     PER3       - -       0.007
+     SOC1      0.712       - - 
+     SOC2     -0.753       - - 
+
+         Completely Standardized Expected Change for LAMBDA-X    
+
+              Person   Soclized   
+            --------   --------
+     PER1       - -       0.086
+     PER2       - -      -0.084
+     PER3       - -       0.003
+     SOC1      0.336       - - 
+     SOC2     -0.436       - - 
+
+ No Non-Zero Modification Indices for BETA        
+
+ No Non-Zero Modification Indices for GAMMA       
+
+ No Non-Zero Modification Indices for PHI         
+
+ No Non-Zero Modification Indices for PSI         
+
+         Modification Indices for THETA-EPS      
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     CREA      0.027
+    SEFF1      0.842       - - 
+    SEFF2      0.048      0.826       - - 
+    SEFF3      1.909      0.209      0.249       - - 
+    SEFF4      0.027      0.187      1.107       - -        - - 
+
+         Expected Change for THETA-EPS   
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     CREA     -0.471
+    SEFF1     -0.123       - - 
+    SEFF2     -0.020     -0.020       - - 
+    SEFF3      0.171      0.014      0.012       - - 
+    SEFF4      0.029     -0.010      0.017       - -        - - 
+
+         Completely Standardized Expected Change for THETA-EPS   
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     CREA     -0.027
+    SEFF1     -0.046       - - 
+    SEFF2     -0.008     -0.051       - - 
+    SEFF3      0.053      0.029      0.026       - - 
+    SEFF4      0.011     -0.026      0.045       - -        - - 
+
+         Modification Indices for THETA-DELTA-EPS
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     PER1      0.048      3.860     10.553      1.519      0.729
+     PER2      0.001      0.233      4.070      0.065      0.217
+     PER3      0.015      0.028      0.001      2.190      0.000
+     SOC1      6.527      1.963      0.469      0.481      9.863
+     SOC2      6.485      9.565      8.419      1.698      6.523
+
+         Expected Change for THETA-DELTA-EPS 
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     PER1      0.067      0.094     -0.202     -0.090     -0.043
+     PER2      0.007     -0.022      0.115     -0.017      0.022
+     PER3     -0.035      0.008     -0.001     -0.105      0.000
+     SOC1      0.666      0.058     -0.040      0.047     -0.148
+     SOC2     -0.669     -0.123      0.131      0.069      0.093
+
+         Completely Standardized Expected Change for THETA-DELTA-EPS 
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     PER1      0.006      0.054     -0.120     -0.043     -0.025
+     PER2      0.001     -0.013      0.071     -0.008      0.013
+     PER3     -0.003      0.005     -0.001     -0.054      0.000
+     SOC1      0.075      0.043     -0.031      0.029     -0.112
+     SOC2     -0.092     -0.112      0.124      0.052      0.086
+
+         Modification Indices for THETA-DELTA    
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+     PER1       - - 
+     PER2      0.311       - - 
+     PER3      0.075      0.680       - - 
+     SOC1      0.005      4.442      0.187       - - 
+     SOC2      1.576      0.229      0.100       - -        - - 
+
+         Expected Change for THETA-DELTA 
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+     PER1       - - 
+     PER2     -0.142       - - 
+     PER3     -0.061      0.182       - - 
+     SOC1     -0.013     -0.357      0.076       - - 
+     SOC2      0.183      0.066     -0.044       - -        - - 
+
+         Completely Standardized Expected Change for THETA-DELTA 
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+     PER1       - - 
+     PER2     -0.019       - - 
+     PER3     -0.009      0.027       - - 
+     SOC1     -0.002     -0.064      0.014       - - 
+     SOC2      0.039      0.014     -0.010       - -        - - 
+
+ Maximum Modification Index is   10.55 for Element ( 1, 3) of THETA DELTA-EPSILON
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Factor Scores Regressions
+
+         ETA 
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     Crea      1.000      0.000      0.000      0.000      0.000      0.000
+ Efficacy      0.013      0.712      0.043      0.041      0.035      0.007
+
+         ETA 
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     Crea      0.000      0.000      0.000      0.000
+ Efficacy      0.010      0.006      0.000     -0.001
+
+         KSI 
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+   Person      0.085      0.377      0.023      0.022      0.019      0.218
+ Soclized      0.008     -0.010     -0.001     -0.001     -0.001      0.016
+
+         KSI 
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+   Person      0.282      0.187      0.016      0.077
+ Soclized      0.021      0.014      0.135      0.640
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Standardized Solution           
+
+         LAMBDA-Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      4.208       - - 
+    SEFF1       - -       0.599
+    SEFF2       - -       0.248
+    SEFF3       - -       0.378
+    SEFF4      0.263      0.186
+
+         LAMBDA-X    
+
+              Person   Soclized   
+            --------   --------
+     PER1      2.288       - - 
+     PER2      2.290       - - 
+     PER3      1.992       - - 
+     SOC1       - -       1.485
+     SOC2       - -       1.572
+
+         BETA        
+
+                Crea   Efficacy   
+            --------   --------
+     Crea       - -       0.327
+ Efficacy       - -        - - 
+
+         GAMMA       
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.522      0.017
+ Efficacy      0.799     -0.057
+
+         Correlation Matrix of ETA and KSI       
+
+                Crea   Efficacy     Person   Soclized   
+            --------   --------   --------   --------
+     Crea      1.000
+ Efficacy      0.734      1.000
+   Person      0.782      0.769      1.000
+ Soclized      0.416      0.369      0.534      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                Crea   Efficacy   
+            --------   --------
+               0.345      0.407
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.783     -0.002
+ Efficacy      0.799     -0.057
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Completely Standardized Solution
+
+         LAMBDA-Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      1.000       - - 
+    SEFF1       - -       0.942
+    SEFF2       - -       0.405
+    SEFF3       - -       0.492
+    SEFF4      0.420      0.297
+
+         LAMBDA-X    
+
+              Person   Soclized   
+            --------   --------
+     PER1      0.832       - - 
+     PER2      0.863       - - 
+     PER3      0.791       - - 
+     SOC1       - -       0.701
+     SOC2       - -       0.911
+
+         BETA        
+
+                Crea   Efficacy   
+            --------   --------
+     Crea       - -       0.327
+ Efficacy       - -        - - 
+
+         GAMMA       
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.522      0.017
+ Efficacy      0.799     -0.057
+
+         Correlation Matrix of ETA and KSI       
+
+                Crea   Efficacy     Person   Soclized   
+            --------   --------   --------   --------
+     Crea      1.000
+ Efficacy      0.734      1.000
+   Person      0.782      0.769      1.000
+ Soclized      0.416      0.369      0.534      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                Crea   Efficacy   
+            --------   --------
+               0.345      0.407
+
+         THETA-EPS   
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4   
+            --------   --------   --------   --------   --------
+     CREA       - - 
+    SEFF1       - -       0.113
+    SEFF2       - -        - -       0.836
+    SEFF3       - -        - -        - -       0.758
+    SEFF4       - -        - -        - -       0.125      0.552
+
+ W_A_R_N_I_N_G: THETA-EPS is not positive definite
+
+         THETA-DELTA 
+
+                PER1       PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------   --------
+               0.308      0.256      0.374      0.508      0.171
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.783     -0.002
+ Efficacy      0.799     -0.057
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Total and Indirect Effects
+
+         Total Effects of KSI on ETA 
+
+              Person   Soclized   
+            --------   --------
+     Crea      1.441     -0.006
+             (0.123)    (0.168)
+              11.681     -0.034
+ 
+ Efficacy      0.209     -0.023
+             (0.020)    (0.027)
+              10.678     -0.847
+ 
+
+         Indirect Effects of KSI on ETA  
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.481     -0.053
+             (0.142)    (0.064)
+               3.396     -0.835
+ 
+ Efficacy       - -        - - 
+ 
+
+         Total Effects of ETA on ETA 
+
+                Crea   Efficacy   
+            --------   --------
+     Crea       - -       2.301
+                        (0.672)
+                          3.423
+ 
+ Efficacy       - -        - - 
+ 
+
+    Largest Eigenvalue of B*B' (Stability Index) is   5.292
+
+         Total Effects of ETA on Y   
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      1.000      2.301
+                        (0.672)
+                          3.423
+ 
+    SEFF1       - -       1.000
+ 
+    SEFF2       - -       0.414
+                        (0.068)
+                          6.122
+ 
+    SEFF3       - -       0.631
+                        (0.085)
+                          7.403
+ 
+    SEFF4      0.062      0.455
+             (0.011)    (0.092)
+               5.502      4.948
+ 
+
+         Indirect Effects of ETA on Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -       2.301
+                        (0.672)
+                          3.423
+ 
+    SEFF1       - -        - - 
+ 
+    SEFF2       - -        - - 
+ 
+    SEFF3       - -        - - 
+ 
+    SEFF4       - -       0.144
+                        (0.045)
+                          3.221
+ 
+
+         Total Effects of KSI on Y   
+
+              Person   Soclized   
+            --------   --------
+     CREA      1.441     -0.006
+             (0.123)    (0.168)
+              11.681     -0.034
+ 
+    SEFF1      0.209     -0.023
+             (0.020)    (0.027)
+              10.678     -0.847
+ 
+    SEFF2      0.087     -0.010
+             (0.016)    (0.011)
+               5.438     -0.840
+ 
+    SEFF3      0.132     -0.015
+             (0.021)    (0.017)
+               6.279     -0.842
+ 
+    SEFF4      0.155     -0.008
+             (0.017)    (0.016)
+               9.317     -0.466
+ 
+
+ Ch8 SEM Stage 2 Modified Model D using LISREL syntax                           
+
+ Standardized Total and Indirect Effects
+
+         Standardized Total Effects of KSI on ETA
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.783     -0.002
+ Efficacy      0.799     -0.057
+
+         Standardized Indirect Effects of KSI on ETA 
+
+              Person   Soclized   
+            --------   --------
+     Crea      0.262     -0.019
+ Efficacy       - -        - - 
+
+         Standardized Total Effects of ETA on ETA
+
+                Crea   Efficacy   
+            --------   --------
+     Crea       - -       0.327
+ Efficacy       - -        - - 
+
+         Standardized Total Effects of ETA on Y  
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      4.208      1.377
+    SEFF1       - -       0.599
+    SEFF2       - -       0.248
+    SEFF3       - -       0.378
+    SEFF4      0.263      0.272
+
+         Completely Standardized Total Effects of ETA on Y   
+
+                Crea   Efficacy   
+            --------   --------
+     CREA      1.000      0.327
+    SEFF1       - -       0.942
+    SEFF2       - -       0.405
+    SEFF3       - -       0.492
+    SEFF4      0.420      0.435
+
+         Standardized Indirect Effects of ETA on Y   
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -       1.377
+    SEFF1       - -        - - 
+    SEFF2       - -        - - 
+    SEFF3       - -        - - 
+    SEFF4       - -       0.086
+
+         Completely Standardized Indirect Effects of ETA on Y    
+
+                Crea   Efficacy   
+            --------   --------
+     CREA       - -       0.327
+    SEFF1       - -        - - 
+    SEFF2       - -        - - 
+    SEFF3       - -        - - 
+    SEFF4       - -       0.137
+
+         Standardized Total Effects of KSI on Y  
+
+              Person   Soclized   
+            --------   --------
+     CREA      3.296     -0.008
+    SEFF1      0.479     -0.034
+    SEFF2      0.198     -0.014
+    SEFF3      0.302     -0.022
+    SEFF4      0.355     -0.011
+
+         Completely Standardized Total Effects of KSI on Y   
+
+              Person   Soclized   
+            --------   --------
+     CREA      0.783     -0.002
+    SEFF1      0.753     -0.054
+    SEFF2      0.324     -0.023
+    SEFF3      0.393     -0.028
+    SEFF4      0.567     -0.018
+
+                           Time used 0.016 seconds

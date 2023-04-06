@@ -1,0 +1,6 @@
+TITLE:	Ch11 Two factor LGM no residual homogeneity assumption
+DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+VARIABLE:	NAMES ARE RT1-RT4;
+MODEL:      I S | RT1@1 RT2@2 RT3@3 RT4@4;
+            !RT1-RT4 (EQ);    !•O¥›Æt≈‹≤ß¨€µ•
+OUTPUT:     TECH1; SAMPSTAT;

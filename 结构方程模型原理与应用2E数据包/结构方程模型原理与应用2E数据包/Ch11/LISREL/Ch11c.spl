@@ -1,0 +1,16 @@
+Ch11 Two factor latent change model using SIMPLIS syntax
+Observed Variables: RT1-RT4
+Covariance matrix from file=Ch11a.cov
+means from file=Ch11a.cov
+Sample Size = 200
+Latent Variables  Level Shape
+Relationships
+RT1 = 1*Level 0*Shape  
+RT2 = 1*Level Shape 
+RT3 = 1*Level Shape 
+RT4 = 1*Level 1*Shape 
+Level=CONST
+Shape=CONST
+Path Diagram
+LISREL output
+End of Problem

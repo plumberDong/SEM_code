@@ -1,0 +1,18 @@
+Ch11 Three factor  Quadratic model using LISREL syntax
+DATA    NI=4 NO=200
+CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+LA;     RT1 RT2 RT3 RT4
+MO    NY=4 NE=3 PS=DI,FR TE=SY TY=FI AL=FR 
+LE;    Intercept Slope Quadratic
+VA    1 LY(1,1) LY(2,1) Ly(3,1) Ly(4,1)
+VA    0 LY(1, 2)
+VA   1 LY(2,2)
+VA 2 LY(3,2)
+VA 3 LY(4,2)
+VA    0 LY(1,3)  
+VA 1 LY(2,3) 
+VA 4 LY(3,3) 
+VA 9 LY(4,3)
+EQ TE(4,4) TE(1,1) TE(2,2) TE(3,3) 
+PD
+OU

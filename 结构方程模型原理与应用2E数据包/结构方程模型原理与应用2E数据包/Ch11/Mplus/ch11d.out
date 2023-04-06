@@ -1,0 +1,314 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/05/2018  11:30 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	Ch11 Three factor with residual homogeneity assumption
+  DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+  VARIABLE:	NAMES ARE RT1-RT4;
+  MODEL:      I S Q | RT1@0 RT2@1 RT3@2 RT4@3;
+              I WITH S @0;  I WITH Q @0; S WITH Q @0;
+              RT1-RT4 (EQ);    !•O¥›Æt≈‹≤ß¨€µ•
+  OUTPUT:     TECH1; SAMPSTAT;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch11 Three factor with residual homogeneity assumption
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         200
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            3
+
+Observed dependent variables
+
+  Continuous
+   RT1         RT2         RT3         RT4
+
+Continuous latent variables
+   I           S           Q
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch11a.cov
+
+Input data format  FREE
+
+
+SAMPLE STATISTICS
+
+
+     SAMPLE STATISTICS
+
+
+           Means/Intercepts/Thresholds
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+               37.480        53.300        54.820        52.630
+
+
+           Covariances/Correlations/Residual Correlations
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1          307.460
+ RT2          296.520       377.210
+ RT3          295.020       365.100       392.470
+ RT4          291.020       355.880       358.250       376.840
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     WARNING:  THE LATENT VARIABLE COVARIANCE MATRIX (PSI) IS NOT POSITIVE
+     DEFINITE.  THIS COULD INDICATE A NEGATIVE VARIANCE/RESIDUAL VARIANCE FOR A
+     LATENT VARIABLE, A CORRELATION GREATER OR EQUAL TO ONE BETWEEN TWO LATENT
+     VARIABLES, OR A LINEAR DEPENDENCY AMONG MORE THAN TWO LATENT VARIABLES.
+     CHECK THE TECH4 OUTPUT FOR MORE INFORMATION.
+     PROBLEM INVOLVING VARIABLE Q.
+
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        7
+
+Loglikelihood
+
+          H0 Value                       -2917.064
+          H1 Value                       -2877.892
+
+Information Criteria
+
+          Akaike (AIC)                    5848.127
+          Bayesian (BIC)                  5871.215
+          Sample-Size Adjusted BIC        5849.039
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             78.343
+          Degrees of Freedom                     7
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.226
+          90 Percent C.I.                    0.182  0.272
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.941
+          TLI                                0.950
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1223.593
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.067
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    RT1                1.000      0.000    999.000    999.000
+    RT2                1.000      0.000    999.000    999.000
+    RT3                1.000      0.000    999.000    999.000
+    RT4                1.000      0.000    999.000    999.000
+
+ S        |
+    RT1                0.000      0.000    999.000    999.000
+    RT2                1.000      0.000    999.000    999.000
+    RT3                2.000      0.000    999.000    999.000
+    RT4                3.000      0.000    999.000    999.000
+
+ Q        |
+    RT1                0.000      0.000    999.000    999.000
+    RT2                1.000      0.000    999.000    999.000
+    RT3                4.000      0.000    999.000    999.000
+    RT4                9.000      0.000    999.000    999.000
+
+ I        WITH
+    S                  0.000      0.000    999.000    999.000
+    Q                  0.000      0.000    999.000    999.000
+
+ S        WITH
+    Q                  0.000      0.000    999.000    999.000
+
+ Means
+    I                 38.009      1.285     29.576      0.000
+    S                 18.205      0.705     25.827      0.000
+    Q                 -4.503      0.196    -22.922      0.000
+
+ Intercepts
+    RT1                0.000      0.000    999.000    999.000
+    RT2                0.000      0.000    999.000    999.000
+    RT3                0.000      0.000    999.000    999.000
+    RT4                0.000      0.000    999.000    999.000
+
+ Variances
+    I                296.690     31.483      9.424      0.000
+    S                 12.612      2.076      6.075      0.000
+    Q                 -1.136      0.188     -6.044      0.000
+
+ Residual Variances
+    RT1               35.410      2.516     14.074      0.000
+    RT2               35.410      2.516     14.074      0.000
+    RT3               35.410      2.516     14.074      0.000
+    RT4               35.410      2.516     14.074      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.191E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+                  0             0             0             0
+
+
+           LAMBDA
+              I             S             Q
+              ________      ________      ________
+ RT1                0             0             0
+ RT2                0             0             0
+ RT3                0             0             0
+ RT4                0             0             0
+
+
+           THETA
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1                1
+ RT2                0             1
+ RT3                0             0             1
+ RT4                0             0             0             1
+
+
+           ALPHA
+              I             S             Q
+              ________      ________      ________
+                  2             3             4
+
+
+           BETA
+              I             S             Q
+              ________      ________      ________
+ I                  0             0             0
+ S                  0             0             0
+ Q                  0             0             0
+
+
+           PSI
+              I             S             Q
+              ________      ________      ________
+ I                  5
+ S                  0             6
+ Q                  0             0             7
+
+
+     STARTING VALUES
+
+
+           NU
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+                0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              I             S             Q
+              ________      ________      ________
+ RT1            1.000         0.000         0.000
+ RT2            1.000         1.000         1.000
+ RT3            1.000         2.000         4.000
+ RT4            1.000         3.000         9.000
+
+
+           THETA
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1          153.730
+ RT2            0.000       188.605
+ RT3            0.000         0.000       196.235
+ RT4            0.000         0.000         0.000       188.420
+
+
+           ALPHA
+              I             S             Q
+              ________      ________      ________
+                0.000         0.000         0.000
+
+
+           BETA
+              I             S             Q
+              ________      ________      ________
+ I              0.000         0.000         0.000
+ S              0.000         0.000         0.000
+ Q              0.000         0.000         0.000
+
+
+           PSI
+              I             S             Q
+              ________      ________      ________
+ I              0.050
+ S              0.000         0.050
+ Q              0.000         0.000         0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch11\mplus\ch11d.dgm
+
+     Beginning Time:  23:30:28
+        Ending Time:  23:30:28
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

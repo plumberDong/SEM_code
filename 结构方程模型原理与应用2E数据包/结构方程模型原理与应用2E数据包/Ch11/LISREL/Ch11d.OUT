@@ -1,0 +1,221 @@
+
+                                DATE:  4/ 5/2018
+                                  TIME: 22:18
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch11\LISREL\Ch11d.LIS:
+
+ Ch11 Three factor  Quadratic model using LISREL syntax
+ DATA    NI=4 NO=200
+ CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+ LA;     RT1 RT2 RT3 RT4
+ MO    NY=4 NE=3 PS=DI,FR TE=SY TY=FI AL=FR
+ LE;    Intercept Slope Quadratic
+ VA    1 LY(1,1) LY(2,1) Ly(3,1) Ly(4,1)
+ VA    0 LY(1, 2)
+ VA   1 LY(2,2)
+ VA 2 LY(3,2)
+ VA 3 LY(4,2)
+ VA    0 LY(1,3)
+ VA 1 LY(2,3)
+ VA 4 LY(3,3)
+ VA 9 LY(4,3)
+ EQ TE(4,4) TE(1,1) TE(2,2) TE(3,3)
+ PD
+ OU
+
+ Ch11 Three factor Quadratic model using LISREL syntax                          
+
+                           Number of Input Variables  4
+                           Number of Y - Variables    4
+                           Number of X - Variables    0
+                           Number of ETA - Variables  3
+                           Number of KSI - Variables  0
+                           Number of Observations   200
+
+ Ch11 Three factor Quadratic model using LISREL syntax                          
+
+         Covariance Matrix       
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+      RT1    307.460
+      RT2    296.520    377.210
+      RT3    295.020    365.100    392.470
+      RT4    291.020    355.880    358.250    376.840
+
+ Total Variance = 1453.980 Generalized Variance = 37786493.359                            
+
+ Largest Eigenvalue = 1350.649 Smallest Eigenvalue = 18.007                                  
+
+ Condition Number = 8.661
+
+         Means   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              37.480     53.300     54.820     52.630
+
+
+ Ch11 Three factor Quadratic model using LISREL syntax                          
+
+ Parameter Specifications
+
+         PSI         
+
+            Intercep      Slope   Quadrati
+            --------   --------   --------
+                   1          2          3
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4
+            --------   --------   --------   --------
+                   4          4          4          4
+
+         ALPHA       
+
+            Intercep      Slope   Quadrati
+            --------   --------   --------
+                   5          6          7
+ 
+
+
+ Ch11 Three factor Quadratic model using LISREL syntax                          
+
+ Number of Iterations = 9           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+            Intercep      Slope   Quadrati   
+            --------   --------   --------
+      RT1      1.000       - -        - - 
+ 
+      RT2      1.000      1.000      1.000
+ 
+      RT3      1.000      2.000      4.000
+ 
+      RT4      1.000      3.000      9.000
+ 
+
+         Covariance Matrix of ETA                
+         Note: This matrix is diagonal.
+
+            Intercep      Slope   Quadrati   
+            --------   --------   --------
+             298.186     12.672     -1.141
+
+         Mean Vector of Eta-Variables
+
+            Intercep      Slope   Quadrati   
+            --------   --------   --------
+              38.009     18.205     -4.503
+
+         PSI         
+         Note: This matrix is diagonal.
+
+            Intercep      Slope   Quadrati   
+            --------   --------   --------
+             298.186     12.672     -1.141
+            (31.641)    (2.086)    (0.189)
+               9.424      6.075     -6.042
+ 
+
+ W_A_R_N_I_N_G: PSI is not positive definite
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              35.574     35.574     35.574     35.574
+             (2.528)    (2.528)    (2.528)    (2.528)
+              14.074     14.074     14.074     14.074
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+               0.893      0.897      0.903      0.900
+
+         ALPHA       
+
+            Intercep      Slope   Quadrati   
+            --------   --------   --------
+              38.009     18.205     -4.503
+             (1.288)    (0.706)    (0.197)
+              29.502     25.767    -22.869
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)         7                       14
+ -2ln(L)                       4367.677                 4289.492
+ AIC (Akaike, 1974)*           4381.677                 4317.492
+ BIC (Schwarz, 1978)*          4404.765                 4363.669
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      7
+ Maximum Likelihood Ratio Chi-Square (C1)              78.185 (P = 0.0000)
+ Due to Covariance Structure                           46.659
+ Due to Mean Structure                                 31.526
+ Browne's (1984) ADF Chi-Square (C2_NT)                59.661 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              71.185
+ 90 Percent Confidence Interval for NCP                (46.390 ; 103.435)
+ 
+ Minimum Fit Function Value                            0.391
+ Population Discrepancy Function Value (F0)            0.356
+ 90 Percent Confidence Interval for F0                 (0.232 ; 0.517)
+ Root Mean Square Error of Approximation (RMSEA)       0.225
+ 90 Percent Confidence Interval for RMSEA              (0.182 ; 0.272)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                0.461
+ 90 Percent Confidence Interval for ECVI               (0.317 ; 0.602)
+ ECVI for Saturated Model                              0.1000
+ ECVI for Independence Model                           6.158
+ 
+ Chi-Square for Independence Model (6 df)            1223.593
+ 
+ Normed Fit Index (NFI)                                0.936
+ Non-Normed Fit Index (NNFI)                           0.950
+ Parsimony Normed Fit Index (PNFI)                     1.092
+ Comparative Fit Index (CFI)                           0.942
+ Incremental Fit Index (IFI)                           0.941
+ Relative Fit Index (RFI)                              0.945
+ 
+ Critical N (CN)                                      48.026
+ 
+ 
+ Root Mean Square Residual (RMR)                       25.825
+ Standardized RMR                                      0.0733
+ Goodness of Fit Index (GFI)                           0.922
+ Adjusted Goodness of Fit Index (AGFI)                 0.888
+ Parsimony Goodness of Fit Index (PGFI)                0.645
+
+                           Time used 0.016 seconds

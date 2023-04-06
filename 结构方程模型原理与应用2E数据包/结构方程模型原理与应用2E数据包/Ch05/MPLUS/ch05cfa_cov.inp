@@ -1,0 +1,13 @@
+TITLE:	ch5a Confirmatory Factor Analysis using LISREL syntax
+DATA:   	FILE IS ch05cfa15.cov;
+            TYPE = covariance;
+            NOBS = 313;
+VARIABLE:	NAMES ARE a1-a3 b1-b3 c1-c3 d1-d3 e1-e3;
+MODEL:     
+ VALUE    by a1-a3;
+ JOBSTYLE by b1-b3;
+ TEAMWORK by c1-c3;
+ LEADERSH by d1-d3;
+ LEARNING by e1-e3;
+OUTPUT: 
+STANDARDIZED;

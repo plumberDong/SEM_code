@@ -1,0 +1,7 @@
+TITLE:	Ch11 Two actor UTM with residual homogeneity assumption
+DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+VARIABLE:	NAMES ARE RT1-RT4;
+MODEL:      I S | RT1@0 RT2* RT3* RT4@1;
+            I WITH S @0;            
+            RT1-RT4 (EQ);    !•O¥›Æt≈‹≤ß¨€µ•
+OUTPUT:     TECH1; SAMPSTAT;

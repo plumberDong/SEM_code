@@ -1,0 +1,309 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  1:01
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m7.Spl:
+
+ Ch6 Model 7 four-factor HCFA using SIMPLIS syntax
+ Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ Raw Data from File ch6.dat
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ Latent Variables:  Flu Fle Ori Affect Crea
+ Relationships:
+ FF1 VF1=Flu
+ FF2 VF2=Fle
+ FF3 VF3=Ori
+ PF1-PF4=Affect
+ Flu Fle Ori Affect =Crea
+ Path Diagram
+ LISREL Output AD=off
+ End of Program
+
+ Ch6 Model 7 four-factor HCFA using SIMPLIS syntax                              
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ Ch6 Model 7 four-factor HCFA using SIMPLIS syntax                              
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect
+            --------   --------   --------   --------
+      FF1          0          0          0          0
+      FF2          0          0          0          0
+      FF3          0          0          0          0
+      VF1          1          0          0          0
+      VF2          0          2          0          0
+      VF3          0          0          3          0
+      PF1          0          0          0          0
+      PF2          0          0          0          4
+      PF3          0          0          0          5
+      PF4          0          0          0          6
+
+         GAMMA       
+
+                Crea
+            --------
+      Flu          7
+      Fle          8
+      Ori          9
+   Affect         10
+
+         PSI         
+
+                 Flu        Fle        Ori     Affect
+            --------   --------   --------   --------
+                  11         12         13         14
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  15         16         17         18         19         20
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  21         22         23         24
+ 
+
+
+ Ch6 Model 7 four-factor HCFA using SIMPLIS syntax                              
+
+ Number of Iterations = 241         
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1      3.223       - -        - -        - - 
+      FF2       - -       2.458       - -        - - 
+      FF3       - -        - -       5.456       - - 
+      VF1     11.573       - -        - -        - - 
+      VF2       - -       5.141       - -        - - 
+      VF3       - -        - -       9.099       - - 
+      PF1       - -        - -        - -       0.763
+      PF2       - -        - -        - -      -4.451
+      PF3       - -        - -        - -      -3.632
+      PF4       - -        - -        - -      -3.078
+
+         GAMMA       
+
+                Crea   
+            --------
+      Flu      1.036
+      Fle      1.103
+      Ori      1.038
+   Affect     -0.544
+
+         Covariance Matrix of ETA and KSI        
+
+                 Flu        Fle        Ori     Affect       Crea   
+            --------   --------   --------   --------   --------
+      Flu      1.000
+      Fle      1.142      1.000
+      Ori      1.074      1.144      1.000
+   Affect     -0.563     -0.599     -0.564      1.000
+     Crea      1.036      1.103      1.038     -0.544      1.000
+
+         PHI         
+
+                Crea   
+            --------
+               1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+              -0.072     -0.216     -0.077      0.704
+
+         Squared Multiple Correlations for Structural Equations  
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+               1.072      1.216      1.077      0.296
+
+ NOTE: R² for Structural Equatios are Hayduk's (2006) Blocked-Error R²
+
+         Squared Multiple Correlations for Reduced Form          
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+               1.072      1.216      1.077      0.296
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+              23.311     11.248     85.431     18.204      8.955     55.764
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+              16.209     28.863     33.820     16.574
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        24                       55
+ -2ln(L)                      33727.579                30224.093
+ AIC (Akaike, 1974)*          33775.579                30334.093
+ BIC (Schwarz, 1978)*         33888.130                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      31
+ Maximum Likelihood Ratio Chi-Square (C1)              3503.486 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                1660.885 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              3472.486
+ 90 Percent Confidence Interval for NCP                (3281.764 ; 3670.486)
+ 
+ Minimum Fit Function Value                            4.358
+ Population Discrepancy Function Value (F0)            4.319
+ 90 Percent Confidence Interval for F0                 (4.082 ; 4.565)
+ Root Mean Square Error of Approximation (RMSEA)       0.373
+ 90 Percent Confidence Interval for RMSEA              (0.363 ; 0.384)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                4.417
+ 90 Percent Confidence Interval for ECVI               (4.180 ; 4.664)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.404
+ Non-Normed Fit Index (NNFI)                           0.136
+ Parsimony Normed Fit Index (PNFI)                     0.278
+ Comparative Fit Index (CFI)                           0.404
+ Incremental Fit Index (IFI)                           0.406
+ Relative Fit Index (RFI)                              0.134
+ 
+ Critical N (CN)                                      12.963
+ 
+ 
+ Root Mean Square Residual (RMR)                       22.025
+ Standardized RMR                                      0.285
+ Goodness of Fit Index (GFI)                           0.647
+ Adjusted Goodness of Fit Index (AGFI)                 0.373
+ Parsimony Goodness of Fit Index (PGFI)                0.364
+
+                           Time used 0.078 seconds

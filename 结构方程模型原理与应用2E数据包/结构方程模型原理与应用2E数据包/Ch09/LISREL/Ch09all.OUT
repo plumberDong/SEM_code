@@ -1,0 +1,463 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME: 23:40
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch09\LISREL\Ch09all.LIS:
+
+ Ch09a All data
+ DATA  NI=18 NO=312
+ KM SY FI=Ch09all.cor; ME FI=Ch09all.cor; SD FI=Ch09all.cor
+ LA; A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+ MODEL  NX=18 NK=6 PH=SY,FR TD=DI,FR LX=FU,FI
+ LK; VALUE JOBSTYLE TEAMWORK LEADERSHIP LEARNING ENVIRONMENT
+ FREE  LX(1,1) LX(2,1) LX(3,1) LX(4,2) LX(5,2) LX(6,2) LX(7,3) LX(8,3) LX(9,3)
+ FREE  LX(10,4) LX(11,4) LX(12,4) LX(13,5) LX(14,5) LX(15,5) LX(16,6)LX(17,6) LX(18,6)
+ VALUE 1 PH(1,1) PH(2,2) PH(3,3) PH(4,4) PH(5,5) PH(6,6)
+ PD
+ OUTPUT SS SC
+
+ Ch09a All data                                                                 
+
+                           Number of Input Variables 18
+                           Number of Y - Variables    0
+                           Number of X - Variables   18
+                           Number of ETA - Variables  0
+                           Number of KSI - Variables  6
+                           Number of Observations   312
+
+ Ch09a All data                                                                 
+
+         Covariance Matrix       
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+       A1      0.960
+       A2      0.570      1.040
+       A3      0.523      0.396      0.941
+       B1      0.273      0.355      0.304      1.346
+       B2      0.421      0.473      0.270      0.767      1.346
+       B3      0.363      0.378      0.275      0.683      0.835      1.188
+       C1      0.192      0.270      0.162      0.409      0.489      0.449
+       C2      0.273      0.294      0.120      0.406      0.478      0.404
+       C3      0.350      0.407      0.295      0.378      0.475      0.423
+       D1      0.304      0.355      0.164      0.273      0.382      0.359
+       D2      0.222      0.240      0.122      0.234      0.283      0.256
+       D3      0.214      0.269      0.115      0.222      0.338      0.317
+       E1      0.323      0.317      0.348      0.383      0.518      0.465
+       E2      0.346      0.443      0.323      0.387      0.469      0.429
+       E3      0.240      0.400      0.247      0.330      0.432      0.406
+       F1      0.344      0.251      0.329      0.163      0.339      0.242
+       F2      0.459      0.367      0.285      0.139      0.253      0.285
+       F3      0.479      0.384      0.356      0.218      0.338      0.277
+
+         Covariance Matrix       
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+       C1      0.960
+       C2      0.555      1.061
+       C3      0.442      0.508      1.103
+       D1      0.249      0.310      0.316      0.884
+       D2      0.198      0.286      0.291      0.616      0.706
+       D3      0.339      0.366      0.354      0.505      0.489      0.828
+       E1      0.342      0.280      0.387      0.419      0.350      0.380
+       E2      0.416      0.375      0.403      0.399      0.322      0.404
+       E3      0.346      0.353      0.381      0.368      0.313      0.339
+       F1      0.344      0.398      0.381      0.275      0.285      0.319
+       F2      0.267      0.314      0.469      0.195      0.192      0.208
+       F3      0.322      0.290      0.355      0.168      0.142      0.188
+
+         Covariance Matrix       
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+       E1      0.941
+       E2      0.735      1.020
+       E3      0.627      0.742      0.960
+       F1      0.306      0.366      0.321      1.369
+       F2      0.243      0.319      0.267      0.548      1.188
+       F3      0.264      0.323      0.258      0.473      0.656      0.884
+
+ Total Variance = 18.724 Generalized Variance = 0.172350D-03                            
+
+ Largest Eigenvalue = 7.170 Smallest Eigenvalue = 0.153                                   
+
+ Condition Number = 6.844
+
+
+ Ch09a All data                                                                 
+
+ Parameter Specifications
+
+         LAMBDA-X    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM
+            --------   --------   --------   --------   --------   --------
+       A1          1          0          0          0          0          0
+       A2          2          0          0          0          0          0
+       A3          3          0          0          0          0          0
+       B1          0          4          0          0          0          0
+       B2          0          5          0          0          0          0
+       B3          0          6          0          0          0          0
+       C1          0          0          7          0          0          0
+       C2          0          0          8          0          0          0
+       C3          0          0          9          0          0          0
+       D1          0          0          0         10          0          0
+       D2          0          0          0         11          0          0
+       D3          0          0          0         12          0          0
+       E1          0          0          0          0         13          0
+       E2          0          0          0          0         14          0
+       E3          0          0          0          0         15          0
+       F1          0          0          0          0          0         16
+       F2          0          0          0          0          0         17
+       F3          0          0          0          0          0         18
+
+         PHI         
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM
+            --------   --------   --------   --------   --------   --------
+    VALUE          0
+ JOBSTYLE         19          0
+ TEAMWORK         20         21          0
+ LEADERSH         22         23         24          0
+ LEARNING         25         26         27         28          0
+ ENVIRONM         29         30         31         32         33          0
+
+         THETA-DELTA 
+
+                  A1         A2         A3         B1         B2         B3
+            --------   --------   --------   --------   --------   --------
+                  34         35         36         37         38         39
+
+         THETA-DELTA 
+
+                  C1         C2         C3         D1         D2         D3
+            --------   --------   --------   --------   --------   --------
+                  40         41         42         43         44         45
+
+         THETA-DELTA 
+
+                  E1         E2         E3         F1         F2         F3
+            --------   --------   --------   --------   --------   --------
+                  46         47         48         49         50         51
+ 
+
+
+ Ch09a All data                                                                 
+
+ Number of Iterations = 8           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-X    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+       A1      0.815       - -        - -        - -        - -        - - 
+             (0.051)
+              15.999
+ 
+       A2      0.704       - -        - -        - -        - -        - - 
+             (0.055)
+              12.703
+ 
+       A3      0.614       - -        - -        - -        - -        - - 
+             (0.054)
+              11.408
+ 
+       B1       - -       0.790       - -        - -        - -        - - 
+                        (0.062)
+                         12.726
+ 
+       B2       - -       0.969       - -        - -        - -        - - 
+                        (0.058)
+                         16.660
+ 
+       B3       - -       0.863       - -        - -        - -        - - 
+                        (0.056)
+                         15.496
+ 
+       C1       - -        - -       0.701       - -        - -        - - 
+                                   (0.053)
+                                    13.124
+ 
+       C2       - -        - -       0.732       - -        - -        - - 
+                                   (0.056)
+                                    13.016
+ 
+       C3       - -        - -       0.699       - -        - -        - - 
+                                   (0.058)
+                                    11.992
+ 
+       D1       - -        - -        - -       0.818       - -        - - 
+                                              (0.045)
+                                               18.238
+ 
+       D2       - -        - -        - -       0.744       - -        - - 
+                                              (0.040)
+                                               18.735
+ 
+       D3       - -        - -        - -       0.652       - -        - - 
+                                              (0.047)
+                                               13.970
+ 
+       E1       - -        - -        - -        - -       0.804       - - 
+                                                         (0.046)
+                                                          17.343
+ 
+       E2       - -        - -        - -        - -       0.915       - - 
+                                                         (0.046)
+                                                          19.849
+ 
+       E3       - -        - -        - -        - -       0.800       - - 
+                                                         (0.047)
+                                                          16.933
+ 
+       F1       - -        - -        - -        - -        - -       0.641
+                                                                    (0.067)
+                                                                      9.603
+ 
+       F2       - -        - -        - -        - -        - -       0.822
+                                                                    (0.058)
+                                                                     14.174
+ 
+       F3       - -        - -        - -        - -        - -       0.788
+                                                                    (0.049)
+                                                                     16.136
+ 
+
+         PHI         
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      1.000
+ 
+ JOBSTYLE      0.544      1.000
+             (0.054)
+              10.050
+ 
+ TEAMWORK      0.493      0.699      1.000
+             (0.061)    (0.047)
+               8.050     14.968
+ 
+ LEADERSH      0.419      0.447      0.525      1.000
+             (0.058)    (0.055)    (0.055)
+               7.209      8.122      9.532
+ 
+ LEARNING      0.525      0.571      0.608      0.557      1.000
+             (0.052)    (0.048)    (0.050)    (0.046)
+              10.048     11.975     12.261     12.063
+ 
+ ENVIRONM      0.699      0.392      0.601      0.316      0.443      1.000
+             (0.046)    (0.061)    (0.055)    (0.062)    (0.056)
+              15.273      6.426     11.022      5.126      7.912
+ 
+
+         THETA-DELTA 
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+               0.297      0.544      0.564      0.722      0.406      0.444
+             (0.046)    (0.054)    (0.053)    (0.068)    (0.057)    (0.052)
+               6.473      9.998     10.702     10.547      7.157      8.538
+ 
+
+         THETA-DELTA 
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+               0.468      0.525      0.614      0.215      0.152      0.404
+             (0.050)    (0.056)    (0.061)    (0.031)    (0.024)    (0.037)
+               9.327      9.416     10.127      6.938      6.196     10.836
+ 
+
+         THETA-DELTA 
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+               0.294      0.182      0.321      0.958      0.512      0.263
+             (0.032)    (0.030)    (0.033)    (0.084)    (0.058)    (0.042)
+               9.288      6.119      9.636     11.393      8.780      6.217
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+               0.691      0.477      0.401      0.464      0.698      0.626
+
+         Squared Multiple Correlations for X - Variables         
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+               0.512      0.506      0.443      0.756      0.785      0.513
+
+         Squared Multiple Correlations for X - Variables         
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+               0.688      0.822      0.666      0.300      0.569      0.702
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        51                      171
+ -2ln(L)                       3152.108                 2912.213
+ AIC (Akaike, 1974)*           3254.108                 3254.213
+ BIC (Schwarz, 1978)*          3445.001                 3894.267
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      120
+ Maximum Likelihood Ratio Chi-Square (C1)              239.895 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                228.056 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              119.895
+ 90 Percent Confidence Interval for NCP                (79.614 ; 167.961)
+ 
+ Minimum Fit Function Value                            0.769
+ Population Discrepancy Function Value (F0)            0.384
+ 90 Percent Confidence Interval for F0                 (0.255 ; 0.538)
+ Root Mean Square Error of Approximation (RMSEA)       0.0566
+ 90 Percent Confidence Interval for RMSEA              (0.0461 ; 0.0670)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.145
+ 
+ Expected Cross-Validation Index (ECVI)                1.096
+ 90 Percent Confidence Interval for ECVI               (0.967 ; 1.250)
+ ECVI for Saturated Model                              1.096
+ ECVI for Independence Model                           9.222
+ 
+ Chi-Square for Independence Model (153 df)        2841.291
+ 
+ Normed Fit Index (NFI)                                0.916
+ Non-Normed Fit Index (NNFI)                           0.943
+ Parsimony Normed Fit Index (PNFI)                     0.718
+ Comparative Fit Index (CFI)                           0.955
+ Incremental Fit Index (IFI)                           0.956
+ Relative Fit Index (RFI)                              0.892
+ 
+ Critical N (CN)                                     207.064
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.0534
+ Standardized RMR                                      0.0518
+ Goodness of Fit Index (GFI)                           0.925
+ Adjusted Goodness of Fit Index (AGFI)                 0.893
+ Parsimony Goodness of Fit Index (PGFI)                0.649
+
+ Ch09a All data                                                                 
+
+ Standardized Solution           
+
+         LAMBDA-X    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+       A1      0.815       - -        - -        - -        - -        - - 
+       A2      0.704       - -        - -        - -        - -        - - 
+       A3      0.614       - -        - -        - -        - -        - - 
+       B1       - -       0.790       - -        - -        - -        - - 
+       B2       - -       0.969       - -        - -        - -        - - 
+       B3       - -       0.863       - -        - -        - -        - - 
+       C1       - -        - -       0.701       - -        - -        - - 
+       C2       - -        - -       0.732       - -        - -        - - 
+       C3       - -        - -       0.699       - -        - -        - - 
+       D1       - -        - -        - -       0.818       - -        - - 
+       D2       - -        - -        - -       0.744       - -        - - 
+       D3       - -        - -        - -       0.652       - -        - - 
+       E1       - -        - -        - -        - -       0.804       - - 
+       E2       - -        - -        - -        - -       0.915       - - 
+       E3       - -        - -        - -        - -       0.800       - - 
+       F1       - -        - -        - -        - -        - -       0.641
+       F2       - -        - -        - -        - -        - -       0.822
+       F3       - -        - -        - -        - -        - -       0.788
+
+         PHI                                     
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      1.000
+ JOBSTYLE      0.544      1.000
+ TEAMWORK      0.493      0.699      1.000
+ LEADERSH      0.419      0.447      0.525      1.000
+ LEARNING      0.525      0.571      0.608      0.557      1.000
+ ENVIRONM      0.699      0.392      0.601      0.316      0.443      1.000
+
+ Ch09a All data                                                                 
+
+ Completely Standardized Solution
+
+         LAMBDA-X    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+       A1      0.831       - -        - -        - -        - -        - - 
+       A2      0.691       - -        - -        - -        - -        - - 
+       A3      0.633       - -        - -        - -        - -        - - 
+       B1       - -       0.681       - -        - -        - -        - - 
+       B2       - -       0.835       - -        - -        - -        - - 
+       B3       - -       0.791       - -        - -        - -        - - 
+       C1       - -        - -       0.716       - -        - -        - - 
+       C2       - -        - -       0.711       - -        - -        - - 
+       C3       - -        - -       0.666       - -        - -        - - 
+       D1       - -        - -        - -       0.870       - -        - - 
+       D2       - -        - -        - -       0.886       - -        - - 
+       D3       - -        - -        - -       0.716       - -        - - 
+       E1       - -        - -        - -        - -       0.829       - - 
+       E2       - -        - -        - -        - -       0.906       - - 
+       E3       - -        - -        - -        - -       0.816       - - 
+       F1       - -        - -        - -        - -        - -       0.548
+       F2       - -        - -        - -        - -        - -       0.754
+       F3       - -        - -        - -        - -        - -       0.838
+
+         PHI                                     
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      1.000
+ JOBSTYLE      0.544      1.000
+ TEAMWORK      0.493      0.699      1.000
+ LEADERSH      0.419      0.447      0.525      1.000
+ LEARNING      0.525      0.571      0.608      0.557      1.000
+ ENVIRONM      0.699      0.392      0.601      0.316      0.443      1.000
+
+         THETA-DELTA 
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+               0.309      0.523      0.599      0.536      0.302      0.374
+
+         THETA-DELTA 
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+               0.488      0.494      0.557      0.244      0.215      0.487
+
+         THETA-DELTA 
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+               0.312      0.178      0.334      0.700      0.431      0.298
+
+                           Time used 0.047 seconds

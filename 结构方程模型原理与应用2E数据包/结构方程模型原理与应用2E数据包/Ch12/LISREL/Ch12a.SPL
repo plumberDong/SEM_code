@@ -1,0 +1,10 @@
+ Ch12a Mediation Analysis using SIMPLIS syntax
+ Observed variables: Y  ME1 ME2 X
+ Raw data from file Ch12MO.csv
+ Sample Size = 681
+ Relationships
+ Y = ME1 ME2 X
+ ME1 ME2= X
+ Set the Error Covariance of ME2 and ME1 Free
+ Path Diagram
+ End of Problem

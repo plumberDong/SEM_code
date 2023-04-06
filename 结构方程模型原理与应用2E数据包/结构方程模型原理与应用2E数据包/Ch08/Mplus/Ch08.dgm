@@ -1,0 +1,165 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+ Ch08 SEM  Stage 2 Modified Model using MPLUS8
+DATA:
+       File is Ch08.cov;
+            Type is covariance;
+            NOBS are 250;
+VARIABLE:
+   Names are CREAT SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2;
+OUTPUT:
+    tech1; STANDARDIZED;
+MODEL:
+  Crea      by CREAT;
+  Efficacy  by SEFF1-SEFF4;
+  Person    by PER1 PER2 PER3;
+  Soclized  by SOC1 SOC2;
+  Crea      on Efficacy Person Soclized;
+  Efficacy  on Person Soclized;
+  CREAT @0;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+10
+4
+0
+creat seff1 seff2 seff3 seff4 per1 per2 per3 soc1 soc2 crea efficacy person soclized
+3
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 2 1 0 0
+0
+4
+crea
+creat
+efficacy
+seff1 seff2 seff3 seff4
+person
+per1 per2 per3
+soclized
+soc1 soc2
+1 1 crea creat    1.000    0.000
+1 1 efficacy seff1    1.000    0.000
+1 1 efficacy seff2    0.474    0.074
+1 1 efficacy seff3    0.735    0.091
+1 1 efficacy seff4    0.834    0.070
+1 1 person per1    1.000    0.000
+1 1 person per2    1.009    0.064
+1 1 person per3    0.875    0.062
+1 1 soclized soc1    1.000    0.000
+1 1 soclized soc2    1.064    0.149
+1 1 efficacy crea    4.364    0.807
+1 1 person crea    0.616    0.189
+1 1 soclized crea   -0.010    0.147
+1 1 person efficacy    0.190    0.019
+1 1 soclized efficacy    0.001    0.026
+2 1 soclized person    1.787    0.350
+4 1 creat    0.000    0.000
+4 1 seff1    0.114    0.018
+4 1 seff2    0.308    0.028
+4 1 seff3    0.431    0.041
+4 1 seff4    0.191    0.020
+4 1 per1    2.365    0.283
+4 1 per2    1.758    0.241
+4 1 per3    2.354    0.261
+4 1 soc1    2.279    0.339
+4 1 soc2    0.495    0.311
+4 1 crea    4.941    0.600
+4 1 efficacy    0.100    0.020
+5 1 person    5.170    0.667
+5 1 soclized    2.185    0.438
+11 1 crea creat    1.000    0.000
+11 1 efficacy seff1    0.846    0.028
+11 1 efficacy seff2    0.417    0.057
+11 1 efficacy seff3    0.515    0.051
+11 1 efficacy seff4    0.716    0.037
+11 1 person per1    0.828    0.025
+11 1 person per2    0.866    0.022
+11 1 person per3    0.792    0.028
+11 1 soclized soc1    0.700    0.054
+11 1 soclized soc2    0.913    0.058
+11 1 efficacy crea    0.558    0.093
+11 1 person crea    0.334    0.100
+11 1 soclized crea   -0.003    0.052
+11 1 person efficacy    0.805    0.056
+11 1 soclized efficacy    0.003    0.071
+12 1 soclized person    0.532    0.060
+14 1 creat    0.000  999.000
+14 1 seff1    0.284    0.047
+14 1 seff2    0.826    0.047
+14 1 seff3    0.734    0.053
+14 1 seff4    0.488    0.052
+14 1 per1    0.314    0.041
+14 1 per2    0.250    0.038
+14 1 per3    0.373    0.045
+14 1 soc1    0.511    0.076
+14 1 soc2    0.167    0.105
+14 1 crea    0.280    0.038
+14 1 efficacy    0.349    0.060
+15 1 person    1.000    0.000
+15 1 soclized    1.000    0.000
+21 1 crea creat    1.000    0.000
+21 1 efficacy seff1    0.846    0.028
+21 1 efficacy seff2    0.417    0.057
+21 1 efficacy seff3    0.515    0.051
+21 1 efficacy seff4    0.716    0.037
+21 1 person per1    0.828    0.025
+21 1 person per2    0.866    0.022
+21 1 person per3    0.792    0.028
+21 1 soclized soc1    0.700    0.054
+21 1 soclized soc2    0.913    0.058
+21 1 efficacy crea    0.558    0.093
+21 1 person crea    0.334    0.100
+21 1 soclized crea   -0.003    0.052
+21 1 person efficacy    0.805    0.056
+21 1 soclized efficacy    0.003    0.071
+22 1 soclized person    0.532    0.060
+24 1 creat  999.000  999.000
+24 1 seff1    0.284    0.047
+24 1 seff2    0.826    0.047
+24 1 seff3    0.734    0.053
+24 1 seff4    0.488    0.052
+24 1 per1    0.314    0.041
+24 1 per2    0.250    0.038
+24 1 per3    0.373    0.045
+24 1 soc1    0.511    0.076
+24 1 soc2    0.167    0.105
+24 1 crea    0.280    0.038
+24 1 efficacy    0.349    0.060
+25 1 person    1.000    0.000
+25 1 soclized    1.000    0.000
+31 1 crea creat    4.200    0.188
+31 1 efficacy seff1    0.537    0.035
+31 1 efficacy seff2    0.255    0.039
+31 1 efficacy seff3    0.395    0.048
+31 1 efficacy seff4    0.448    0.036
+31 1 person per1    2.274    0.147
+31 1 person per2    2.294    0.138
+31 1 person per3    1.989    0.137
+31 1 soclized soc1    1.478    0.148
+31 1 soclized soc2    1.573    0.128
+31 1 efficacy crea    0.558    0.093
+31 1 person crea    0.334    0.100
+31 1 soclized crea   -0.003    0.052
+31 1 person efficacy    0.805    0.056
+31 1 soclized efficacy    0.003    0.071
+32 1 soclized person    0.532    0.060
+34 1 creat  999.000  999.000
+34 1 seff1    0.114    0.018
+34 1 seff2    0.308    0.028
+34 1 seff3    0.431    0.041
+34 1 seff4    0.191    0.020
+34 1 per1    2.365    0.283
+34 1 per2    1.758    0.241
+34 1 per3    2.354    0.261
+34 1 soc1    2.279    0.339
+34 1 soc2    0.495    0.311
+34 1 crea    0.280    0.038
+34 1 efficacy    0.349    0.060
+35 1 person    1.000    0.000
+35 1 soclized    1.000    0.000

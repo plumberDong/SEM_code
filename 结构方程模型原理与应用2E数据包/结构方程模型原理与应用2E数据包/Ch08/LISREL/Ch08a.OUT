@@ -1,0 +1,219 @@
+
+                                DATE:  4/ 4/2018
+                                  TIME: 20:31
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch08\LISREL\Ch08a.SPL:
+
+ Ch8 SEM Stage 1 CFA using SIMPLIS syntax
+ Observed variables: CREA SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2
+ Covariance matrix from file Ch08.cov
+ Sample Size = 250
+ Latent Variables  Creat Efficacy Person Soclized
+ Relationships
+ CREA = Creat
+ SEFF1-SEFF4 = Efficacy
+ PER1-PER3= Person
+ SOC1 -SOC2 =Soclized
+ Set the error variance of CREA to 0
+ Robust Estimation
+ Path Diagram
+ End of Problem
+
+ Sample Size =   250
+
+ Ch8 SEM Stage 1 CFA using SIMPLIS syntax                                       
+
+         Covariance Matrix       
+
+                CREA      SEFF1      SEFF2      SEFF3      SEFF4       PER1   
+            --------   --------   --------   --------   --------   --------
+     CREA     17.711
+    SEFF1      1.843      0.404
+    SEFF2      0.801      0.146      0.374
+    SEFF3      1.243      0.227      0.110      0.589
+    SEFF4      1.692      0.226      0.115      0.208      0.393
+     PER1      7.518      1.074      0.301      0.531      0.741      7.565
+     PER2      7.585      1.062      0.538      0.609      0.806      5.202
+     PER3      6.499      0.906      0.388      0.434      0.664      4.530
+     SOC1      3.020      0.369      0.237      0.322      0.196      1.947
+     SOC2      2.663      0.318      0.307      0.335      0.326      2.092
+
+         Covariance Matrix       
+
+                PER2       PER3       SOC1       SOC2   
+            --------   --------   --------   --------
+     PER2      7.046
+     PER3      4.626      6.335
+     SOC1      1.524      1.649      4.482
+     SOC2      1.824      1.662      2.335      2.982
+
+ Total Variance = 47.881 Generalized Variance = 17.911                                  
+
+ Largest Eigenvalue = 31.566 Smallest Eigenvalue = 0.136                                   
+
+ Condition Number = 15.246
+ 
+
+
+ Ch8 SEM Stage 1 CFA using SIMPLIS syntax                                       
+
+ Number of Iterations = 8           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         Measurement Equations
+
+ 
+     CREA = 4.208*Creat,, R² = 1.000
+ Standerr  (0.189)                  
+ Z-values   22.316                  
+ P-values   0.000        
+ 
+    SEFF1 = 0.538*Efficacy, Errorvar.= 0.115  , R² = 0.716
+ Standerr  (0.0349)                   (0.0176)            
+ Z-values   15.412                     6.506              
+ P-values   0.000                      0.000   
+ 
+    SEFF2 = 0.255*Efficacy, Errorvar.= 0.309  , R² = 0.174
+ Standerr  (0.0395)                   (0.0286)            
+ Z-values   6.454                      10.813             
+ P-values   0.000                      0.000   
+ 
+    SEFF3 = 0.396*Efficacy, Errorvar.= 0.433  , R² = 0.266
+ Standerr  (0.0483)                   (0.0410)            
+ Z-values   8.194                      10.561             
+ P-values   0.000                      0.000   
+ 
+    SEFF4 = 0.449*Efficacy, Errorvar.= 0.192  , R² = 0.512
+ Standerr  (0.0364)                   (0.0205)            
+ Z-values   12.310                     9.366              
+ P-values   0.000                      0.000   
+ 
+     PER1 = 2.278*Person, Errorvar.= 2.375 , R² = 0.686
+ Standerr  (0.147)                  (0.285)            
+ Z-values   15.471                   8.339             
+ P-values   0.000                    0.000  
+ 
+     PER2 = 2.298*Person, Errorvar.= 1.765 , R² = 0.750
+ Standerr  (0.139)                  (0.242)            
+ Z-values   16.549                   7.288             
+ P-values   0.000                    0.000  
+ 
+     PER3 = 1.993*Person, Errorvar.= 2.363 , R² = 0.627
+ Standerr  (0.138)                  (0.262)            
+ Z-values   14.471                   9.015             
+ P-values   0.000                    0.000  
+ 
+     SOC1 = 1.481*Soclized, Errorvar.= 2.288 , R² = 0.489
+ Standerr  (0.149)                    (0.342)            
+ Z-values   9.964                      6.700             
+ P-values   0.000                      0.000  
+ 
+     SOC2 = 1.577*Soclized, Errorvar.= 0.497 , R² = 0.833
+ Standerr  (0.129)                    (0.313)            
+ Z-values   12.231                     1.589             
+ P-values   0.000                      0.112  
+ 
+
+         Correlation Matrix of Independent Variables 
+
+               Creat   Efficacy     Person   Soclized   
+            --------   --------   --------   --------
+    Creat      1.000
+ 
+ Efficacy      0.826      1.000
+             (0.030)
+              27.780
+ 
+   Person      0.782      0.807      1.000
+             (0.030)    (0.037)
+              26.478     21.778
+ 
+ Soclized      0.415      0.432      0.532      1.000
+             (0.060)    (0.067)    (0.060)
+               6.891      6.405      8.855
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        25                       55
+ -2ln(L)                       3302.318                 3221.354
+ AIC (Akaike, 1974)*           3352.318                 3331.354
+ BIC (Schwarz, 1978)*          3440.354                 3525.034
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      30
+ Maximum Likelihood Ratio Chi-Square (C1)              80.964 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                73.086 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              50.964
+ 90 Percent Confidence Interval for NCP                (27.987 ; 81.602)
+ 
+ Minimum Fit Function Value                            0.324
+ Population Discrepancy Function Value (F0)            0.204
+ 90 Percent Confidence Interval for F0                 (0.112 ; 0.326)
+ Root Mean Square Error of Approximation (RMSEA)       0.0824
+ 90 Percent Confidence Interval for RMSEA              (0.0611 ; 0.104)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.00769
+ 
+ Expected Cross-Validation Index (ECVI)                0.524
+ 90 Percent Confidence Interval for ECVI               (0.432 ; 0.646)
+ ECVI for Saturated Model                              0.440
+ ECVI for Independence Model                           5.130
+ 
+ Chi-Square for Independence Model (45 df)          1262.601
+ 
+ Normed Fit Index (NFI)                                0.936
+ Non-Normed Fit Index (NNFI)                           0.937
+ Parsimony Normed Fit Index (PNFI)                     0.624
+ Comparative Fit Index (CFI)                           0.958
+ Incremental Fit Index (IFI)                           0.959
+ Relative Fit Index (RFI)                              0.904
+ 
+ Critical N (CN)                                     157.516
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.104
+ Standardized RMR                                      0.0416
+ Goodness of Fit Index (GFI)                           0.945
+ Adjusted Goodness of Fit Index (AGFI)                 0.899
+ Parsimony Goodness of Fit Index (PGFI)                0.515
+
+        The Modification Indices Suggest to Add the
+  Path to  from      Decrease in Chi-Square    New Estimate
+ SEFF1     Person             13.1                 0.35
+ SEFF3     Person              9.3                -0.32
+ SEFF4     Creat              12.7                 0.31
+
+ The Modification Indices Suggest to Add an Error Covariance
+  Between    and     Decrease in Chi-Square    New Estimate
+ SEFF4     CREA               13.0                 0.33
+ SEFF4     SEFF1              11.8                -0.07
+ PER1      SEFF2               9.9                -0.20
+ SOC1      SEFF4               8.1                -0.14
+ SOC2      SEFF1               8.7                -0.11
+
+                           Time used 0.000 seconds

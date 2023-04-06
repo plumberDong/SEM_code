@@ -1,0 +1,24 @@
+TITLE:      MoMe example
+DATA:       FILE = Ch12c.csv; 
+VARIABLE:   NAMES = group y x m z; 
+            USEVARIABLES=y x m z xz mz;
+DEFINE:     CENTER x m (GRANDMEAN);
+            xz=x*z;
+            mz=m*z;
+ANALYSIS:   ESTIMATOR IS ML;
+            BOOTSTRAP IS 5000;
+MODEL:      m on x  (a)
+                 z  (da)
+                 xz (inta);
+            y on m  (b)
+                 x  (c)
+                 z  (dc)
+                 xz (intc)
+                 mz (intb);
+MODEL CONSTRAINT:
+            NEW (DIR IND TOT);
+            IND=a*b;
+            DIR=c;
+            TOT=a*b+c;
+OUTPUT:     SAMPSTAT STANDARDIZED CINTERVAL(BOOTSTRAP); 
+PLOT:       TYPE = PLOT3;

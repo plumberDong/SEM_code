@@ -1,0 +1,17 @@
+Ch11 Two factor latent change model using SIMPLIS syntax
+Observed Variables: RT1-RT4
+Covariance matrix from file=Ch11a.cov
+means from file=Ch11a.cov
+Sample Size = 200
+Latent Variables  Intercept Slope Quadratic Cubic
+Relationships
+RT1 = 1*Intercept 0*Slope  0*Quadratic 0*Cubic
+RT2 = 1*Intercept 1*Slope  1*Quadratic 1*Cubic
+RT3 = 1*Intercept 2*Slope  4*Quadratic 8*Cubic
+RT4 = 1*Intercept 3*Slope  9*Quadratic 27*Cubic
+Intercept Slope Quadratic Cubic=CONST
+Set the error variance of RT1 and RT2 and RT3 and RT4 equal
+Set the covariance of Intercept-Cubic to 0
+Path Diagram
+LISREL output
+End of Problem

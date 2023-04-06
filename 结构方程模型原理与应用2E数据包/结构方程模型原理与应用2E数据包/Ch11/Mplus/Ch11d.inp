@@ -1,0 +1,7 @@
+TITLE:	Ch11 Three factor with residual homogeneity assumption
+DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+VARIABLE:	NAMES ARE RT1-RT4;
+MODEL:      I S Q | RT1@0 RT2@1 RT3@2 RT4@3;
+            I WITH S @0;  I WITH Q @0; S WITH Q @0;            
+            RT1-RT4 (EQ);    !•O¥›Æt≈‹≤ß¨€µ•
+OUTPUT:     TECH1; SAMPSTAT;

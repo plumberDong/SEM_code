@@ -1,0 +1,623 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  1:03
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m6.LIS:
+
+ Title Model 6 three-factor HCFA model using LISREL syntax
+ DATA   NI=10 NO=804
+ RA FI=ch6.dat
+ LA
+ FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ MO    NY=10 NE=3 NK=1 LY=FU,FI GA=FU,FR
+
+ W_A_R_N_I_N_G:     FF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF4 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ MO    NY=10 NE=3 NK=1 LY=FU,FI GA=FU,FR
+ LE;   Figual Verbal Affect
+ LK;   Crea
+ FR   LY 2 1 LY 3 1 LY 4 2 LY 6 2 LY 8 3 LY 9 3 LY 10 3
+ VA 1 LY 1 1 LY 5 2  LY 7 3
+ PD
+ OUTPUT SS SC MI
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+                           Number of Input Variables 10
+                           Number of Y - Variables   10
+                           Number of X - Variables    0
+                           Number of ETA - Variables  3
+                           Number of KSI - Variables  1
+                           Number of Observations   804
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+              Figual     Verbal     Affect
+            --------   --------   --------
+      FF1          0          0          0
+      FF2          1          0          0
+      FF3          2          0          0
+      VF1          0          3          0
+      VF2          0          0          0
+      VF3          0          4          0
+      PF1          0          0          0
+      PF2          0          0          5
+      PF3          0          0          6
+      PF4          0          0          7
+
+         GAMMA       
+
+                Crea
+            --------
+   Figual          8
+   Verbal          9
+   Affect         10
+
+         PSI         
+
+              Figual     Verbal     Affect
+            --------   --------   --------
+                  11         12         13
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  14         15         16         17         18         19
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  20         21         22         23
+
+ W_A_R_N_I_N_G: THETA-EPS is not positive definite
+ 
+
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+ Number of Iterations = 50          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1      1.000       - -        - - 
+      FF2      0.637       - -        - - 
+      FF3      1.607       - -        - - 
+      VF1       - -       2.408       - - 
+      VF2       - -       1.000       - - 
+      VF3       - -       2.240       - - 
+      PF1       - -        - -       1.000
+      PF2       - -        - -       1.794
+      PF3       - -        - -       1.446
+      PF4       - -        - -       1.258
+
+         GAMMA       
+
+                Crea   
+            --------
+   Figual      4.513
+   Verbal      1.948
+   Affect      0.739
+
+         Covariance Matrix of ETA and KSI        
+
+              Figual     Verbal     Affect       Crea   
+            --------   --------   --------   --------
+   Figual     31.956
+   Verbal      8.791     11.121
+   Affect      3.334      1.439      6.942
+     Crea      4.513      1.948      0.739      1.000
+
+         PHI         
+
+                Crea   
+            --------
+               1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+              11.587      7.327      6.396
+
+         Squared Multiple Correlations for Structural Equations  
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+               0.637      0.341      0.079
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               1.157      2.586     18.449     -0.270      3.823     17.332
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               9.858     14.954     23.607      8.847
+
+ W_A_R_N_I_N_G: THETA-EPS is not positive definite
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        23                       55
+ -2ln(L)                      30330.993                30224.093
+ AIC (Akaike, 1974)*          30376.993                30334.093
+ BIC (Schwarz, 1978)*         30484.854                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      32
+ Maximum Likelihood Ratio Chi-Square (C1)              106.900 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                90.717 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              74.900
+ 90 Percent Confidence Interval for NCP                (47.259 ; 110.144)
+ 
+ Minimum Fit Function Value                            0.133
+ Population Discrepancy Function Value (F0)            0.0932
+ 90 Percent Confidence Interval for F0                 (0.0588 ; 0.137)
+ Root Mean Square Error of Approximation (RMSEA)       0.0540
+ 90 Percent Confidence Interval for RMSEA              (0.0429 ; 0.0654)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.266
+ 
+ Expected Cross-Validation Index (ECVI)                0.190
+ 90 Percent Confidence Interval for ECVI               (0.156 ; 0.234)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.982
+ Non-Normed Fit Index (NNFI)                           0.982
+ Parsimony Normed Fit Index (PNFI)                     0.698
+ Comparative Fit Index (CFI)                           0.987
+ Incremental Fit Index (IFI)                           0.987
+ Relative Fit Index (RFI)                              0.974
+ 
+ Critical N (CN)                                     402.800
+ 
+ 
+ Root Mean Square Residual (RMR)                       1.925
+ Standardized RMR                                      0.0516
+ Goodness of Fit Index (GFI)                           0.967
+ Adjusted Goodness of Fit Index (AGFI)                 0.943
+ Parsimony Goodness of Fit Index (PGFI)                0.563
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+ Modification Indices and Expected Change
+
+         Modification Indices for LAMBDA-Y       
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1       - -       0.130      7.996
+      FF2       - -       2.932      0.001
+      FF3       - -       0.407      5.584
+      VF1      0.720       - -       1.248
+      VF2      0.282      1.198     12.186
+      VF3      1.295       - -       0.073
+      PF1      0.062      0.764       - - 
+      PF2      0.897      1.521       - - 
+      PF3      0.148      4.180       - - 
+      PF4      0.047      3.238       - - 
+
+         Expected Change for LAMBDA-Y    
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1       - -       0.010     -0.092
+      FF2       - -      -0.037      0.001
+      FF3       - -       0.037      0.168
+      VF1      0.021       - -      -0.054
+      VF2     -0.008     -0.198      0.103
+      VF3     -0.036       - -       0.017
+      PF1     -0.006      0.032       - - 
+      PF2     -0.030     -0.064       - - 
+      PF3      0.013      0.115       - - 
+      PF4      0.005      0.069       - - 
+
+         Standardized Expected Change for LAMBDA-Y       
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1       - -       0.033     -0.242
+      FF2       - -      -0.124      0.002
+      FF3       - -       0.122      0.444
+      VF1      0.120       - -      -0.142
+      VF2     -0.044     -0.661      0.273
+      VF3     -0.204       - -       0.045
+      PF1     -0.032      0.108       - - 
+      PF2     -0.170     -0.215       - - 
+      PF3      0.075      0.384       - - 
+      PF4      0.029      0.229       - - 
+
+         Completely Standardized Expected Change for LAMBDA-Y    
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1       - -       0.006     -0.042
+      FF2       - -      -0.032      0.000
+      FF3       - -       0.012      0.044
+      VF1      0.015       - -      -0.018
+      VF2     -0.011     -0.171      0.071
+      VF3     -0.024       - -       0.005
+      PF1     -0.008      0.026       - - 
+      PF2     -0.028     -0.035       - - 
+      PF3      0.012      0.062       - - 
+      PF4      0.006      0.051       - - 
+
+ No Non-Zero Modification Indices for GAMMA       
+
+         Modification Indices for PHI            
+
+                Crea   
+            --------
+              29.622
+
+         Expected Change for PHI         
+
+                Crea   
+            --------
+              -1.873
+
+         Standardized Expected Change for PHI            
+
+                Crea   
+            --------
+              -1.873
+
+         Modification Indices for PSI            
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+   Figual       - - 
+   Verbal      1.121       - - 
+   Affect     11.241     26.725       - - 
+
+         Expected Change for PSI         
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+   Figual       - - 
+   Verbal     -0.979       - - 
+   Affect     -2.468      2.276       - - 
+
+         Standardized Expected Change for PSI            
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+   Figual       - - 
+   Verbal     -0.052       - - 
+   Affect     -0.166      0.259       - - 
+
+         Modification Indices for THETA-EPS      
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2       - -        - - 
+      FF3      0.020      1.130       - - 
+      VF1     25.366     13.106      6.218       - - 
+      VF2      5.733     10.989      0.491       - -        - - 
+      VF3     25.056      2.443     21.805       - -      12.645       - - 
+      PF1      1.752      1.650      0.777      3.842      0.499      2.680
+      PF2      4.070      0.825      2.700      8.562      9.994      0.822
+      PF3      1.342      3.068      0.028      0.413      0.395      2.771
+      PF4      5.815      2.796      1.448      0.883      0.033      0.224
+
+         Modification Indices for THETA-EPS      
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2      0.394       - - 
+      PF3      0.008      0.292       - - 
+      PF4      0.024      0.420      0.356       - - 
+
+         Expected Change for THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2       - -        - - 
+      FF3     -0.090     -0.534       - - 
+      VF1      1.066     -0.642     -1.171       - - 
+      VF2     -0.334      0.392     -0.220       - -        - - 
+      VF3     -1.487      0.393      3.114       - -       2.934       - - 
+      PF1      0.321     -0.264     -0.481      0.681     -0.164     -0.808
+      PF2     -0.666      0.254      1.218     -1.388      0.997      0.608
+      PF3      0.430     -0.552     -0.140     -0.342      0.223      1.258
+      PF4     -0.592      0.348      0.663      0.331      0.043     -0.236
+
+         Expected Change for THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2     -0.503       - - 
+      PF3     -0.061      0.635       - - 
+      PF4      0.089     -0.723     -0.488       - - 
+
+         Completely Standardized Expected Change for THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2       - -        - - 
+      FF3     -0.002     -0.013       - - 
+      VF1      0.023     -0.020     -0.015       - - 
+      VF2     -0.015      0.026     -0.006       - -        - - 
+      VF3     -0.030      0.012      0.036       - -       0.089       - - 
+      PF1      0.014     -0.016     -0.012      0.021     -0.010     -0.023
+      PF2     -0.019      0.011      0.020     -0.028      0.042      0.012
+      PF3      0.012     -0.023     -0.002     -0.007      0.009      0.024
+      PF4     -0.023      0.020      0.015      0.009      0.002     -0.006
+
+         Completely Standardized Expected Change for THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2     -0.020       - - 
+      PF3     -0.002      0.017       - - 
+      PF4      0.005     -0.027     -0.018       - - 
+
+ Maximum Modification Index is   29.62 for Element ( 1, 1) of PHI
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+ Standardized Solution           
+
+         LAMBDA-Y    
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1      5.653       - -        - - 
+      FF2      3.602       - -        - - 
+      FF3      9.085       - -        - - 
+      VF1       - -       8.030       - - 
+      VF2       - -       3.335       - - 
+      VF3       - -       7.470       - - 
+      PF1       - -        - -       2.635
+      PF2       - -        - -       4.727
+      PF3       - -        - -       3.809
+      PF4       - -        - -       3.314
+
+         GAMMA       
+
+                Crea   
+            --------
+   Figual      0.798
+   Verbal      0.584
+   Affect      0.280
+
+         Correlation Matrix of ETA and KSI       
+
+              Figual     Verbal     Affect       Crea   
+            --------   --------   --------   --------
+   Figual      1.000
+   Verbal      0.466      1.000
+   Affect      0.224      0.164      1.000
+     Crea      0.798      0.584      0.280      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+               0.363      0.659      0.921
+
+ Model 6 three-factor HCFA model using LISREL syntax                            
+
+ Completely Standardized Solution
+
+         LAMBDA-Y    
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+      FF1      0.982       - -        - - 
+      FF2      0.913       - -        - - 
+      FF3      0.904       - -        - - 
+      VF1       - -       1.002       - - 
+      VF2       - -       0.863       - - 
+      VF3       - -       0.873       - - 
+      PF1       - -        - -       0.643
+      PF2       - -        - -       0.774
+      PF3       - -        - -       0.617
+      PF4       - -        - -       0.744
+
+         GAMMA       
+
+                Crea   
+            --------
+   Figual      0.798
+   Verbal      0.584
+   Affect      0.280
+
+         Correlation Matrix of ETA and KSI       
+
+              Figual     Verbal     Affect       Crea   
+            --------   --------   --------   --------
+   Figual      1.000
+   Verbal      0.466      1.000
+   Affect      0.224      0.164      1.000
+     Crea      0.798      0.584      0.280      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Figual     Verbal     Affect   
+            --------   --------   --------
+               0.363      0.659      0.921
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.035      0.166      0.183     -0.004      0.256      0.237
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.587      0.401      0.619      0.446
+
+ W_A_R_N_I_N_G: THETA-EPS is not positive definite
+
+                           Time used 0.031 seconds

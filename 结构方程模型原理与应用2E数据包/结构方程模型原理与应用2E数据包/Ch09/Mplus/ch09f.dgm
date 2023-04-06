@@ -1,0 +1,280 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+ Ch09 Multigroup CFA using MPLUS for female only
+DATA:
+    FILE IS Ch09f.dat;
+VARIABLE:
+ NAMES ARE a1-a3 b1-b3 c1-c3 d1-d3 e1-e3 f1-f3;
+OUTPUT:
+STANDARDIZED;
+MODEL:
+ VALUE    by a1* a2-a3;
+ JOBSTYLE by b1* b2-b3;
+ TEAMWORK by c1* c2-c3;
+ LEADERSH by d1* d2-d3;
+ LEARNING by e1* e2-e3;
+ ENVIRONM by f1* f2-f3;
+ VALUE@1;
+ JOBSTYLE@1;
+ TEAMWORK@1;
+ LEADERSH@1;
+ LEARNING@1;
+ ENVIRONM@1;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+18
+6
+0
+a1 a2 a3 b1 b2 b3 c1 c2 c3 d1 d2 d3 e1 e2 e3 f1 f2 f3 value jobstyle teamwork leadersh learning environm
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0
+0
+6
+value
+a1 a2 a3
+jobstyle
+b1 b2 b3
+teamwork
+c1 c2 c3
+leadersh
+d1 d2 d3
+learning
+e1 e2 e3
+environm
+f1 f2 f3
+1 1 value a1    0.939    0.076
+1 1 value a2    0.757    0.086
+1 1 value a3    0.734    0.080
+1 1 jobstyle b1    0.864    0.089
+1 1 jobstyle b2    0.907    0.086
+1 1 jobstyle b3    0.915    0.084
+1 1 teamwork c1    0.785    0.083
+1 1 teamwork c2    0.752    0.086
+1 1 teamwork c3    0.733    0.091
+1 1 leadersh d1    0.842    0.065
+1 1 leadersh d2    0.803    0.058
+1 1 leadersh d3    0.770    0.074
+1 1 learning e1    0.839    0.076
+1 1 learning e2    1.028    0.074
+1 1 learning e3    0.787    0.073
+1 1 environm f1    0.723    0.089
+1 1 environm f2    0.947    0.087
+1 1 environm f3    0.836    0.073
+2 1 jobstyle value    0.451    0.085
+2 1 teamwork value    0.380    0.098
+2 1 teamwork jobstyle    0.807    0.058
+2 1 leadersh value    0.253    0.091
+2 1 leadersh jobstyle    0.521    0.076
+2 1 leadersh teamwork    0.606    0.073
+2 1 learning value    0.454    0.085
+2 1 learning jobstyle    0.639    0.066
+2 1 learning teamwork    0.619    0.073
+2 1 learning leadersh    0.626    0.063
+2 1 environm value    0.628    0.068
+2 1 environm jobstyle    0.327    0.093
+2 1 environm teamwork    0.577    0.083
+2 1 environm leadersh    0.403    0.084
+2 1 environm learning    0.495    0.076
+4 1 a1    0.185    0.073
+4 1 a2    0.587    0.088
+4 1 a3    0.532    0.075
+4 1 b1    0.592    0.091
+4 1 b2    0.483    0.081
+4 1 b3    0.433    0.076
+4 1 c1    0.471    0.080
+4 1 c2    0.559    0.087
+4 1 c3    0.694    0.100
+4 1 d1    0.200    0.038
+4 1 d2    0.116    0.030
+4 1 d3    0.416    0.058
+4 1 e1    0.389    0.060
+4 1 e2    0.163    0.054
+4 1 e3    0.397    0.056
+4 1 f1    0.709    0.096
+4 1 f2    0.442    0.084
+4 1 f3    0.274    0.061
+5 1 value    1.000    0.000
+5 1 jobstyle    1.000    0.000
+5 1 teamwork    1.000    0.000
+5 1 leadersh    1.000    0.000
+5 1 learning    1.000    0.000
+5 1 environm    1.000    0.000
+11 1 value a1    0.909    0.039
+11 1 value a2    0.703    0.054
+11 1 value a3    0.709    0.049
+11 1 jobstyle b1    0.747    0.047
+11 1 jobstyle b2    0.794    0.042
+11 1 jobstyle b3    0.812    0.040
+11 1 teamwork c1    0.753    0.050
+11 1 teamwork c2    0.709    0.054
+11 1 teamwork c3    0.661    0.058
+11 1 leadersh d1    0.883    0.026
+11 1 leadersh d2    0.921    0.023
+11 1 leadersh d3    0.766    0.040
+11 1 learning e1    0.802    0.037
+11 1 learning e2    0.931    0.025
+11 1 learning e3    0.781    0.038
+11 1 environm f1    0.652    0.056
+11 1 environm f2    0.818    0.041
+11 1 environm f3    0.847    0.039
+12 1 jobstyle value    0.451    0.085
+12 1 teamwork value    0.380    0.098
+12 1 teamwork jobstyle    0.807    0.058
+12 1 leadersh value    0.253    0.091
+12 1 leadersh jobstyle    0.521    0.076
+12 1 leadersh teamwork    0.606    0.073
+12 1 learning value    0.454    0.085
+12 1 learning jobstyle    0.639    0.066
+12 1 learning teamwork    0.619    0.073
+12 1 learning leadersh    0.626    0.063
+12 1 environm value    0.628    0.068
+12 1 environm jobstyle    0.327    0.093
+12 1 environm teamwork    0.577    0.083
+12 1 environm leadersh    0.403    0.084
+12 1 environm learning    0.495    0.076
+14 1 a1    0.173    0.070
+14 1 a2    0.506    0.076
+14 1 a3    0.497    0.070
+14 1 b1    0.442    0.070
+14 1 b2    0.370    0.066
+14 1 b3    0.341    0.064
+14 1 c1    0.433    0.076
+14 1 c2    0.497    0.077
+14 1 c3    0.564    0.077
+14 1 d1    0.221    0.046
+14 1 d2    0.153    0.042
+14 1 d3    0.413    0.061
+14 1 e1    0.356    0.059
+14 1 e2    0.134    0.046
+14 1 e3    0.391    0.059
+14 1 f1    0.575    0.074
+14 1 f2    0.330    0.067
+14 1 f3    0.282    0.066
+15 1 value    1.000    0.000
+15 1 jobstyle    1.000    0.000
+15 1 teamwork    1.000    0.000
+15 1 leadersh    1.000    0.000
+15 1 learning    1.000    0.000
+15 1 environm    1.000    0.000
+21 1 value a1    0.909    0.039
+21 1 value a2    0.703    0.054
+21 1 value a3    0.709    0.049
+21 1 jobstyle b1    0.747    0.047
+21 1 jobstyle b2    0.794    0.042
+21 1 jobstyle b3    0.812    0.040
+21 1 teamwork c1    0.753    0.050
+21 1 teamwork c2    0.709    0.054
+21 1 teamwork c3    0.661    0.058
+21 1 leadersh d1    0.883    0.026
+21 1 leadersh d2    0.921    0.023
+21 1 leadersh d3    0.766    0.040
+21 1 learning e1    0.802    0.037
+21 1 learning e2    0.931    0.025
+21 1 learning e3    0.781    0.038
+21 1 environm f1    0.652    0.056
+21 1 environm f2    0.818    0.041
+21 1 environm f3    0.847    0.039
+22 1 jobstyle value    0.451    0.085
+22 1 teamwork value    0.380    0.098
+22 1 teamwork jobstyle    0.807    0.058
+22 1 leadersh value    0.253    0.091
+22 1 leadersh jobstyle    0.521    0.076
+22 1 leadersh teamwork    0.606    0.073
+22 1 learning value    0.454    0.085
+22 1 learning jobstyle    0.639    0.066
+22 1 learning teamwork    0.619    0.073
+22 1 learning leadersh    0.626    0.063
+22 1 environm value    0.628    0.068
+22 1 environm jobstyle    0.327    0.093
+22 1 environm teamwork    0.577    0.083
+22 1 environm leadersh    0.403    0.084
+22 1 environm learning    0.495    0.076
+24 1 a1    0.173    0.070
+24 1 a2    0.506    0.076
+24 1 a3    0.497    0.070
+24 1 b1    0.442    0.070
+24 1 b2    0.370    0.066
+24 1 b3    0.341    0.064
+24 1 c1    0.433    0.076
+24 1 c2    0.497    0.077
+24 1 c3    0.564    0.077
+24 1 d1    0.221    0.046
+24 1 d2    0.153    0.042
+24 1 d3    0.413    0.061
+24 1 e1    0.356    0.059
+24 1 e2    0.134    0.046
+24 1 e3    0.391    0.059
+24 1 f1    0.575    0.074
+24 1 f2    0.330    0.067
+24 1 f3    0.282    0.066
+25 1 value    1.000    0.000
+25 1 jobstyle    1.000    0.000
+25 1 teamwork    1.000    0.000
+25 1 leadersh    1.000    0.000
+25 1 learning    1.000    0.000
+25 1 environm    1.000    0.000
+31 1 value a1    0.939    0.076
+31 1 value a2    0.757    0.086
+31 1 value a3    0.734    0.080
+31 1 jobstyle b1    0.864    0.089
+31 1 jobstyle b2    0.907    0.086
+31 1 jobstyle b3    0.915    0.084
+31 1 teamwork c1    0.785    0.083
+31 1 teamwork c2    0.752    0.086
+31 1 teamwork c3    0.733    0.091
+31 1 leadersh d1    0.842    0.065
+31 1 leadersh d2    0.803    0.058
+31 1 leadersh d3    0.770    0.074
+31 1 learning e1    0.839    0.076
+31 1 learning e2    1.028    0.074
+31 1 learning e3    0.787    0.073
+31 1 environm f1    0.723    0.089
+31 1 environm f2    0.947    0.087
+31 1 environm f3    0.836    0.073
+32 1 jobstyle value    0.451    0.085
+32 1 teamwork value    0.380    0.098
+32 1 teamwork jobstyle    0.807    0.058
+32 1 leadersh value    0.253    0.091
+32 1 leadersh jobstyle    0.521    0.076
+32 1 leadersh teamwork    0.606    0.073
+32 1 learning value    0.454    0.085
+32 1 learning jobstyle    0.639    0.066
+32 1 learning teamwork    0.619    0.073
+32 1 learning leadersh    0.626    0.063
+32 1 environm value    0.628    0.068
+32 1 environm jobstyle    0.327    0.093
+32 1 environm teamwork    0.577    0.083
+32 1 environm leadersh    0.403    0.084
+32 1 environm learning    0.495    0.076
+34 1 a1    0.185    0.073
+34 1 a2    0.587    0.088
+34 1 a3    0.532    0.075
+34 1 b1    0.592    0.091
+34 1 b2    0.483    0.081
+34 1 b3    0.433    0.076
+34 1 c1    0.471    0.080
+34 1 c2    0.559    0.087
+34 1 c3    0.694    0.100
+34 1 d1    0.200    0.038
+34 1 d2    0.116    0.030
+34 1 d3    0.416    0.058
+34 1 e1    0.389    0.060
+34 1 e2    0.163    0.054
+34 1 e3    0.397    0.056
+34 1 f1    0.709    0.096
+34 1 f2    0.442    0.084
+34 1 f3    0.274    0.061
+35 1 value    1.000    0.000
+35 1 jobstyle    1.000    0.000
+35 1 teamwork    1.000    0.000
+35 1 leadersh    1.000    0.000
+35 1 learning    1.000    0.000
+35 1 environm    1.000    0.000

@@ -1,0 +1,16 @@
+TITLE:	Ch10b Mean structure modeling for hybrid model
+DATA:    	
+   NGROUPS=2;
+   FILE (manager) IS Ch10bm.dat; 
+   FILE (employee) IS Ch10be.dat;
+
+VARIABLE:	NAMES ARE out1-out3 co1-co3;
+
+MODEL:     
+ Commit  by co1-co3;
+ Outcome by out1-out3;
+ Outcome on Commit(1);
+
+OUTPUT: 
+STANDARDIZED;
+  

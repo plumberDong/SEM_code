@@ -1,0 +1,16 @@
+Ch6 Model 6 threee-factor HCFA using SIMPLIS syntax
+Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+Raw Data from File ch6.dat
+Latent Variables:  Figural Verbal Affect Crea
+Relationships:
+FF1=1*Figural
+FF2-FF3=Figural 
+VF1=1*Verbal 
+VF2-VF3=Verbal 
+PF1=1*Affect
+PF2-PF4=Affect
+Figural Verbal Affect=Crea
+Set the Variance of crea to 1
+Path Diagram
+LISREL Output AD=off SC MI
+End of Program

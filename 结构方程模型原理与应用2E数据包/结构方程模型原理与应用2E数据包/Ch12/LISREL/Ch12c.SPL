@@ -1,0 +1,11 @@
+Ch12c Moderated Mediation Analysis using SIMPLIS syntax                         
+SYSTEM FILE from file 'C:\SEM\Ch12\LISREL\Ch12c.DSF'
+!Observed variables: Y ME X MO XMO MOME
+!Raw data from file Ch12MOME.csv
+Sample Size = 681
+Relationships
+Y = X ME MO XMO MOME 
+ME = X MO XMO
+Path Diagram
+LISREL OUTPUT SC EF
+End of Problem 

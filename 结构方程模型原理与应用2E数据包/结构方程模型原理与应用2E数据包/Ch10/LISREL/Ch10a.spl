@@ -1,0 +1,48 @@
+GROUP: MALE                                                                    
+Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+Correlation matrix from file Ch10am.cor
+Means from file Ch10am.cor
+Standard deviation from file Ch10am.cor
+Sample Size = 172
+Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM 
+Relationships
+A1-A3=CONST VALUE 
+B1-B3=CONST JOBSTYLE 
+C1-C3=CONST TEAMWORK 
+D1-D3=CONST LEADERSH 
+E1-E3=CONST LEARNING 
+F1 -F3=CONST ENVIRONM 
+Set the Variance of VALUE-ENVIRONM to 1.00
+GROUP: FEMALE                                                                  
+Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+Correlation matrix from file Ch10af.cor
+Means from file Ch10af.cor
+Standard deviation from file Ch10af.cor
+Sample Size = 140
+Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM 
+Relationships
+VALUE = CONST
+JOBSTYLE = CONST
+TEAMWORK = CONST
+LEADERSH = CONST
+LEARNING = CONST
+ENVIRONM = CONST
+Set the Variance of VALUE-ENVIRONM to 1.00
+Set the Covariance of JOBSTYLE and VALUE Free 
+Set the Covariance of TEAMWORK and VALUE Free 
+Set the Covariance of TEAMWORK and JOBSTYLE Free 
+Set the Covariance of LEADERSH and VALUE Free 
+Set the Covariance of LEADERSH and JOBSTYLE Free 
+Set the Covariance of LEADERSH and TEAMWORK Free 
+Set the Covariance of LEARNING and VALUE Free 
+Set the Covariance of LEARNING and JOBSTYLE Free 
+Set the Covariance of LEARNING and TEAMWORK Free 
+Set the Covariance of LEARNING and LEADERSH Free 
+Set the Covariance of ENVIRONM and VALUE Free 
+Set the Covariance of ENVIRONM and JOBSTYLE Free 
+Set the Covariance of ENVIRONM and TEAMWORK Free 
+Set the Covariance of ENVIRONM and LEADERSH Free 
+Set the Covariance of ENVIRONM and LEARNING Free 
+path diagram
+LISREL OUTPUT
+End of Problem 

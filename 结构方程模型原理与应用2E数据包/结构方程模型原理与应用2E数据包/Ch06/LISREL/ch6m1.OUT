@@ -1,0 +1,307 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  0:48
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m1.Spl:
+
+ Ch6 Model 1 One-factor CFA using SIMPLIS syntax
+ Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ Raw Data from File ch6.dat
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ Sample Size = 804
+ Latent Variables:  Crea
+ Relationships:
+ FF1 =1*Crea
+ FF2-PF4=Crea
+ Path Diagram
+ LISREL Output AD=OFF
+ End of Program
+
+ Ch6 Model 1 One-factor CFA using SIMPLIS syntax                                
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ Ch6 Model 1 One-factor CFA using SIMPLIS syntax                                
+
+ Parameter Specifications
+
+         LAMBDA-X    
+
+                Crea
+            --------
+      FF1          0
+      FF2          1
+      FF3          2
+      VF1          3
+      VF2          4
+      VF3          5
+      PF1          6
+      PF2          7
+      PF3          8
+      PF4          9
+
+         PHI         
+
+                Crea
+            --------
+                  10
+
+         THETA-DELTA 
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  11         12         13         14         15         16
+
+         THETA-DELTA 
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  17         18         19         20
+ 
+
+
+ Ch6 Model 1 One-factor CFA using SIMPLIS syntax                                
+
+ Number of Iterations = 7           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-X    
+
+                Crea   
+            --------
+      FF1      1.000
+ 
+      FF2      0.640
+             (0.013)
+              49.475
+ 
+      FF3      1.645
+             (0.034)
+              49.050
+ 
+      VF1      0.681
+             (0.046)
+              14.874
+ 
+      VF2      0.282
+             (0.023)
+              12.312
+ 
+      VF3      0.622
+             (0.051)
+              12.123
+ 
+      PF1      0.101
+             (0.027)
+               3.764
+ 
+      PF2      0.173
+             (0.040)
+               4.315
+ 
+      PF3      0.167
+             (0.041)
+               4.076
+ 
+      PF4      0.139
+             (0.029)
+               4.729
+ 
+
+         PHI         
+
+                Crea   
+            --------
+              29.718
+             (1.594)
+              18.640
+ 
+
+         THETA-DELTA 
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               1.878      2.619     17.759     46.940     11.872     59.437
+             (0.276)    (0.171)    (1.146)    (2.369)    (0.597)    (2.987)
+               6.809     15.343     15.503     19.818     19.893     19.898
+ 
+
+         THETA-DELTA 
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+              16.534     36.885     38.353     19.901
+             (0.825)    (1.841)    (1.914)    (0.994)
+              20.036     20.031     20.033     20.027
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.941      0.823      0.819      0.227      0.166      0.162
+
+         Squared Multiple Correlations for X - Variables         
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.018      0.024      0.021      0.028
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        20                       55
+ -2ln(L)                      33137.973                30224.093
+ AIC (Akaike, 1974)*          33177.973                30334.093
+ BIC (Schwarz, 1978)*         33271.765                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      35
+ Maximum Likelihood Ratio Chi-Square (C1)              2913.880 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                2918.508 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              2878.880
+ 90 Percent Confidence Interval for NCP                (2705.429 ; 3059.642)
+ 
+ Minimum Fit Function Value                            3.624
+ Population Discrepancy Function Value (F0)            3.581
+ 90 Percent Confidence Interval for F0                 (3.365 ; 3.806)
+ Root Mean Square Error of Approximation (RMSEA)       0.320
+ 90 Percent Confidence Interval for RMSEA              (0.310 ; 0.330)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                3.674
+ 90 Percent Confidence Interval for ECVI               (3.458 ; 3.899)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.504
+ Non-Normed Fit Index (NNFI)                           0.365
+ Parsimony Normed Fit Index (PNFI)                     0.392
+ Comparative Fit Index (CFI)                           0.506
+ Incremental Fit Index (IFI)                           0.507
+ Relative Fit Index (RFI)                              0.362
+ 
+ Critical N (CN)                                      16.802
+ 
+ 
+ Root Mean Square Residual (RMR)                       8.495
+ Standardized RMR                                      0.223
+ Goodness of Fit Index (GFI)                           0.579
+ Adjusted Goodness of Fit Index (AGFI)                 0.339
+ Parsimony Goodness of Fit Index (PGFI)                0.369
+
+                           Time used 0.000 seconds

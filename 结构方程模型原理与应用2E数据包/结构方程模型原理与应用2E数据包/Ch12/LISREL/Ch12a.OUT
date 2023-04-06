@@ -1,0 +1,370 @@
+
+                                DATE:  4/ 6/2018
+                                  TIME: 23:26
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch12\LISREL\Ch12a.LIS:
+
+ Ch12a Mediation Analysis using LISREL syntax
+ DA   NI=4 NO=681 MA=CM
+ RA   FI=Ch12ME.csv
+           Effective sample size:      681
+
+ LA; Y ME1 ME2 X
+ MO NX=1 NY=3 BE=FU GA=FI PS=SY
+ FR BE(1,2) BE(1,3) GA(1,1) GA(2,1) GA(3,1) PS(3,2)
+ PD
+ OU EF SC
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+                           Number of Input Variables  4
+                           Number of Y - Variables    3
+                           Number of X - Variables    1
+                           Number of ETA - Variables  3
+                           Number of KSI - Variables  1
+                           Number of Observations   681
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+         Covariance Matrix       
+
+                   Y        ME1        ME2          X   
+            --------   --------   --------   --------
+        Y      0.659
+      ME1      0.512      0.715
+      ME2     -0.276     -0.320      0.839
+        X      0.408      0.423     -0.184      0.563
+
+ Total Variance = 2.776 Generalized Variance = 0.0396                                  
+
+ Largest Eigenvalue = 1.774 Smallest Eigenvalue = 0.174                                   
+
+ Condition Number = 3.196
+
+         Means   
+
+                   Y        ME1        ME2          X   
+            --------   --------   --------   --------
+               4.203      4.002      3.581      3.979
+
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+ Parameter Specifications
+
+         BETA        
+
+                   Y        ME1        ME2
+            --------   --------   --------
+        Y          0          1          2
+      ME1          0          0          0
+      ME2          0          0          0
+
+         GAMMA       
+
+                   X
+            --------
+        Y          3
+      ME1          4
+      ME2          5
+
+         PHI         
+
+                   X
+            --------
+                   6
+
+         PSI         
+
+                   Y        ME1        ME2
+            --------   --------   --------
+        Y          7
+      ME1          0          8
+      ME2          0          9         10
+
+         ALPHA       
+
+                   Y        ME1        ME2
+            --------   --------   --------
+                  11         12         13
+ 
+
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+ Number of Iterations = 0           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         BETA        
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y       - -       0.485     -0.071
+                        (0.032)    (0.023)
+                         14.938     -3.044
+ 
+      ME1       - -        - -        - - 
+ 
+      ME2       - -        - -        - - 
+ 
+
+         GAMMA       
+
+                   X   
+            --------
+        Y      0.337
+             (0.035)
+               9.771
+ 
+      ME1      0.750
+             (0.032)
+              23.297
+ 
+      ME2     -0.327
+             (0.045)
+              -7.262
+ 
+
+         Covariance Matrix of Y and X            
+
+                   Y        ME1        ME2          X   
+            --------   --------   --------   --------
+        Y      0.659
+      ME1      0.512      0.715
+      ME2     -0.276     -0.320      0.839
+        X      0.408      0.423     -0.184      0.563
+
+         Mean Vector of Eta-Variables
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+               4.203      4.002      3.581
+
+         PHI         
+
+                   X   
+            --------
+               0.563
+             (0.031)
+              18.439
+ 
+
+         PSI         
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y      0.254
+             (0.014)
+              18.439
+ 
+      ME1       - -       0.398
+                        (0.022)
+                         18.439
+ 
+      ME2       - -      -0.181      0.778
+                        (0.022)    (0.042)
+                         -8.089     18.439
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+               0.615      0.444      0.072
+
+ NOTE: R² for Structural Equatios are Hayduk's (2006) Blocked-Error R²
+
+         Reduced Form                
+
+                   X   
+            --------
+        Y      0.724
+             (0.031)
+              23.486
+ 
+      ME1      0.750
+             (0.032)
+              23.280
+ 
+      ME2     -0.327
+             (0.045)
+              -7.257
+ 
+
+         Squared Multiple Correlations for Reduced Form          
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+               0.448      0.444      0.072
+
+         ALPHA       
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+               1.174      1.017      4.883
+             (0.165)    (0.130)    (0.182)
+               7.116      7.798     26.763
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        14                       14
+ -2ln(L)                        525.002                  525.002
+ AIC (Akaike, 1974)*            553.002                  553.002
+ BIC (Schwarz, 1978)*           616.332                  616.332
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      0
+ Due to Mean Structure                                 0.00
+ Browne's (1984) ADF Chi-Square (C2_NT)                0.0 (P = 1.0000)
+
+                  The Model is Saturated, the Fit is Perfect !
+
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+ Standardized Solution           
+
+         BETA        
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y       - -       0.505     -0.080
+      ME1       - -        - -        - - 
+      ME2       - -        - -        - - 
+
+         GAMMA       
+
+                   X   
+            --------
+        Y      0.312
+      ME1      0.666
+      ME2     -0.268
+
+         Correlation Matrix of Y and X           
+
+                   Y        ME1        ME2          X   
+            --------   --------   --------   --------
+        Y      1.000
+      ME1      0.745      1.000
+      ME2     -0.372     -0.413      1.000
+        X      0.669      0.666     -0.268      1.000
+
+         PSI         
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y      0.385
+      ME1       - -       0.556
+      ME2       - -      -0.234      0.928
+
+         Regression Matrix Y on X (Standardized)     
+
+                   X   
+            --------
+        Y      0.669
+      ME1      0.666
+      ME2     -0.268
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+ Total and Indirect Effects
+
+         Total Effects of X on Y     
+
+                   X   
+            --------
+        Y      0.724
+             (0.031)
+              23.520
+ 
+      ME1      0.750
+             (0.032)
+              23.314
+ 
+      ME2     -0.327
+             (0.045)
+              -7.268
+ 
+
+         Indirect Effects of X on Y      
+
+                   X   
+            --------
+        Y      0.387
+             (0.029)
+              13.550
+ 
+      ME1       - - 
+ 
+      ME2       - - 
+ 
+
+         Total Effects of Y on Y     
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y       - -       0.485     -0.071
+                        (0.032)    (0.023)
+                         14.949     -3.046
+ 
+      ME1       - -        - -        - - 
+ 
+      ME2       - -        - -        - - 
+ 
+
+    Largest Eigenvalue of B*B' (Stability Index) is   0.240
+
+ Ch12a Mediation Analysis using LISREL syntax                                   
+
+ Standardized Total and Indirect Effects
+
+         Standardized Total Effects of X on Y    
+
+                   X   
+            --------
+        Y      0.669
+      ME1      0.666
+      ME2     -0.268
+
+         Standardized Indirect Effects of X on Y     
+
+                   X   
+            --------
+        Y      0.358
+      ME1       - - 
+      ME2       - - 
+
+         Standardized Total Effects of Y on Y    
+
+                   Y        ME1        ME2   
+            --------   --------   --------
+        Y       - -       0.505     -0.080
+      ME1       - -        - -        - - 
+      ME2       - -        - -        - - 
+
+                           Time used 0.031 seconds

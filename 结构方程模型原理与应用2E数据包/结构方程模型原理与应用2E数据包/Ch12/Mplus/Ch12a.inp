@@ -1,0 +1,13 @@
+TITLE:      Ch12 Mediation Analysis
+DATA:       FILE = Ch12a.csv; 
+VARIABLE:   NAMES = ID y x m1 m2 gender leader; 
+            USEVARIABLES=y x m1 m2;
+ANALYSIS:   ESTIMATOR IS ML;
+            BOOTSTRAP IS 5000;
+MODEL:      m1 m2 on x;
+            y  on x m1 m2;
+            m1 with m2;             !估計中介變數的殘差相關
+MODEL INDIRECT:                     
+            y IND x;      
+OUTPUT:     STDYX CINTERVAL(BOOTSTRAP); 
+PLOT:       TYPE = PLOT1 PLOT3;

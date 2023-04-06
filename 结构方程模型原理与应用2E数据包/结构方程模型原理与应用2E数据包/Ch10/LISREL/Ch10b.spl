@@ -1,0 +1,32 @@
+Group: Manager                                                               
+Observed variables: out1 out2 out3 co1 co2 co3
+covariance matrix from file Ch10bm.cov
+means from file Ch10bm.cov
+Sample Size = 121
+Latent Variables:  Outcome Commit 
+Relationships
+out1 = CONST 1.00*Outcome 
+out2 = CONST Outcome 
+out3 = CONST Outcome 
+co1 = CONST 1.00*Commit 
+co2 = CONST Commit 
+co3 = CONST Commit 
+Outcome =Commit 
+Path Diagram
+
+Group:  Emplyee                                                                
+Observed variables: out1 out2 out3 co1 co2 co3
+Covariance matrix from file Ch10be.cov
+Means from file Ch10be.cov
+Sample Size = 215
+Latent Variables:  Outcome Commit 
+Relationships
+Outcome =CONST 
+Commit  = CONST
+Set the Variance of Commit Free 
+Set the Error Variance of Outcome Free 
+Set the Error Variance of out1-out3 Free 
+Set the Error Variance of co1-co3 Free 
+LISREL OUTPUT SC
+End of Problem 
+

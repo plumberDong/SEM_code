@@ -1,0 +1,12 @@
+Ex13 One factor LGM using SIMPLIS syntax 
+Observed Variables: RT1-RT4
+Covariance matrix from file=Ch11a.cov
+means from file=Ch11a.cov
+Sample Size = 200
+Latent Variables  TIME
+Relationships
+RT1-RT4=1*TIME
+TIME=CONST
+Path Diagram
+LISREL output
+End of Problem

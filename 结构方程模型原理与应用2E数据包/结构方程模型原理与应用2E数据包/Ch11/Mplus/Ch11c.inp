@@ -1,0 +1,5 @@
+TITLE:	Ch11 Two factor UTM no residual homogeneity assumption
+DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+VARIABLE:	NAMES ARE RT1-RT4;
+MODEL:      I S | RT1@0 RT2*  RT3*  RT4@1;
+OUTPUT:     TECH1; SAMPSTAT;

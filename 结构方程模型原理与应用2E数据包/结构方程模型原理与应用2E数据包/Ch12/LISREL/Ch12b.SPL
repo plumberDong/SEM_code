@@ -1,0 +1,8 @@
+Ch12b Moderation Analysis using SIMPLIS syntax
+Observed variables: Y X MO XMO
+Raw data from file Ch12MO.csv
+Sample Size = 681
+Relationships
+Y = CONST X MO XMO 
+Path Diagram
+End of Problem 

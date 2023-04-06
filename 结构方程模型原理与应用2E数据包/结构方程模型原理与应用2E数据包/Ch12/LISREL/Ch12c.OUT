@@ -1,0 +1,353 @@
+
+                                DATE:  4/ 7/2018
+                                  TIME:  0:36
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch12\LISREL\Ch12c.SPL:
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax
+ SYSTEM FILE from file 'C:\SEM\Ch12\LISREL\Ch12c.DSF'
+ !Observed variables: Y ME X MO XMO MOME
+ !Raw data from file Ch12MOME.csv
+ Sample Size = 681
+ Relationships
+ Y = X ME MO XMO MOME
+ ME = X MO XMO
+ Path Diagram
+ LISREL OUTPUT SC EF
+ End of Problem
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+         Covariance Matrix       
+
+                   Y         ME          X         MO        XMO       MOME   
+            --------   --------   --------   --------   --------   --------
+        Y      0.659
+       ME     -0.276      0.839
+        X      0.408     -0.184      0.563
+       MO      0.040     -0.059      0.025      0.199
+      XMO      0.244     -0.262      0.212      0.812      3.414
+     MOME      0.095      0.042      0.064      0.671      2.711      2.501
+
+ Total Variance = 8.176 Generalized Variance = 0.409790D-03                            
+
+ Largest Eigenvalue = 5.931 Smallest Eigenvalue = 0.003                                   
+
+ Condition Number = 43.938
+
+ WARNING: The Condition Number indicates severe multicollinearity.
+
+          One or more variables may be redundant.
+
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+ Parameter Specifications
+
+         BETA        
+
+                   Y         ME
+            --------   --------
+        Y          0          1
+       ME          0          0
+
+         GAMMA       
+
+                   X         MO        XMO       MOME
+            --------   --------   --------   --------
+        Y          2          3          4          5
+       ME          6          7          8          0
+
+         PHI         
+
+                   X         MO        XMO       MOME
+            --------   --------   --------   --------
+        X          9
+       MO         10         11
+      XMO         12         13         14
+     MOME         15         16         17         18
+
+         PSI         
+
+                   Y         ME
+            --------   --------
+                  19         20
+ 
+
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+ Number of Iterations = 0           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         BETA        
+
+                   Y         ME   
+            --------   --------
+        Y       - -      -0.219
+                        (0.025)
+                         -8.620
+ 
+       ME       - -        - - 
+ 
+
+         GAMMA       
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.634     -0.793      0.106      0.123
+             (0.034)    (0.361)    (0.075)    (0.046)
+              18.531     -2.194      1.406      2.699
+ 
+       ME     -0.346     -0.874      0.152       - - 
+             (0.050)    (0.464)    (0.113)
+              -6.911     -1.884      1.347
+ 
+
+         Covariance Matrix of Y and X            
+
+                   Y         ME          X         MO        XMO       MOME   
+            --------   --------   --------   --------   --------   --------
+        Y      0.672
+       ME     -0.306      0.839
+        X      0.408     -0.184      0.563
+       MO      0.040     -0.059      0.025      0.199
+      XMO      0.244     -0.262      0.212      0.812      3.414
+     MOME      0.147     -0.195      0.064      0.671      2.711      2.501
+
+         PHI         
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        X      0.563
+             (0.031)
+              18.398
+ 
+       MO      0.025      0.199
+             (0.013)    (0.011)
+               1.948     18.398
+ 
+      XMO      0.212      0.812      3.414
+             (0.054)    (0.044)    (0.186)
+               3.929     18.248     18.398
+ 
+     MOME      0.064      0.671      2.711      2.501
+             (0.046)    (0.037)    (0.153)    (0.136)
+               1.392     17.926     17.698     18.398
+ 
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                   Y         ME   
+            --------   --------
+               0.334      0.763
+             (0.018)    (0.041)
+              18.398     18.398
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+                   Y         ME   
+            --------   --------
+               0.503      0.090
+
+ NOTE: R² for Structural Equatios are Hayduk's (2006) Blocked-Error R²
+
+         Reduced Form                
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.710     -0.601      0.073      0.123
+             (0.035)    (0.375)    (0.079)    (0.046)
+              20.360     -1.604      0.916      2.697
+ 
+       ME     -0.346     -0.874      0.152       - - 
+             (0.050)    (0.464)    (0.113)
+              -6.906     -1.882      1.346
+ 
+
+         Squared Multiple Correlations for Reduced Form          
+
+                   Y         ME   
+            --------   --------
+               0.449      0.090
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        20                       21
+ -2ln(L)                       -972.240                -1225.709
+ AIC (Akaike, 1974)*           -932.240                -1183.709
+ BIC (Schwarz, 1978)*          -841.769                -1088.714
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      1
+ Maximum Likelihood Ratio Chi-Square (C1)              253.468 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                211.644 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              252.468
+ 90 Percent Confidence Interval for NCP                (203.795 ; 308.548)
+ 
+ Minimum Fit Function Value                            0.372
+ Population Discrepancy Function Value (F0)            0.371
+ 90 Percent Confidence Interval for F0                 (0.299 ; 0.453)
+ Root Mean Square Error of Approximation (RMSEA)       0.609
+ 90 Percent Confidence Interval for RMSEA              (0.547 ; 0.673)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                0.431
+ 90 Percent Confidence Interval for ECVI               (0.359 ; 0.513)
+ ECVI for Saturated Model                              0.0617
+ ECVI for Independence Model                           7.184
+ 
+ Chi-Square for Independence Model (15 df)          4880.135
+ 
+ Normed Fit Index (NFI)                                0.948
+ Non-Normed Fit Index (NNFI)                           0.222
+ Parsimony Normed Fit Index (PNFI)                     0.0632
+ Comparative Fit Index (CFI)                           0.948
+ Incremental Fit Index (IFI)                           0.948
+ Relative Fit Index (RFI)                              0.221
+ 
+ Critical N (CN)                                      18.800
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.0534
+ Standardized RMR                                      0.0380
+ Goodness of Fit Index (GFI)                           0.906
+ Parsimony Goodness of Fit Index (PGFI)                0.0431
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+ Standardized Solution           
+
+         BETA        
+
+                   Y         ME   
+            --------   --------
+        Y       - -      -0.245
+       ME       - -        - - 
+
+         GAMMA       
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.581     -0.432      0.239      0.237
+       ME     -0.283     -0.426      0.307       - - 
+
+         Correlation Matrix of Y and X           
+
+                   Y         ME          X         MO        XMO       MOME   
+            --------   --------   --------   --------   --------   --------
+        Y      1.000
+       ME     -0.407      1.000
+        X      0.663     -0.268      1.000
+       MO      0.108     -0.145      0.075      1.000
+      XMO      0.161     -0.155      0.153      0.984      1.000
+     MOME      0.113     -0.135      0.054      0.951      0.928      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+                   Y         ME   
+            --------   --------
+               0.497      0.910
+
+         Regression Matrix Y on X (Standardized)     
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.650     -0.327      0.164      0.237
+       ME     -0.283     -0.426      0.307       - - 
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+ Total and Indirect Effects
+
+         Total Effects of X on Y     
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.710     -0.601      0.073      0.123
+             (0.035)    (0.373)    (0.079)    (0.045)
+              20.435     -1.609      0.919      2.707
+ 
+       ME     -0.346     -0.874      0.152       - - 
+             (0.050)    (0.462)    (0.113)
+              -6.932     -1.889      1.351
+ 
+
+         Indirect Effects of X on Y      
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.076      0.191     -0.033       - - 
+             (0.014)    (0.104)    (0.025)
+               5.408      1.846     -1.334
+ 
+       ME       - -        - -        - -        - - 
+ 
+
+         Total Effects of Y on Y     
+
+                   Y         ME   
+            --------   --------
+        Y       - -      -0.219
+                        (0.025)
+                         -8.645
+ 
+       ME       - -        - - 
+ 
+
+    Largest Eigenvalue of B*B' (Stability Index) is   0.048
+
+ Ch12c Moderated Mediation Analysis using SIMPLIS syntax                        
+
+ Standardized Total and Indirect Effects
+
+         Standardized Total Effects of X on Y    
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.650     -0.327      0.164      0.237
+       ME     -0.283     -0.426      0.307       - - 
+
+         Standardized Indirect Effects of X on Y     
+
+                   X         MO        XMO       MOME   
+            --------   --------   --------   --------
+        Y      0.069      0.104     -0.075       - - 
+       ME       - -        - -        - -        - - 
+
+         Standardized Total Effects of Y on Y    
+
+                   Y         ME   
+            --------   --------
+        Y       - -      -0.245
+       ME       - -        - - 
+
+                           Time used 0.000 seconds

@@ -1,0 +1,432 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  1:07
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m5.LIS:
+
+ Title ch6 Model 5 two-factor CFA using LISREL syntax
+ DATA   NI=10 NO=804
+ RA FI=ch6.dat
+ LA
+ FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ MO    NY=10 NE=2 NK=1 PS=DI,FR TE=DI,FR LY=FU,FI GA=FU,FR
+
+ W_A_R_N_I_N_G:     FF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF4 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ MO    NY=10 NE=2 NK=1 PS=DI,FR TE=DI,FR LY=FU,FI GA=FU,FR
+ LE;   Cognit Affect
+ LK;   Crea
+ FR   LY 2 1 LY 3 1 LY 4 1 LY 5 1 LY 6 1 LY 8 2 LY 9 2 LY 10 2
+ VA 1 LY 1 1 LY 7 2
+ PD
+ OUTPUT AD=off SS SC MI
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+                           Number of Input Variables 10
+                           Number of Y - Variables   10
+                           Number of X - Variables    0
+                           Number of ETA - Variables  2
+                           Number of KSI - Variables  1
+                           Number of Observations   804
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+              Cognit     Affect
+            --------   --------
+      FF1          0          0
+      FF2          1          0
+      FF3          2          0
+      VF1          3          0
+      VF2          4          0
+      VF3          5          0
+      PF1          0          0
+      PF2          0          6
+      PF3          0          7
+      PF4          0          8
+
+         GAMMA       
+
+                Crea
+            --------
+   Cognit          9
+   Affect         10
+
+         PSI         
+
+              Cognit     Affect
+            --------   --------
+                  11         12
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  13         14         15         16         17         18
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  19         20         21         22
+ 
+
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+ Number of Iterations = 221         
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+ W_A_R_N_I_N_G: PS 2_2 may not be identified.
+                Standard Errors, z-Values, Modification Indices,
+                and Standardized Residuals cannot be computed.
+
+         LAMBDA-Y    
+
+              Cognit     Affect   
+            --------   --------
+      FF1      1.000       - - 
+      FF2      0.643       - - 
+      FF3      1.640       - - 
+      VF1      0.682       - - 
+      VF2      0.283       - - 
+      VF3      0.623       - - 
+      PF1       - -       1.000
+      PF2       - -       1.895
+      PF3       - -       1.583
+      PF4       - -       1.305
+
+         GAMMA       
+
+                Crea   
+            --------
+   Cognit      4.674
+   Affect      0.581
+
+         Covariance Matrix of ETA and KSI        
+
+              Cognit     Affect       Crea   
+            --------   --------   --------
+   Cognit     29.131
+   Affect      2.715      5.995
+     Crea      4.674      0.581      1.000
+
+         PHI         
+
+                Crea   
+            --------
+               1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Cognit     Affect   
+            --------   --------
+               7.287      5.658
+
+         Squared Multiple Correlations for Structural Equations  
+
+              Cognit     Affect   
+            --------   --------
+               0.750      0.056
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               1.852      2.699     18.762     47.356     11.106     60.135
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+              11.217     16.469     25.484     11.638
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        22                       55
+ -2ln(L)                      32307.069                30224.093
+ AIC (Akaike, 1974)*          32351.069                30334.093
+ BIC (Schwarz, 1978)*         32454.240                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      33
+ Maximum Likelihood Ratio Chi-Square (C1)              2082.976 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                1299.525 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              2049.976
+ 90 Percent Confidence Interval for NCP                (1904.055 ; 2203.245)
+ 
+ Minimum Fit Function Value                            2.591
+ Population Discrepancy Function Value (F0)            2.550
+ 90 Percent Confidence Interval for F0                 (2.368 ; 2.740)
+ Root Mean Square Error of Approximation (RMSEA)       0.278
+ 90 Percent Confidence Interval for RMSEA              (0.268 ; 0.288)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                2.645
+ 90 Percent Confidence Interval for ECVI               (2.464 ; 2.836)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.646
+ Non-Normed Fit Index (NNFI)                           0.521
+ Parsimony Normed Fit Index (PNFI)                     0.473
+ Comparative Fit Index (CFI)                           0.648
+ Incremental Fit Index (IFI)                           0.649
+ Relative Fit Index (RFI)                              0.517
+ 
+ Critical N (CN)                                      22.116
+ 
+ 
+ Root Mean Square Residual (RMR)                       7.405
+ Standardized RMR                                      0.167
+ Goodness of Fit Index (GFI)                           0.702
+ Adjusted Goodness of Fit Index (AGFI)                 0.503
+ Parsimony Goodness of Fit Index (PGFI)                0.421
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+ Standardized Solution           
+
+         LAMBDA-Y    
+
+              Cognit     Affect   
+            --------   --------
+      FF1      5.397       - - 
+      FF2      3.468       - - 
+      FF3      8.851       - - 
+      VF1      3.679       - - 
+      VF2      1.528       - - 
+      VF3      3.362       - - 
+      PF1       - -       2.449
+      PF2       - -       4.641
+      PF3       - -       3.877
+      PF4       - -       3.196
+
+         GAMMA       
+
+                Crea   
+            --------
+   Cognit      0.866
+   Affect      0.237
+
+         Correlation Matrix of ETA and KSI       
+
+              Cognit     Affect       Crea   
+            --------   --------   --------
+   Cognit      1.000
+   Affect      0.205      1.000
+     Crea      0.866      0.237      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Cognit     Affect   
+            --------   --------
+               0.250      0.944
+
+ ch6 Model 5 two-factor CFA using LISREL syntax                                 
+
+ Completely Standardized Solution
+
+         LAMBDA-Y    
+
+              Cognit     Affect   
+            --------   --------
+      FF1      0.970       - - 
+      FF2      0.904       - - 
+      FF3      0.898       - - 
+      VF1      0.472       - - 
+      VF2      0.417       - - 
+      VF3      0.398       - - 
+      PF1       - -       0.590
+      PF2       - -       0.753
+      PF3       - -       0.609
+      PF4       - -       0.684
+
+         GAMMA       
+
+                Crea   
+            --------
+   Cognit      0.866
+   Affect      0.237
+
+         Correlation Matrix of ETA and KSI       
+
+              Cognit     Affect       Crea   
+            --------   --------   --------
+   Cognit      1.000
+   Affect      0.205      1.000
+     Crea      0.866      0.237      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+              Cognit     Affect   
+            --------   --------
+               0.250      0.944
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.060      0.183      0.193      0.778      0.826      0.842
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.652      0.433      0.629      0.533
+
+                           Time used 0.016 seconds

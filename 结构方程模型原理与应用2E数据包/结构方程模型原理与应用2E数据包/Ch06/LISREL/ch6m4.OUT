@@ -1,0 +1,503 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  1:00
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m4.LIS:
+
+ Title Model 4 four-factor CFA model using LISREL syntax
+ DATA   NI=10 NO=804
+ RA FI=ch6.dat
+ LA
+ FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ MO  NY=10 NE=4 PS=SY,FR
+
+ W_A_R_N_I_N_G:     FF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF4 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ MO  NY=10 NE=4 PS=SY,FR
+ LE;   Flu Fle Ori Affect
+ FR       LY 4 1 LY 5 2 LY 6 3 LY 8 4 LY 9 4 LY 10 4
+ VA  1   LY 1 1 LY 2 2 LY 3 3 LY 7 4
+ PD
+ OUTPUT AD=off SE TV SS MI
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+                           Number of Input Variables 10
+                           Number of Y - Variables   10
+                           Number of X - Variables    0
+                           Number of ETA - Variables  4
+                           Number of KSI - Variables  0
+                           Number of Observations   804
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect
+            --------   --------   --------   --------
+      FF1          0          0          0          0
+      FF2          0          0          0          0
+      FF3          0          0          0          0
+      VF1          1          0          0          0
+      VF2          0          2          0          0
+      VF3          0          0          3          0
+      PF1          0          0          0          0
+      PF2          0          0          0          4
+      PF3          0          0          0          5
+      PF4          0          0          0          6
+
+         PSI         
+
+                 Flu        Fle        Ori     Affect
+            --------   --------   --------   --------
+      Flu          7
+      Fle          8          9
+      Ori         10         11         12
+   Affect         13         14         15         16
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  17         18         19         20         21         22
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  23         24         25         26
+ 
+
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+ Number of Iterations = 15          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1      1.000       - -        - -        - - 
+ 
+      FF2       - -       1.000       - -        - - 
+ 
+      FF3       - -        - -       1.000       - - 
+ 
+      VF1      1.176       - -        - -        - - 
+             (0.056)
+              20.814
+ 
+      VF2       - -       0.801       - -        - - 
+                        (0.045)
+                         17.823
+ 
+      VF3       - -        - -       0.682       - - 
+                                   (0.038)
+                                    18.045
+ 
+      PF1       - -        - -        - -       1.000
+ 
+      PF2       - -        - -        - -       1.814
+                                              (0.114)
+                                               15.918
+ 
+      PF3       - -        - -        - -       1.499
+                                              (0.107)
+                                               14.026
+ 
+      PF4       - -        - -        - -       1.291
+                                              (0.082)
+                                               15.711
+ 
+
+         Covariance Matrix of ETA                
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      Flu     16.342
+      Fle     15.834      6.318
+      Ori     41.132     25.550     45.182
+   Affect      3.302      2.423      6.070      6.835
+
+         PSI         
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      Flu     16.342
+             (1.474)
+              11.084
+ 
+      Fle     15.834      6.318
+             (0.931)    (0.684)
+              17.011      9.239
+ 
+      Ori     41.132     25.550     45.182
+             (2.406)    (1.571)    (4.617)
+              17.092     16.264      9.787
+ 
+   Affect      3.302      2.423      6.070      6.835
+             (0.563)    (0.384)    (0.995)    (0.755)
+               5.865      6.308      6.099      9.051
+ 
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+              15.254      8.481     52.958     38.121     10.188     49.915
+             (0.921)    (0.530)    (3.363)    (2.032)    (0.548)    (2.671)
+              16.566     16.008     15.749     18.759     18.599     18.688
+ 
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+              10.002     15.276     23.827      9.078
+             (0.602)    (1.228)    (1.417)    (0.672)
+              16.605     12.444     16.810     13.512
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.517      0.427      0.460      0.372      0.285      0.296
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.406      0.596      0.392      0.557
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        26                       55
+ -2ln(L)                      32115.288                30224.093
+ AIC (Akaike, 1974)*          32167.288                30334.093
+ BIC (Schwarz, 1978)*         32289.217                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      29
+ Maximum Likelihood Ratio Chi-Square (C1)              1891.195 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                1535.079 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              1862.195
+ 90 Percent Confidence Interval for NCP                (1723.310 ; 2008.432)
+ 
+ Minimum Fit Function Value                            2.352
+ Population Discrepancy Function Value (F0)            2.316
+ 90 Percent Confidence Interval for F0                 (2.143 ; 2.498)
+ Root Mean Square Error of Approximation (RMSEA)       0.283
+ 90 Percent Confidence Interval for RMSEA              (0.272 ; 0.293)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                2.417
+ 90 Percent Confidence Interval for ECVI               (2.244 ; 2.599)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.678
+ Non-Normed Fit Index (NNFI)                           0.504
+ Parsimony Normed Fit Index (PNFI)                     0.437
+ Comparative Fit Index (CFI)                           0.681
+ Incremental Fit Index (IFI)                           0.682
+ Relative Fit Index (RFI)                              0.501
+ 
+ Critical N (CN)                                      22.055
+ 
+ 
+ Root Mean Square Residual (RMR)                       5.310
+ Standardized RMR                                      0.120
+ Goodness of Fit Index (GFI)                           0.724
+ Adjusted Goodness of Fit Index (AGFI)                 0.476
+ Parsimony Goodness of Fit Index (PGFI)                0.382
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+ Modification Indices and Expected Change
+
+         Modification Indices for LAMBDA-Y       
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1       - -       0.972      0.008      9.757
+      FF2      0.949       - -       1.488     15.430
+      FF3      0.030      0.119       - -       3.239
+      VF1       - -       0.972      0.008      9.757
+      VF2      0.949       - -       1.488     15.430
+      VF3      0.030      0.119       - -       3.239
+      PF1      4.876      1.446      1.392       - - 
+      PF2      1.083      5.052      3.303       - - 
+      PF3      0.076      3.202      0.515       - - 
+      PF4      0.883      0.003      0.130       - - 
+
+         Expected Change for LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1       - -      -0.130      0.005     -0.322
+      FF2      0.046       - -      -0.040     -0.308
+      FF3      0.020     -0.066       - -      -0.361
+      VF1       - -       0.153     -0.006      0.378
+      VF2     -0.037       - -       0.032      0.247
+      VF3     -0.014      0.045       - -       0.246
+      PF1     -0.045      0.040      0.016       - - 
+      PF2      0.031     -0.106     -0.035       - - 
+      PF3     -0.009      0.091      0.015       - - 
+      PF4      0.020     -0.002      0.005       - - 
+
+         Standardized Expected Change for LAMBDA-Y       
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1       - -      -0.326      0.034     -0.841
+      FF2      0.186       - -      -0.269     -0.805
+      FF3      0.082     -0.165       - -      -0.943
+      VF1       - -       0.383     -0.039      0.990
+      VF2     -0.149       - -       0.216      0.645
+      VF3     -0.056      0.113       - -       0.643
+      PF1     -0.184      0.100      0.106       - - 
+      PF2      0.123     -0.265     -0.232       - - 
+      PF3     -0.035      0.229      0.099       - - 
+      PF4      0.082     -0.005      0.034       - - 
+
+ No Non-Zero Modification Indices for PSI         
+
+         Modification Indices for THETA-EPS      
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2     83.538       - - 
+      FF3     79.521     52.486       - - 
+      VF1       - -     142.986    118.971       - - 
+      VF2     98.450       - -      70.806    207.854       - - 
+      VF3    120.084     53.802       - -     223.192     94.259       - - 
+      PF1      4.279      3.758      3.228      6.693      0.544      1.309
+      PF2      4.420      1.439      1.498      4.869      3.257      0.076
+      PF3      0.330      5.099      0.492      3.707      0.071      2.897
+      PF4      1.253      0.187      0.001      0.318      1.109      0.266
+
+         Modification Indices for THETA-EPS      
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2      0.011       - - 
+      PF3      0.000      0.257       - - 
+      PF4      0.245      0.051      0.475       - - 
+
+         Expected Change for THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2      4.111       - - 
+      FF3     10.144      5.023       - - 
+      VF1       - -      -7.628    -17.653       - - 
+      VF2     -4.217       - -      -5.688      9.586       - - 
+      VF3    -10.135     -4.260       - -      21.918      6.331       - - 
+      PF1      0.636     -0.491     -1.175      1.456     -0.232     -0.824
+      PF2     -0.908      0.426      1.124     -1.730      0.789      0.276
+      PF3      0.271     -0.877     -0.704      1.663      0.128      1.882
+      PF4     -0.358      0.114     -0.024      0.329      0.343      0.384
+
+         Expected Change for THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2     -0.082       - - 
+      PF3      0.007      0.596       - - 
+      PF4      0.277     -0.236     -0.581       - - 
+
+ Maximum Modification Index is  223.19 for Element ( 6, 4) of THETA-EPS
+
+ Model 4 four-factor CFA model using LISREL syntax                              
+
+ Standardized Solution           
+
+         LAMBDA-Y    
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      FF1      4.043       - -        - -        - - 
+      FF2       - -       2.514       - -        - - 
+      FF3       - -        - -       6.722       - - 
+      VF1      4.754       - -        - -        - - 
+      VF2       - -       2.013       - -        - - 
+      VF3       - -        - -       4.583       - - 
+      PF1       - -        - -        - -       2.614
+      PF2       - -        - -        - -       4.743
+      PF3       - -        - -        - -       3.918
+      PF4       - -        - -        - -       3.376
+
+         Correlation Matrix of ETA               
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      Flu      1.000
+      Fle      1.558      1.000
+      Ori      1.514      1.512      1.000
+   Affect      0.312      0.369      0.345      1.000
+
+         PSI         
+
+                 Flu        Fle        Ori     Affect   
+            --------   --------   --------   --------
+      Flu      1.000
+      Fle      1.558      1.000
+      Ori      1.514      1.512      1.000
+   Affect      0.312      0.369      0.345      1.000
+
+                           Time used 0.016 seconds

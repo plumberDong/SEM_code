@@ -1,0 +1,317 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME:  0:51
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m3.spl:
+
+ Ch6 Model 3 Three-factor CFA model using SIMPLIS syntax
+ Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ Raw Data from File ch6.dat
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ Latent Variables:  Figural Verbal Affect
+ Relationships:
+ FF1 FF2 FF3=Figural
+ VF1 VF2 VF3=Verbal
+ PF1-PF4=Affect
+ Path Diagram
+ LISREL Output AD=off
+ End of Program
+
+ Ch6 Model 3 Three-factor CFA model using SIMPLIS syntax                        
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ Ch6 Model 3 Three-factor CFA model using SIMPLIS syntax                        
+
+ Parameter Specifications
+
+         LAMBDA-X    
+
+             Figural     Verbal     Affect
+            --------   --------   --------
+      FF1          1          0          0
+      FF2          2          0          0
+      FF3          3          0          0
+      VF1          0          4          0
+      VF2          0          5          0
+      VF3          0          6          0
+      PF1          0          0          7
+      PF2          0          0          8
+      PF3          0          0          9
+      PF4          0          0         10
+
+         PHI         
+
+             Figural     Verbal     Affect
+            --------   --------   --------
+  Figural          0
+   Verbal         11          0
+   Affect         12         13          0
+
+         THETA-DELTA 
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  14         15         16         17         18         19
+
+         THETA-DELTA 
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  20         21         22         23
+ 
+
+
+ Ch6 Model 3 Three-factor CFA model using SIMPLIS syntax                        
+
+ Number of Iterations = 4           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-X    
+
+             Figural     Verbal     Affect   
+            --------   --------   --------
+      FF1      5.525       - -        - - 
+             (0.145)
+              38.181
+ 
+      FF2      3.471       - -        - - 
+             (0.106)
+              32.857
+ 
+      FF3      8.898       - -        - - 
+             (0.273)
+              32.605
+ 
+      VF1       - -       7.761       - - 
+                        (0.200)
+                         38.861
+ 
+      VF2       - -       3.255       - - 
+                        (0.107)
+                         30.417
+ 
+      VF3       - -       7.333       - - 
+                        (0.238)
+                         30.872
+ 
+      PF1       - -        - -       2.630
+                                   (0.144)
+                                    18.226
+ 
+      PF2       - -        - -       4.708
+                                   (0.208)
+                                    22.590
+ 
+      PF3       - -        - -       3.935
+                                   (0.221)
+                                    17.801
+ 
+      PF4       - -        - -       3.380
+                                   (0.154)
+                                    21.913
+ 
+
+         PHI         
+
+             Figural     Verbal     Affect   
+            --------   --------   --------
+  Figural      1.000
+ 
+   Verbal      0.446      1.000
+             (0.029)
+              15.398
+ 
+   Affect      0.186      0.270      1.000
+             (0.039)    (0.037)
+               4.798      7.301
+ 
+
+         THETA-DELTA 
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               1.075      2.749     18.971      0.483      3.648     17.153
+             (0.280)    (0.175)    (1.189)    (0.664)    (0.216)    (1.042)
+               3.840     15.665     15.953      0.728     16.857     16.466
+ 
+
+         THETA-DELTA 
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               9.918     15.605     23.693      9.053
+             (0.601)    (1.231)    (1.415)    (0.672)
+              16.515     12.680     16.747     13.469
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.966      0.814      0.807      0.992      0.744      0.758
+
+         Squared Multiple Correlations for X - Variables         
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.411      0.587      0.395      0.558
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        23                       55
+ -2ln(L)                      30311.482                30224.093
+ AIC (Akaike, 1974)*          30357.482                30334.093
+ BIC (Schwarz, 1978)*         30465.343                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      32
+ Maximum Likelihood Ratio Chi-Square (C1)              87.389 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                86.854 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              55.389
+ 90 Percent Confidence Interval for NCP                (31.337 ; 87.098)
+ 
+ Minimum Fit Function Value                            0.109
+ Population Discrepancy Function Value (F0)            0.0689
+ 90 Percent Confidence Interval for F0                 (0.0390 ; 0.108)
+ Root Mean Square Error of Approximation (RMSEA)       0.0464
+ 90 Percent Confidence Interval for RMSEA              (0.0349 ; 0.0582)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.677
+ 
+ Expected Cross-Validation Index (ECVI)                0.166
+ 90 Percent Confidence Interval for ECVI               (0.136 ; 0.205)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.985
+ Non-Normed Fit Index (NNFI)                           0.987
+ Parsimony Normed Fit Index (PNFI)                     0.701
+ Comparative Fit Index (CFI)                           0.991
+ Incremental Fit Index (IFI)                           0.991
+ Relative Fit Index (RFI)                              0.979
+ 
+ Critical N (CN)                                     492.508
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.803
+ Standardized RMR                                      0.0204
+ Goodness of Fit Index (GFI)                           0.979
+ Adjusted Goodness of Fit Index (AGFI)                 0.964
+ Parsimony Goodness of Fit Index (PGFI)                0.570
+
+                           Time used 0.000 seconds

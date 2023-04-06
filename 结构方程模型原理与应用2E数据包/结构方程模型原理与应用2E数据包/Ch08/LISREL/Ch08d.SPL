@@ -1,0 +1,16 @@
+Ch8 SEM Stage 2 Modified model B using SIMPLIS syntax                                        
+Observed variables: CREAT SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2
+Covariance matrix from file Ch08.cov
+Sample Size = 250
+Latent Variables  Crea Efficacy Person Soclized 
+Relationships
+CREAT SEFF4 = Crea  
+SEFF1-SEFF4 = Efficacy  
+PER1-PER3 = Person 
+SOC1-SOC2 = Soclized
+Crea = Efficacy Person Soclized 
+Efficacy = Person Soclized
+Set the error variance of CREAT to 0
+Set the error covariance of SEFF3 and SEFF4 to free
+Path Diagram
+End of Problem 

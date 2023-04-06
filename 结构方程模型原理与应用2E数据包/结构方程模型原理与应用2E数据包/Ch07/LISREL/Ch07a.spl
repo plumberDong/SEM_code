@@ -1,0 +1,24 @@
+Ch7a Path Modela  using SIMPLIS syntax
+Observed variables: OUTCOME COMMIT VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE
+Covariance matrix
+.402
+.466 2.537
+.185 .667 .649
+.174 .704 .368 .910
+.167 .578 .272 .421 .693
+.157 .483 .207 .330 .320 .600
+.221 .730 .346 .463 .392 .387 .779
+.172 .647 .370 .270 .369 .250 .333 .768 
+1.406 2.883 .949 .154 .347 .274 .527 1.116 85.137
+Sample Size = 281
+Relationships
+OUTCOME = COMMIT TENURE 
+COMMIT = VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE 
+set the correlation between VALUE and TENURE equal to 0
+set the covariance of JOBSTYLE and TENURE to 0
+set the covariance between TEAMWORK and TENURE to 0
+!set the covariance between LEADERSH and TENURE to 0
+!set the covariance between LEARNING and TENURE to 0
+!set the covariance between ENVIRONM and TENURE to 0
+Path Diagram
+End of Program 

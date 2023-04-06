@@ -1,0 +1,11 @@
+Ch7a Path Modela using LISREL syntax                                           
+SYSTEM FILE from file 'C:\SEM\Ch07\LISREL\Ch07a.DSF'
+Sample Size = 281
+Relationships
+OUTCOME = COMMIT 
+OUTCOME = TENURE 
+COMMIT = VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE 
+Set Covariance of TENURE and VALUE to 1
+Path Diagram
+Print Residuals
+End of Problem 

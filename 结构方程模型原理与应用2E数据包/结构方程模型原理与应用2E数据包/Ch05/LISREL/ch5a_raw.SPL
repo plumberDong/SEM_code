@@ -1,0 +1,19 @@
+Ch5 Confirmatory Factor Analysis using SIMPLIS syntax
+Observed Variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3
+Raw data from File ch05cfa.raw
+Latent Variables:  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING
+Relationships
+A1    = 1*VALUE
+A2-A3 = VALUE 
+B1    = 1*JOBSTYLE
+B2-B3 = JOBSTYLE
+C1    = 1*TEAMWORK
+C2-C3 = TEAMWORK
+D1    = 1*LEADERSH
+D2-D3 = LEADERSH
+E1    = 1*LEARNING
+E2-E3 = LEARNING
+set the variance of VALUE-LEARNING free
+Path Diagram
+LISREL Output SE TV RS MR FS SS SC MI ALL
+End of Program

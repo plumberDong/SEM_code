@@ -1,0 +1,12 @@
+Title ch6 Model 2 Two-factor CFA using LISREL syntax 
+DATA   NI=10 NO=804
+RA FI=ch6.dat
+LA
+FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+MO  NY=10 NE=2 PS=SY,FR
+LE
+Cognitive Affect 
+FR       LY 2 1 LY 3 1 LY 4 1 LY 5 1 LY 6 1 LY 8 2 LY 9 2 LY 10 2
+VA  1   LY 1 1 LY 7 2
+PD
+OUTPUT AD=OFF SE TV SS MI

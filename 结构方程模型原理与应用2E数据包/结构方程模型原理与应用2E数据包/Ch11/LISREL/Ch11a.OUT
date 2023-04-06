@@ -1,0 +1,209 @@
+
+                                DATE:  4/ 5/2018
+                                  TIME: 22:20
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch11\LISREL\Ch11a.LIS:
+
+ Ch11 One factor latent change model using LISREL syntax
+ DA NI=4 NO=200
+ CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+ LA;   RT1 RT2 RT3 RT4
+ MO   NY=4 NE=1 AL=FR
+ LE;   Time
+ FI  LY 1 1 LY 2 1 LY 3 1 LY 4 1
+ VA 1 LY 1 1 LY 2 1 LY 3 1 LY 4 1
+ PD
+ OU
+
+ Ch11 One factor latent change model using LISREL syntax                        
+
+                           Number of Input Variables  4
+                           Number of Y - Variables    4
+                           Number of X - Variables    0
+                           Number of ETA - Variables  1
+                           Number of KSI - Variables  0
+                           Number of Observations   200
+
+ Ch11 One factor latent change model using LISREL syntax                        
+
+         Covariance Matrix       
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+      RT1    307.460
+      RT2    296.520    377.210
+      RT3    295.020    365.100    392.470
+      RT4    291.020    355.880    358.250    376.840
+
+ Total Variance = 1453.980 Generalized Variance = 37786493.359                            
+
+ Largest Eigenvalue = 1350.649 Smallest Eigenvalue = 18.007                                  
+
+ Condition Number = 8.661
+
+         Means   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              37.480     53.300     54.820     52.630
+
+
+ Ch11 One factor latent change model using LISREL syntax                        
+
+ Parameter Specifications
+
+         PSI         
+
+                Time
+            --------
+                   1
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4
+            --------   --------   --------   --------
+                   2          3          4          5
+
+         ALPHA       
+
+                Time
+            --------
+                   6
+ 
+
+
+ Ch11 One factor latent change model using LISREL syntax                        
+
+ Number of Iterations = 9           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+                Time   
+            --------
+      RT1      1.000
+ 
+      RT2      1.000
+ 
+      RT3      1.000
+ 
+      RT4      1.000
+ 
+
+         Covariance Matrix of ETA                
+
+                Time   
+            --------
+             357.580
+
+         Mean Vector of Eta-Variables
+
+                Time   
+            --------
+              53.151
+
+         PSI         
+
+                Time   
+            --------
+             357.580
+            (36.447)
+               9.811
+ 
+
+         THETA-EPS   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+             331.611     13.425     30.383     27.681
+            (33.852)    (2.933)    (4.061)    (3.851)
+               9.796      4.578      7.481      7.189
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+               0.519      0.964      0.922      0.928
+
+         ALPHA       
+
+                Time   
+            --------
+              53.151
+             (1.350)
+              39.377
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)         6                       14
+ -2ln(L)                       4622.734                 4289.492
+ AIC (Akaike, 1974)*           4634.734                 4317.492
+ BIC (Schwarz, 1978)*          4654.524                 4363.669
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      8
+ Maximum Likelihood Ratio Chi-Square (C1)              333.241 (P = 0.0000)
+ Due to Covariance Structure                           164.499
+ Due to Mean Structure                                 168.742
+ Browne's (1984) ADF Chi-Square (C2_NT)                194.352 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              325.241
+ 90 Percent Confidence Interval for NCP                (269.210 ; 388.689)
+ 
+ Minimum Fit Function Value                            1.666
+ Population Discrepancy Function Value (F0)            1.626
+ 90 Percent Confidence Interval for F0                 (1.346 ; 1.943)
+ Root Mean Square Error of Approximation (RMSEA)       0.451
+ 90 Percent Confidence Interval for RMSEA              (0.410 ; 0.493)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                1.726
+ 90 Percent Confidence Interval for ECVI               (1.426 ; 2.023)
+ ECVI for Saturated Model                              0.1000
+ ECVI for Independence Model                           6.158
+ 
+ Chi-Square for Independence Model (6 df)            1223.593
+ 
+ Normed Fit Index (NFI)                                0.728
+ Non-Normed Fit Index (NNFI)                           0.800
+ Parsimony Normed Fit Index (PNFI)                     0.970
+ Comparative Fit Index (CFI)                           0.733
+ Incremental Fit Index (IFI)                           0.732
+ Relative Fit Index (RFI)                              0.796
+ 
+ Critical N (CN)                                      12.998
+ 
+ 
+ Root Mean Square Residual (RMR)                       58.355
+ Standardized RMR                                      0.0993
+ Goodness of Fit Index (GFI)                           0.964
+ Adjusted Goodness of Fit Index (AGFI)                 0.955
+ Parsimony Goodness of Fit Index (PGFI)                0.771
+
+                           Time used 0.000 seconds

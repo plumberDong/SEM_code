@@ -1,0 +1,11 @@
+Ch6 Model 1 One-factor CFA using SIMPLIS syntax 
+Observed Variables: FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+Raw Data from File ch6.dat 
+Sample Size = 804
+Latent Variables:  Crea
+Relationships:
+FF1 =1*Crea
+FF2-PF4=Crea 
+Path Diagram
+LISREL Output AD=OFF
+End of Program

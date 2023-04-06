@@ -1,0 +1,14 @@
+Ch8 SEM Stage 1 CFA using SIMPLIS syntax                                        
+Observed variables: CREA SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2
+Covariance matrix from file Ch08.cov
+Sample Size = 250
+Latent Variables  Creat Efficacy Person Soclized 
+Relationships
+  CREA = Creat
+  SEFF1-SEFF4 = Efficacy  
+  PER1-PER3= Person 
+  SOC1 -SOC2 =Soclized 
+Set the error variance of CREA to 0
+Robust Estimation
+Path Diagram
+End of Problem 

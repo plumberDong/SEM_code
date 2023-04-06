@@ -1,0 +1,12 @@
+TITLE:      Basic moderation model (categorial Moe)
+DATA:       FILE = Ch12a.csv; 
+VARIABLE:   NAMES = group y x m1 m gender leader; 
+            USEVARIABLES=y x leader INTER1;
+DEFINE:     CENTER x (GRANDMEAN);
+            INTER1=x*leader;
+ANALYSIS:   ESTIMATOR IS ML;
+MODEL:      y on x leader
+                   INTER1 (int);
+MODEL TEST: 0 = int;            
+OUTPUT:     SAMPSTAT STDYX CINTERVAL; 
+PLOT:       TYPE = PLOT3;

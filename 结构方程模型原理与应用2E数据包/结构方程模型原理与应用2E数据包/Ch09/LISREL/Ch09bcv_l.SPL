@@ -1,0 +1,43 @@
+GROUP: calibration sample                                                      
+Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+correlation matrix from file Ch9b1.cov
+Sample Size = 144
+Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM 
+Relationships
+A1-A3= VALUE 
+B1-B3 = JOBSTYLE 
+C1-C3 = TEAMWORK 
+D1-D3 = LEADERSH 
+E1-E3 = LEARNING 
+F1 -F3= ENVIRONM 
+Set the Variance of VALUE-ENVIRONM  to 1.00
+Path Diagram
+GROUP: Validation sample                                                       
+Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+correlation matrix from file Ch9b2.cov
+Sample Size = 111
+Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM 
+Relationships
+A1-A3= VALUE 
+B1-B3 = JOBSTYLE 
+C1-C3 = TEAMWORK 
+D1-D3 = LEADERSH 
+E1-E3 = LEARNING 
+F1 -F3= ENVIRONM 
+Set the Error Variance of A1-F3 Free 
+Set the Covariances of JOBSTYLE and VALUE Free 
+Set the Covariances of TEAMWORK and VALUE Free 
+Set the Covariances of TEAMWORK and JOBSTYLE Free 
+Set the Covariances of LEADERSH and VALUE Free 
+Set the Covariances of LEADERSH and JOBSTYLE Free 
+Set the Covariances of LEADERSH and TEAMWORK Free 
+Set the Covariances of LEARNING and VALUE Free 
+Set the Covariances of LEARNING and JOBSTYLE Free 
+Set the Covariances of LEARNING and TEAMWORK Free 
+Set the Covariances of LEARNING and LEADERSH Free 
+Set the Covariances of ENVIRONM and VALUE Free 
+Set the Covariances of ENVIRONM and JOBSTYLE Free 
+Set the Covariances of ENVIRONM and TEAMWORK Free 
+Set the Covariances of ENVIRONM and LEADERSH Free 
+Set the Covariances of ENVIRONM and LEARNING Free 
+End of Problem 

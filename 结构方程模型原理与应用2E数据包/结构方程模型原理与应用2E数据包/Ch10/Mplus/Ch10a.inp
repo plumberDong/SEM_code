@@ -1,0 +1,21 @@
+TITLE:	Ch10a Mean Structure Model for Measurement Model
+DATA:   	
+   NGROUPS=2;
+   FILE (female) IS Ch10af.dat;
+   FILE (male) IS Ch10am.dat;
+
+VARIABLE:	NAMES ARE a1-a3 b1-b3 c1-c3 d1-d3 e1-e3 f1-f3;
+
+MODEL:     
+ VALUE    by a1* a2-a3;
+ JOBSTYLE by b1* b2-b3;
+ TEAMWORK by c1* c2-c3;
+ LEADERSH by d1* d2-d3;
+ LEARNING by e1* e2-e3;
+ ENVIRONM by f1* f2-f3;
+ VALUE@1 JOBSTYLE@1 TEAMWORK@1 LEADERSH@1 LEARNING@1 ENVIRONM@1;
+  a1(1); a2(2); a3(3); b1(4); b2(5); b3(6); c1(7); c2(8); c3(9); 
+  d1(10); d2(11); d3(12); e1(13); e2(14); e3(15); f1(16); f2(17); f3(18);
+
+OUTPUT: 
+STANDARDIZED;

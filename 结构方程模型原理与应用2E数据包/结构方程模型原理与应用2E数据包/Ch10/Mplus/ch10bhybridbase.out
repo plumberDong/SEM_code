@@ -1,0 +1,573 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/04/2018  11:18 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	Ch10b Mean structure modeling
+  DATA:   	
+     NGROUPS=2;
+     FILE (manager) IS Ch10bm.dat;
+     FILE (employee) IS Ch10be.dat;
+
+  VARIABLE:	NAMES ARE out1-out3 co1-co3;
+
+  MODEL:
+   Commit by co1-co3;
+   Outcome by out1-out3;
+   Outcome on Commit(1);
+
+  MODEL manager:
+   [out1 out2 out3 co1 co2 co3];
+
+  MODEL employee:
+   [Commit@0 Outcome@0];
+   [out1 out2 out3 co1 co2 co3];
+
+  OUTPUT:
+  STANDARDIZED;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch10b Mean structure modeling
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group MANAGER                                               121
+   Group EMPLOYEE                                              215
+   Total sample size                                           336
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   OUT1        OUT2        OUT3        CO1         CO2         CO3
+
+Continuous latent variables
+   COMMIT      OUTCOME
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch10bm.dat
+  Ch10be.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR MANAGER
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     OUT1                  4.669      -1.511       3.000    4.96%       4.000      5.000      5.000
+             121.000       0.320       1.286       5.000   71.90%       5.000      5.000
+     OUT2                  2.066       0.962       1.000   44.63%       1.000      1.000      2.000
+             121.000       1.467      -0.009       5.000    6.61%       2.000      3.000
+     OUT3                  4.587      -1.085       3.000    4.96%       4.000      5.000      5.000
+             121.000       0.342       0.171       5.000   63.64%       5.000      5.000
+     CO1                  10.041      -0.469       6.000    2.48%       9.000     10.000     10.000
+             121.000       2.651      -0.561      12.000   27.27%      10.000     12.000
+     CO2                  10.050      -0.394       6.000    1.65%       9.000     10.000     10.000
+             121.000       2.245      -0.325      12.000   24.79%      10.000     12.000
+     CO3                   9.752      -0.443       5.000    0.83%       8.000     10.000     10.000
+             121.000       2.385      -0.115      12.000   15.70%      10.000     11.000
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS FOR EMPLOYEE
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     OUT1                  4.437      -1.075       2.000    1.40%       4.000      4.000      5.000
+             215.000       0.469       0.894       5.000   53.49%       5.000      5.000
+     OUT2                  2.623       0.216       1.000   32.56%       1.000      2.000      3.000
+             215.000       1.937      -1.259       5.000   11.16%       3.000      4.000
+     OUT3                  4.405      -0.983       2.000    1.40%       4.000      4.000      5.000
+             215.000       0.473       0.706       5.000   50.70%       5.000      5.000
+     CO1                   9.293      -0.318       3.000    0.47%       8.000      9.000      9.000
+             215.000       3.333       0.070      12.000   17.21%      10.000     11.000
+     CO2                   9.256      -0.443       2.000    0.47%       8.000      8.000      9.000
+             215.000       3.660       0.411      12.000   17.67%      10.000     11.000
+     CO3                   8.991       0.009       4.000    0.93%       8.000      8.000      9.000
+             215.000       3.079      -0.303      12.000   12.56%       9.000     10.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       33
+
+Loglikelihood
+
+          H0 Value                       -2848.356
+          H1 Value                       -2825.444
+
+Information Criteria
+
+          Akaike (AIC)                    5762.711
+          Bayesian (BIC)                  5888.676
+          Sample-Size Adjusted BIC        5783.996
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             45.822
+          Degrees of Freedom                    21
+          P-Value                           0.0013
+
+Chi-Square Contribution From Each Group
+
+          MANAGER                           20.527
+          EMPLOYEE                          25.296
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.084
+          90 Percent C.I.                    0.051  0.117
+          Probability RMSEA <= .05           0.048
+
+CFI/TLI
+
+          CFI                                0.966
+          TLI                                0.952
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            768.322
+          Degrees of Freedom                    30
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.087
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group MANAGER
+
+ COMMIT   BY
+    CO1                1.000      0.000    999.000    999.000
+    CO2                1.110      0.061     18.272      0.000
+    CO3                1.035      0.057     18.109      0.000
+
+ OUTCOME  BY
+    OUT1               1.000      0.000    999.000    999.000
+    OUT2              -0.957      0.322     -2.970      0.003
+    OUT3               0.476      0.099      4.826      0.000
+
+ OUTCOME  ON
+    COMMIT             0.171      0.025      6.921      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               4.669      0.053     88.439      0.000
+    OUT2               2.066      0.113     18.301      0.000
+    OUT3               4.587      0.052     88.573      0.000
+    CO1               10.041      0.144     69.577      0.000
+    CO2               10.050      0.137     73.312      0.000
+    CO3                9.752      0.140     69.424      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.578      0.259      6.096      0.000
+
+ Residual Variances
+    OUT1               0.159      0.071      2.244      0.025
+    OUT2               1.379      0.194      7.100      0.000
+    OUT3               0.284      0.041      6.966      0.000
+    CO1                0.942      0.147      6.394      0.000
+    CO2                0.331      0.103      3.227      0.001
+    CO3                0.697      0.124      5.627      0.000
+    OUTCOME            0.132      0.072      1.843      0.065
+
+Group EMPLOYEE
+
+ COMMIT   BY
+    CO1                1.000      0.000    999.000    999.000
+    CO2                1.110      0.061     18.272      0.000
+    CO3                1.035      0.057     18.109      0.000
+
+ OUTCOME  BY
+    OUT1               1.000      0.000    999.000    999.000
+    OUT2              -0.957      0.322     -2.970      0.003
+    OUT3               0.476      0.099      4.826      0.000
+
+ OUTCOME  ON
+    COMMIT             0.171      0.025      6.921      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               4.437      0.046     96.218      0.000
+    OUT2               2.623      0.094     28.012      0.000
+    OUT3               4.405      0.048     92.527      0.000
+    CO1                9.293      0.126     73.663      0.000
+    CO2                9.256      0.130     71.318      0.000
+    CO3                8.991      0.120     75.146      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             2.284      0.299      7.637      0.000
+
+ Residual Variances
+    OUT1               0.140      0.088      1.590      0.112
+    OUT2               1.595      0.189      8.455      0.000
+    OUT3               0.415      0.042      9.838      0.000
+    CO1                1.138      0.140      8.142      0.000
+    CO2                0.810      0.130      6.215      0.000
+    CO3                0.631      0.108      5.828      0.000
+    OUTCOME            0.250      0.096      2.612      0.009
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group MANAGER
+
+ COMMIT   BY
+    CO1                0.791      0.035     22.387      0.000
+    CO2                0.924      0.025     37.633      0.000
+    CO3                0.841      0.030     27.745      0.000
+
+ OUTCOME  BY
+    OUT1               0.727      0.139      5.215      0.000
+    OUT2              -0.325      0.077     -4.210      0.000
+    OUT3               0.353      0.081      4.336      0.000
+
+ OUTCOME  ON
+    COMMIT             0.510      0.122      4.186      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               8.040      0.492     16.327      0.000
+    OUT2               1.664      0.142     11.751      0.000
+    OUT3               8.052      0.495     16.254      0.000
+    CO1                6.325      0.367     17.239      0.000
+    CO2                6.665      0.431     15.473      0.000
+    CO3                6.311      0.383     16.461      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.472      0.203      2.327      0.020
+    OUT2               0.894      0.050     17.780      0.000
+    OUT3               0.875      0.058     15.223      0.000
+    CO1                0.374      0.056      6.685      0.000
+    CO2                0.146      0.045      3.206      0.001
+    CO3                0.292      0.051      5.718      0.000
+    OUTCOME            0.740      0.124      5.947      0.000
+
+Group EMPLOYEE
+
+ COMMIT   BY
+    CO1                0.817      0.026     31.885      0.000
+    CO2                0.881      0.022     40.726      0.000
+    CO3                0.892      0.021     42.864      0.000
+
+ OUTCOME  BY
+    OUT1               0.833      0.116      7.200      0.000
+    OUT2              -0.393      0.090     -4.378      0.000
+    OUT3               0.385      0.061      6.340      0.000
+
+ OUTCOME  ON
+    COMMIT             0.460      0.092      4.989      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               6.562      0.306     21.411      0.000
+    OUT2               1.910      0.113     16.875      0.000
+    OUT3               6.310      0.311     20.270      0.000
+    CO1                5.024      0.242     20.735      0.000
+    CO2                4.864      0.237     20.494      0.000
+    CO3                5.125      0.251     20.410      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.305      0.193      1.582      0.114
+    OUT2               0.846      0.070     11.997      0.000
+    OUT3               0.852      0.047     18.256      0.000
+    CO1                0.333      0.042      7.946      0.000
+    CO2                0.224      0.038      5.863      0.000
+    CO3                0.205      0.037      5.523      0.000
+    OUTCOME            0.789      0.085      9.303      0.000
+
+
+STDY Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group MANAGER
+
+ COMMIT   BY
+    CO1                0.791      0.035     22.387      0.000
+    CO2                0.924      0.025     37.633      0.000
+    CO3                0.841      0.030     27.745      0.000
+
+ OUTCOME  BY
+    OUT1               0.727      0.139      5.215      0.000
+    OUT2              -0.325      0.077     -4.210      0.000
+    OUT3               0.353      0.081      4.336      0.000
+
+ OUTCOME  ON
+    COMMIT             0.510      0.122      4.186      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               8.040      0.492     16.327      0.000
+    OUT2               1.664      0.142     11.751      0.000
+    OUT3               8.052      0.495     16.254      0.000
+    CO1                6.325      0.367     17.239      0.000
+    CO2                6.665      0.431     15.473      0.000
+    CO3                6.311      0.383     16.461      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.472      0.203      2.327      0.020
+    OUT2               0.894      0.050     17.780      0.000
+    OUT3               0.875      0.058     15.223      0.000
+    CO1                0.374      0.056      6.685      0.000
+    CO2                0.146      0.045      3.206      0.001
+    CO3                0.292      0.051      5.718      0.000
+    OUTCOME            0.740      0.124      5.947      0.000
+
+Group EMPLOYEE
+
+ COMMIT   BY
+    CO1                0.817      0.026     31.885      0.000
+    CO2                0.881      0.022     40.726      0.000
+    CO3                0.892      0.021     42.864      0.000
+
+ OUTCOME  BY
+    OUT1               0.833      0.116      7.200      0.000
+    OUT2              -0.393      0.090     -4.378      0.000
+    OUT3               0.385      0.061      6.340      0.000
+
+ OUTCOME  ON
+    COMMIT             0.460      0.092      4.989      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               6.562      0.306     21.411      0.000
+    OUT2               1.910      0.113     16.875      0.000
+    OUT3               6.310      0.311     20.270      0.000
+    CO1                5.024      0.242     20.735      0.000
+    CO2                4.864      0.237     20.494      0.000
+    CO3                5.125      0.251     20.410      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.305      0.193      1.582      0.114
+    OUT2               0.846      0.070     11.997      0.000
+    OUT3               0.852      0.047     18.256      0.000
+    CO1                0.333      0.042      7.946      0.000
+    CO2                0.224      0.038      5.863      0.000
+    CO3                0.205      0.037      5.523      0.000
+    OUTCOME            0.789      0.085      9.303      0.000
+
+
+STD Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group MANAGER
+
+ COMMIT   BY
+    CO1                1.256      0.103     12.191      0.000
+    CO2                1.394      0.103     13.570      0.000
+    CO3                1.300      0.102     12.787      0.000
+
+ OUTCOME  BY
+    OUT1               0.422      0.085      4.966      0.000
+    OUT2              -0.404      0.100     -4.035      0.000
+    OUT3               0.201      0.047      4.306      0.000
+
+ OUTCOME  ON
+    COMMIT             0.510      0.122      4.186      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               4.669      0.053     88.439      0.000
+    OUT2               2.066      0.113     18.301      0.000
+    OUT3               4.587      0.052     88.573      0.000
+    CO1               10.041      0.144     69.577      0.000
+    CO2               10.050      0.137     73.312      0.000
+    CO3                9.752      0.140     69.424      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.159      0.071      2.244      0.025
+    OUT2               1.379      0.194      7.100      0.000
+    OUT3               0.284      0.041      6.966      0.000
+    CO1                0.942      0.147      6.394      0.000
+    CO2                0.331      0.103      3.227      0.001
+    CO3                0.697      0.124      5.627      0.000
+    OUTCOME            0.740      0.124      5.947      0.000
+
+Group EMPLOYEE
+
+ COMMIT   BY
+    CO1                1.511      0.099     15.273      0.000
+    CO2                1.677      0.101     16.560      0.000
+    CO3                1.564      0.093     16.769      0.000
+
+ OUTCOME  BY
+    OUT1               0.564      0.085      6.635      0.000
+    OUT2              -0.539      0.129     -4.187      0.000
+    OUT3               0.268      0.046      5.775      0.000
+
+ OUTCOME  ON
+    COMMIT             0.460      0.092      4.989      0.000
+
+ Means
+    COMMIT             0.000      0.000    999.000    999.000
+
+ Intercepts
+    OUT1               4.437      0.046     96.218      0.000
+    OUT2               2.623      0.094     28.012      0.000
+    OUT3               4.405      0.048     92.527      0.000
+    CO1                9.293      0.126     73.663      0.000
+    CO2                9.256      0.130     71.318      0.000
+    CO3                8.991      0.120     75.146      0.000
+    OUTCOME            0.000      0.000    999.000    999.000
+
+ Variances
+    COMMIT             1.000      0.000    999.000    999.000
+
+ Residual Variances
+    OUT1               0.140      0.088      1.590      0.112
+    OUT2               1.595      0.189      8.455      0.000
+    OUT3               0.415      0.042      9.838      0.000
+    CO1                1.138      0.140      8.142      0.000
+    CO2                0.810      0.130      6.215      0.000
+    CO3                0.631      0.108      5.828      0.000
+    OUTCOME            0.789      0.085      9.303      0.000
+
+
+R-SQUARE
+
+Group MANAGER
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    OUT1               0.528      0.203      2.607      0.009
+    OUT2               0.106      0.050      2.105      0.035
+    OUT3               0.125      0.058      2.168      0.030
+    CO1                0.626      0.056     11.194      0.000
+    CO2                0.854      0.045     18.816      0.000
+    CO3                0.708      0.051     13.872      0.000
+
+     Latent                                         Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    OUTCOME            0.260      0.124      2.093      0.036
+
+Group EMPLOYEE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    OUT1               0.695      0.193      3.600      0.000
+    OUT2               0.154      0.070      2.189      0.029
+    OUT3               0.148      0.047      3.170      0.002
+    CO1                0.667      0.042     15.942      0.000
+    CO2                0.776      0.038     20.363      0.000
+    CO3                0.795      0.037     21.432      0.000
+
+     Latent                                         Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    OUTCOME            0.211      0.085      2.494      0.013
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.116E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch10\mplus\ch10bhybridbase.dgm
+
+     Beginning Time:  23:18:45
+        Ending Time:  23:18:45
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

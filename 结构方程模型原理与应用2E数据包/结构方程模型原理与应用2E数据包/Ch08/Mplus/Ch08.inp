@@ -1,0 +1,22 @@
+Title: Ch08 SEM  Stage 2 Modified Model using MPLUS8
+DATA:       File is Ch08.cov;
+            Type is covariance;
+            NOBS are 250;
+Variable:   Names are CREAT SEFF1 SEFF2 SEFF3 SEFF4 PER1 PER2 PER3 SOC1 SOC2;
+Model:
+  Crea      by CREAT;
+  Efficacy  by SEFF1-SEFF4;
+  Person    by PER1 PER2 PER3;
+  Soclized  by SOC1 SOC2;
+  Crea      on Efficacy Person Soclized;
+  Efficacy  on Person Soclized;
+  CREAT @0;
+
+MODEL INDIRECT:
+  Crea IND Efficacy Person;
+  Crea IND Person;
+  Crea IND Efficacy Soclized;
+  Crea IND Soclized;
+
+OUTPUT: 
+    tech1; STANDARDIZED;

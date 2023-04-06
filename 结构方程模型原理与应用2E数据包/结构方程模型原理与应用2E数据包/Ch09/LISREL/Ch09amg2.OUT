@@ -1,0 +1,541 @@
+
+                                DATE:  4/ 4/2018
+                                  TIME: 18:54
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch09\LISREL\Ch09amg2.SPL:
+
+ GROUP: MALE
+ Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+ correlation matrix from file Ch09m.cor
+ means from file Ch09m.cor
+ standard deviation from file Ch09m.cor
+ Sample Size = 172
+ Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM
+ Relationships
+ A1-A3= VALUE
+ B1-B3 = JOBSTYLE
+ C1-C3 = TEAMWORK
+ D1-D3 = LEADERSH
+ E1-E3 = LEARNING
+ F1 -F3= ENVIRONM
+ Set the Variance of VALUE-ENVIRONM to 1.00
+ Path Diagram
+ GROUP: FEMALE
+ Observed variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 D2 D3 E1 E2 E3 F1 F2 F3
+ correlation matrix from file Ch09f.cor
+ means from file Ch09f.cor
+ standard deviation from file Ch09f.cor
+ Sample Size = 140
+ Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM
+ Relationships
+ !A1-A3= VALUE
+ !B1-B3 = JOBSTYLE
+ !C1-C3 = TEAMWORK
+ !D1-D3 = LEADERSH
+ !E1-E3 = LEARNING
+ !F1 -F3= ENVIRONM
+ !Set the Variance of VALUE-ENVIRONM to 1.00
+ Set the Covariance of JOBSTYLE and VALUE Free
+ Set the Covariance of TEAMWORK and VALUE Free
+ Set the Covariance of TEAMWORK and JOBSTYLE Free
+ Set the Covariance of LEADERSH and VALUE Free
+ Set the Covariance of LEADERSH and JOBSTYLE Free
+ Set the Covariance of LEADERSH and TEAMWORK Free
+ Set the Covariance of LEARNING and VALUE Free
+ Set the Covariance of LEARNING and JOBSTYLE Free
+ Set the Covariance of LEARNING and TEAMWORK Free
+ Set the Covariance of LEARNING and LEADERSH Free
+ Set the Covariance of ENVIRONM and VALUE Free
+ Set the Covariance of ENVIRONM and JOBSTYLE Free
+ Set the Covariance of ENVIRONM and TEAMWORK Free
+ Set the Covariance of ENVIRONM and LEADERSH Free
+ Set the Covariance of ENVIRONM and LEARNING Free
+ Set the Error Variance of A1-F3 Free
+ End of Problem
+
+ Sample Size =   312
+
+ GROUP: MALE                                                                    
+
+         Covariance Matrix       
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+       A1      0.828
+       A2      0.419      0.922
+       A3      0.336      0.276      0.810
+       B1      0.199      0.276      0.248      1.322
+       B2      0.363      0.460      0.277      0.669      1.300
+       B3      0.288      0.294      0.220      0.598      0.733      1.040
+       C1      0.174      0.175      0.123      0.230      0.384      0.213
+       C2      0.319      0.250      0.189      0.287      0.479      0.316
+       C3      0.274      0.270      0.236      0.178      0.398      0.267
+       D1      0.335      0.406      0.166      0.159      0.304      0.300
+       D2      0.258      0.272      0.153      0.186      0.240      0.149
+       D3      0.254      0.315      0.118      0.094      0.262      0.125
+       E1      0.235      0.188      0.304      0.266      0.416      0.254
+       E2      0.259      0.273      0.272      0.215      0.365      0.209
+       E3      0.214      0.262      0.288      0.259      0.418      0.297
+       F1      0.295      0.265      0.400      0.097      0.315      0.159
+       F2      0.319      0.221      0.198      0.057      0.194      0.214
+       F3      0.359      0.218      0.265      0.126      0.297      0.214
+
+         Covariance Matrix       
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+       C1      0.828
+       C2      0.491      1.000
+       C3      0.335      0.456      0.941
+       D1      0.159      0.239      0.277      0.846
+       D2      0.052      0.186      0.259      0.551      0.656
+       D3      0.224      0.279      0.262      0.407      0.385      0.672
+       E1      0.251      0.267      0.319      0.311      0.260      0.263
+       E2      0.267      0.356      0.259      0.278      0.202      0.277
+       E3      0.257      0.320      0.292      0.311      0.236      0.224
+       F1      0.306      0.408      0.338      0.210      0.233      0.315
+       F2      0.209      0.210      0.262      0.064      0.065      0.123
+       F3      0.306      0.260      0.196      0.093      0.068      0.131
+
+         Covariance Matrix       
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+       E1      0.792
+       E2      0.586      0.792
+       E3      0.619      0.619      0.884
+       F1      0.288      0.288      0.350      1.440
+       F2      0.125      0.125      0.141      0.396      1.000
+       F3      0.142      0.150      0.142      0.302      0.462      0.706
+
+ Total Variance = 16.779 Generalized Variance = 0.465890D-04                            
+
+ Largest Eigenvalue = 5.723 Smallest Eigenvalue = 0.135                                   
+
+ Condition Number = 6.517
+
+ GROUP: FEMALE                                                                  
+
+         Covariance Matrix       
+
+                  A1         A2         A3         B1         B2         B3   
+            --------   --------   --------   --------   --------   --------
+       A1      1.082
+       A2      0.708      1.166
+       A3      0.714      0.517      1.082
+       B1      0.302      0.426      0.326      1.346
+       B2      0.407      0.435      0.191      0.840      1.322
+       B3      0.364      0.427      0.282      0.721      0.858      1.277
+       C1      0.186      0.352      0.164      0.609      0.568      0.676
+       C2      0.209      0.343      0.022      0.553      0.463      0.479
+       C3      0.381      0.527      0.300      0.579      0.472      0.527
+       D1      0.270      0.301      0.150      0.423      0.475      0.423
+       D2      0.163      0.197      0.063      0.283      0.320      0.374
+       D3      0.126      0.185      0.105      0.375      0.407      0.525
+       E1      0.393      0.420      0.360      0.499      0.580      0.653
+       E2      0.381      0.587      0.346      0.554      0.523      0.615
+       E3      0.221      0.534      0.179      0.398      0.395      0.502
+       F1      0.358      0.216      0.208      0.206      0.319      0.276
+       F2      0.555      0.476      0.350      0.161      0.227      0.275
+       F3      0.535      0.503      0.402      0.264      0.285      0.246
+
+         Covariance Matrix       
+
+                  C1         C2         C3         D1         D2         D3   
+            --------   --------   --------   --------   --------   --------
+       C1      1.103
+       C2      0.634      1.124
+       C3      0.524      0.553      1.232
+       D1      0.353      0.387      0.373      0.922
+       D2      0.365      0.397      0.309      0.685      0.757
+       D3      0.456      0.482      0.437      0.630      0.624      1.020
+       E1      0.419      0.289      0.408      0.564      0.448      0.498
+       E2      0.548      0.388      0.505      0.543      0.464      0.538
+       E3      0.424      0.385      0.448      0.427      0.395      0.449
+       F1      0.361      0.377      0.394      0.341      0.319      0.314
+       F2      0.292      0.443      0.631      0.356      0.323      0.281
+       F3      0.291      0.315      0.451      0.257      0.215      0.220
+
+         Covariance Matrix       
+
+                  E1         E2         E3         F1         F2         F3   
+            --------   --------   --------   --------   --------   --------
+       E1      1.103
+       E2      0.874      1.232
+       E3      0.604      0.830      1.020
+       F1      0.291      0.419      0.269      1.232
+       F2      0.304      0.489      0.387      0.682      1.346
+       F3      0.333      0.429      0.350      0.626      0.792      0.980
+
+ Total Variance = 20.344 Generalized Variance = 0.100497D-03                            
+
+ Largest Eigenvalue = 8.318 Smallest Eigenvalue = 0.123                                   
+
+ Condition Number = 8.223
+ 
+
+
+ GROUP: MALE                                                                    
+
+ Number of Iterations = 25          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         Measurement Equations
+
+ 
+       A1 = 0.818*VALUE, Errorvar.= 0.359  , R² = 0.651
+ Standerr  (0.0504)                (0.0577)            
+ Z-values   16.231                  6.216              
+ P-values   0.000                   0.000   
+ 
+       A2 = 0.702*VALUE, Errorvar.= 0.546  , R² = 0.474
+ Standerr  (0.0549)                (0.0691)            
+ Z-values   12.778                  7.895              
+ P-values   0.000                   0.000   
+ 
+       A3 = 0.622*VALUE, Errorvar.= 0.563  , R² = 0.407
+ Standerr  (0.0532)                (0.0683)            
+ Z-values   11.696                  8.235              
+ P-values   0.000                   0.000   
+ 
+       B1 = 0.803*JOBSTYLE, Errorvar.= 0.797 , R² = 0.447
+ Standerr  (0.0617)                   (0.101)            
+ Z-values   13.028                     7.932             
+ P-values   0.000                      0.000  
+ 
+       B2 = 0.947*JOBSTYLE, Errorvar.= 0.411  , R² = 0.686
+ Standerr  (0.0583)                   (0.0741)            
+ Z-values   16.259                     5.546              
+ P-values   0.000                      0.000   
+ 
+       B3 = 0.844*JOBSTYLE, Errorvar.= 0.433  , R² = 0.622
+ Standerr  (0.0552)                   (0.0675)            
+ Z-values   15.305                     6.415              
+ P-values   0.000                      0.000   
+ 
+       C1 = 0.706*TEAMWORK, Errorvar.= 0.433  , R² = 0.535
+ Standerr  (0.0529)                   (0.0620)            
+ Z-values   13.338                     6.987              
+ P-values   0.000                      0.000   
+ 
+       C2 = 0.762*TEAMWORK, Errorvar.= 0.456  , R² = 0.560
+ Standerr  (0.0557)                   (0.0677)            
+ Z-values   13.690                     6.731              
+ P-values   0.000                      0.000   
+ 
+       C3 = 0.672*TEAMWORK, Errorvar.= 0.571  , R² = 0.442
+ Standerr  (0.0576)                   (0.0740)            
+ Z-values   11.673                     7.714              
+ P-values   0.000                      0.000   
+ 
+       D1 = 0.822*LEADERSH, Errorvar.= 0.235  , R² = 0.742
+ Standerr  (0.0444)                   (0.0409)            
+ Z-values   18.520                     5.746              
+ P-values   0.000                      0.000   
+ 
+       D2 = 0.749*LEADERSH, Errorvar.= 0.180  , R² = 0.757
+ Standerr  (0.0393)                   (0.0329)            
+ Z-values   19.089                     5.487              
+ P-values   0.000                      0.000   
+ 
+       D3 = 0.659*LEADERSH, Errorvar.= 0.362  , R² = 0.545
+ Standerr  (0.0462)                   (0.0461)            
+ Z-values   14.258                     7.861              
+ P-values   0.000                      0.000   
+ 
+       E1 = 0.812*LEARNING, Errorvar.= 0.208  , R² = 0.760
+ Standerr  (0.0455)                   (0.0329)            
+ Z-values   17.844                     6.315              
+ P-values   0.000                      0.000   
+ 
+       E2 = 0.882*LEARNING, Errorvar.= 0.188  , R² = 0.805
+ Standerr  (0.0458)                   (0.0344)            
+ Z-values   19.274                     5.479              
+ P-values   0.000                      0.000   
+ 
+       E3 = 0.805*LEARNING, Errorvar.= 0.255  , R² = 0.718
+ Standerr  (0.0469)                   (0.0367)            
+ Z-values   17.164                     6.944              
+ P-values   0.000                      0.000   
+ 
+       F1 = 0.644*ENVIRONM, Errorvar.= 1.129 , R² = 0.268
+ Standerr  (0.0654)                   (0.131)            
+ Z-values   9.844                      8.615             
+ P-values   0.000                      0.000  
+ 
+       F2 = 0.812*ENVIRONM, Errorvar.= 0.540  , R² = 0.550
+ Standerr  (0.0576)                   (0.0775)            
+ Z-values   14.101                     6.970              
+ P-values   0.000                      0.000   
+ 
+       F3 = 0.756*ENVIRONM, Errorvar.= 0.263  , R² = 0.685
+ Standerr  (0.0476)                   (0.0507)            
+ Z-values   15.896                     5.182              
+ P-values   0.000                      0.000   
+ 
+
+         Correlation Matrix of Independent Variables 
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      1.000
+ 
+ JOBSTYLE      0.638      1.000
+             (0.065)
+               9.784
+ 
+ TEAMWORK      0.624      0.634      1.000
+             (0.070)    (0.066)
+               8.888      9.543
+ 
+ LEADERSH      0.662      0.440      0.491      1.000
+             (0.059)    (0.073)    (0.074)
+              11.139      6.011      6.662
+ 
+ LEARNING      0.582      0.529      0.607      0.536      1.000
+             (0.064)    (0.065)    (0.063)    (0.062)
+               9.046      8.081      9.613      8.701
+ 
+ ENVIRONM      0.762      0.459      0.651      0.315      0.390      1.000
+             (0.057)    (0.077)    (0.068)    (0.081)    (0.077)
+              13.331      5.936      9.639      3.861      5.103
+ 
+
+
+                         Group Goodness of Fit Statistics
+
+ Contribution to Chi-Square                            212.474
+ Percentage Contribution to Chi-Square                 47.242
+ 
+ Root Mean Square Residual (RMR)                       0.112
+ Standardized RMR                                      0.110
+ Goodness of Fit Index (GFI)                           0.903
+
+        The Modification Indices Suggest to Add the
+  Path to  from      Decrease in Chi-Square    New Estimate
+ B2        TEAMWORK            8.0                 0.25 IN GROUP 1
+ E2        LEARNING            8.4                 0.79 IN GROUP 1
+
+ The Modification Indices Suggest to Add an Error Covariance
+  Between    and     Decrease in Chi-Square    New Estimate
+ D1        B3                 11.8                 0.12 IN GROUP 1
+ D2        C1                 10.4                -0.10 IN GROUP 1
+
+
+ GROUP: FEMALE                                                                  
+
+ Number of Iterations = 25          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         Measurement Equations
+
+ 
+       A1 = 0.818*VALUE, Errorvar.= 0.234  , R² = 0.741
+ Standerr  (0.0504)                (0.0617)            
+ Z-values   16.231                  3.787              
+ P-values   0.000                   0.000   
+ 
+       A2 = 0.702*VALUE, Errorvar.= 0.565  , R² = 0.466
+ Standerr  (0.0549)                (0.0821)            
+ Z-values   12.778                  6.883              
+ P-values   0.000                   0.000   
+ 
+       A3 = 0.622*VALUE, Errorvar.= 0.552  , R² = 0.412
+ Standerr  (0.0532)                (0.0767)            
+ Z-values   11.696                  7.194              
+ P-values   0.000                   0.000   
+ 
+       B1 = 0.803*JOBSTYLE, Errorvar.= 0.596  , R² = 0.520
+ Standerr  (0.0617)                   (0.0866)            
+ Z-values   13.028                     6.883              
+ P-values   0.000                      0.000   
+ 
+       B2 = 0.947*JOBSTYLE, Errorvar.= 0.461  , R² = 0.661
+ Standerr  (0.0583)                   (0.0810)            
+ Z-values   16.259                     5.689              
+ P-values   0.000                      0.000   
+ 
+       B3 = 0.844*JOBSTYLE, Errorvar.= 0.459  , R² = 0.609
+ Standerr  (0.0552)                   (0.0736)            
+ Z-values   15.305                     6.231              
+ P-values   0.000                      0.000   
+ 
+       C1 = 0.706*TEAMWORK, Errorvar.= 0.498  , R² = 0.500
+ Standerr  (0.0529)                   (0.0756)            
+ Z-values   13.338                     6.586              
+ P-values   0.000                      0.000   
+ 
+       C2 = 0.762*TEAMWORK, Errorvar.= 0.540  , R² = 0.518
+ Standerr  (0.0557)                   (0.0838)            
+ Z-values   13.690                     6.446              
+ P-values   0.000                      0.000   
+ 
+       C3 = 0.672*TEAMWORK, Errorvar.= 0.699  , R² = 0.393
+ Standerr  (0.0576)                   (0.0965)            
+ Z-values   11.673                     7.244              
+ P-values   0.000                      0.000   
+ 
+       D1 = 0.822*LEADERSH, Errorvar.= 0.193  , R² = 0.777
+ Standerr  (0.0444)                   (0.0392)            
+ Z-values   18.520                     4.938              
+ P-values   0.000                      0.000   
+ 
+       D2 = 0.749*LEADERSH, Errorvar.= 0.120  , R² = 0.824
+ Standerr  (0.0393)                   (0.0296)            
+ Z-values   19.089                     4.036              
+ P-values   0.000                      0.000   
+ 
+       D3 = 0.659*LEADERSH, Errorvar.= 0.436  , R² = 0.499
+ Standerr  (0.0462)                   (0.0581)            
+ Z-values   14.258                     7.505              
+ P-values   0.000                      0.000   
+ 
+       E1 = 0.812*LEARNING, Errorvar.= 0.368  , R² = 0.642
+ Standerr  (0.0455)                   (0.0569)            
+ Z-values   17.844                     6.462              
+ P-values   0.000                      0.000   
+ 
+       E2 = 0.882*LEARNING, Errorvar.= 0.229  , R² = 0.773
+ Standerr  (0.0458)                   (0.0477)            
+ Z-values   19.274                     4.802              
+ P-values   0.000                      0.000   
+ 
+       E3 = 0.805*LEARNING, Errorvar.= 0.399  , R² = 0.619
+ Standerr  (0.0469)                   (0.0600)            
+ Z-values   17.164                     6.647              
+ P-values   0.000                      0.000   
+ 
+       F1 = 0.644*ENVIRONM, Errorvar.= 0.713  , R² = 0.368
+ Standerr  (0.0654)                   (0.0963)            
+ Z-values   9.844                      7.399              
+ P-values   0.000                      0.000   
+ 
+       F2 = 0.812*ENVIRONM, Errorvar.= 0.472  , R² = 0.583
+ Standerr  (0.0576)                   (0.0789)            
+ Z-values   14.101                     5.982              
+ P-values   0.000                      0.000   
+ 
+       F3 = 0.756*ENVIRONM, Errorvar.= 0.266  , R² = 0.683
+ Standerr  (0.0476)                   (0.0556)            
+ Z-values   15.896                     4.779              
+ P-values   0.000                      0.000   
+ 
+
+         Correlation Matrix of Independent Variables 
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      1.000
+ 
+ JOBSTYLE      0.421      1.000
+             (0.088)
+               4.805
+ 
+ TEAMWORK      0.340      0.778      1.000
+             (0.098)    (0.062)
+               3.464     12.527
+ 
+ LEADERSH      0.218      0.485      0.576      1.000
+             (0.093)    (0.076)    (0.076)
+               2.357      6.394      7.627
+ 
+ LEARNING      0.435      0.619      0.584      0.612      1.000
+             (0.083)    (0.066)    (0.076)    (0.062)
+               5.232      9.330      7.648      9.933
+ 
+ ENVIRONM      0.595      0.272      0.533      0.354      0.444      1.000
+             (0.075)    (0.095)    (0.087)    (0.087)    (0.083)
+               7.896      2.855      6.148      4.078      5.350
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        84                      342
+ -2ln(L)                       3061.367                 2611.614
+ AIC (Akaike, 1974)*           3229.367                 3295.614
+ BIC (Schwarz, 1978)*          3543.509                 4574.624
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                        Global Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      258
+ Maximum Likelihood Ratio Chi-Square (C1)              449.752 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                318.260 (P = 0.0062)
+ 
+ Estimated Non-centrality Parameter (NCP)              191.752
+ 90 Percent Confidence Interval for NCP                (136.729 ; 254.637)
+ 
+ Minimum Fit Function Value                            1.446
+ Population Discrepancy Function Value (F0)            0.617
+ 90 Percent Confidence Interval for F0                 (0.440 ; 0.819)
+ Root Mean Square Error of Approximation (RMSEA)       0.0691
+ 90 Percent Confidence Interval for RMSEA              (0.0584 ; 0.0797)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.00231
+ 
+ Expected Cross-Validation Index (ECVI)                1.986
+ 90 Percent Confidence Interval for ECVI               (1.809 ; 2.189)
+ ECVI for Saturated Model                              1.100
+ ECVI for Independence Model                           9.743
+ 
+ Chi-Square for Independence Model (306 df)        2994.079
+ 
+ Normed Fit Index (NFI)                                0.926
+ Non-Normed Fit Index (NNFI)                           0.961
+ Parsimony Normed Fit Index (PNFI)                     0.781
+ Comparative Fit Index (CFI)                           0.967
+ Incremental Fit Index (IFI)                           0.967
+ Relative Fit Index (RFI)                              0.912
+ 
+ Critical N (CN)                                     217.269
+ 
+
+
+                         Group Goodness of Fit Statistics
+
+ Contribution to Chi-Square                            237.279
+ Percentage Contribution to Chi-Square                 52.758
+ 
+ Root Mean Square Residual (RMR)                       0.123
+ Standardized RMR                                      0.120
+ Goodness of Fit Index (GFI)                           0.829
+
+        The Modification Indices Suggest to Add the
+  Path to  from      Decrease in Chi-Square    New Estimate
+ A2        TEAMWORK           10.5                 0.27 IN GROUP 2
+ A2        LEARNING           13.8                 0.30 IN GROUP 2
+ C3        VALUE              10.8                 0.30 IN GROUP 2
+ C3        ENVIRONM            9.7                 0.30 IN GROUP 2
+ D3        TEAMWORK           10.4                 0.23 IN GROUP 2
+ E2        LEARNING            8.1                 1.01 IN GROUP 2
+
+ The Modification Indices Suggest to Add an Error Covariance
+  Between    and     Decrease in Chi-Square    New Estimate
+ A3        A1                  9.0                 0.19 IN GROUP 2
+ E3        A2                 13.0                 0.17 IN GROUP 2
+ E3        E1                 11.6                -0.17 IN GROUP 2
+ F2        C3                  8.2                 0.17 IN GROUP 2
+
+                           Time used 0.062 seconds

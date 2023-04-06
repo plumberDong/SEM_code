@@ -1,0 +1,8 @@
+TITLE   Ch12b Moderation Analysis using LISREL syntax
+DA  NI=4
+RA  FI=Ch12MO.csv
+LA; Y X MO XMO
+MO  NX=3 NY=1 GA=FU,FI
+FR GA(1,1) GA(1,2) GA(1,3)
+PD
+OU

@@ -1,0 +1,288 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/06/2018   6:41 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:	Ch11 Two factor UTM no residual homogeneity assumption
+  DATA:   	FILE IS Ch11a.cov; TYPE=COVA means; NOBS = 200;
+  VARIABLE:	NAMES ARE RT1-RT4;
+  MODEL:      I S | RT1@0 RT2*  RT3*  RT4@1;
+  OUTPUT:     TECH1; SAMPSTAT;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Ch11 Two factor UTM no residual homogeneity assumption
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         200
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            2
+
+Observed dependent variables
+
+  Continuous
+   RT1         RT2         RT3         RT4
+
+Continuous latent variables
+   I           S
+
+
+Estimator                                                       ML
+Information matrix                                        EXPECTED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch11a.cov
+
+Input data format  FREE
+
+
+SAMPLE STATISTICS
+
+
+     SAMPLE STATISTICS
+
+
+           Means/Intercepts/Thresholds
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+               37.480        53.300        54.820        52.630
+
+
+           Covariances/Correlations/Residual Correlations
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1          307.460
+ RT2          296.520       377.210
+ RT3          295.020       365.100       392.470
+ RT4          291.020       355.880       358.250       376.840
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       11
+
+Loglikelihood
+
+          H0 Value                       -2878.098
+          H1 Value                       -2877.892
+
+Information Criteria
+
+          Akaike (AIC)                    5778.195
+          Bayesian (BIC)                  5814.477
+          Sample-Size Adjusted BIC        5779.628
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.411
+          Degrees of Freedom                     3
+          P-Value                           0.9379
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.028
+          Probability RMSEA <= .05           0.969
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.004
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1223.593
+          Degrees of Freedom                     6
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.006
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ I        |
+    RT1                1.000      0.000    999.000    999.000
+    RT2                1.000      0.000    999.000    999.000
+    RT3                1.000      0.000    999.000    999.000
+    RT4                1.000      0.000    999.000    999.000
+
+ S        |
+    RT1                0.000      0.000    999.000    999.000
+    RT2                1.045      0.030     34.742      0.000
+    RT3                1.144      0.036     32.100      0.000
+    RT4                1.000      0.000    999.000    999.000
+
+ S        WITH
+    I                 22.547     31.671      0.712      0.477
+
+ Means
+    I                 37.479      1.237     30.296      0.000
+    S                 15.148      0.705     21.474      0.000
+
+ Intercepts
+    RT1                0.000      0.000    999.000    999.000
+    RT2                0.000      0.000    999.000    999.000
+    RT3                0.000      0.000    999.000    999.000
+    RT4                0.000      0.000    999.000    999.000
+
+ Variances
+    I                269.423     44.031      6.119      0.000
+    S                 36.863     29.339      1.256      0.209
+
+ Residual Variances
+    RT1               36.679     32.622      1.124      0.261
+    RT2               14.515      2.732      5.314      0.000
+    RT3               24.390      3.709      6.576      0.000
+    RT4               27.507      3.618      7.602      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.284E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION
+
+
+           NU
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+                  0             0             0             0
+
+
+           LAMBDA
+              I             S
+              ________      ________
+ RT1                0             0
+ RT2                0             1
+ RT3                0             2
+ RT4                0             0
+
+
+           THETA
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1                3
+ RT2                0             4
+ RT3                0             0             5
+ RT4                0             0             0             6
+
+
+           ALPHA
+              I             S
+              ________      ________
+                  7             8
+
+
+           BETA
+              I             S
+              ________      ________
+ I                  0             0
+ S                  0             0
+
+
+           PSI
+              I             S
+              ________      ________
+ I                  9
+ S                 10            11
+
+
+     STARTING VALUES
+
+
+           NU
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+                0.000         0.000         0.000         0.000
+
+
+           LAMBDA
+              I             S
+              ________      ________
+ RT1            1.000         0.000
+ RT2            1.000         1.000
+ RT3            1.000         1.000
+ RT4            1.000         1.000
+
+
+           THETA
+              RT1           RT2           RT3           RT4
+              ________      ________      ________      ________
+ RT1          153.730
+ RT2            0.000       188.605
+ RT3            0.000         0.000       196.235
+ RT4            0.000         0.000         0.000       188.420
+
+
+           ALPHA
+              I             S
+              ________      ________
+                0.000         0.000
+
+
+           BETA
+              I             S
+              ________      ________
+ I              0.000         0.000
+ S              0.000         0.000
+
+
+           PSI
+              I             S
+              ________      ________
+ I              0.050
+ S              0.000         0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch11\mplus\ch11c.dgm
+
+     Beginning Time:  18:41:22
+        Ending Time:  18:41:22
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

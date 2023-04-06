@@ -2,4 +2,288 @@
 
 # 验证性因素分析
 
-text
+验证性因素分析（CFA），主要是用来检验对某一潜变量的测量架构的设置是否合理。譬如，某一概念的测量由多个子题目构成，此时CFA可以确认，数据模型是否为研究者所预期的形式。
+
+## 操作步骤概览
+
+1. 建立一个测量模型假设。
+2. 进行模型的识别，包括检查模型的可识别性，以及输入模型指令。
+3. 执行CFA分析。
+4. 进行结果分析。
+5. 进行模型的修正。
+6. 完成SEM分析，并给出报告。
+
+该演示用到的软件包为：
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(modelsummary)
+library(lavaan)
+library(semPlot)
+
+# 绘图风格
+theme_set(cowplot::theme_minimal_hgrid())
+```
+
+
+## 模型界定
+
+我们首先读入《组织创新气氛量表》数据，可以看到，该数据包含313个观测对象，以及18个变量。
+
+```{r message=FALSE, warning=FALSE}
+dat <- read_csv("data/ch05.csv")
+dim(dat) # 样本量和变量数
+```
+
+计算原书中的表5.2，也就是对不同题项进行描述统计。这里可以用到`modelsummary`包，结果见表\@ref(tab:summary1)。其中，第一列为题项名称，第二列为取值个数，第三列为缺失值比例，此后依次为均值、标准差、最小值、中位数、最大值和条形图展现的分布情况。
+
+```{r summary1, message=FALSE, warning=FALSE}
+datasummary_skim(dat,
+                 title = "组织创新气氛量表18题短版本的描述统计量",
+                 fmt = fmt_sprintf("%.2f"))
+```
+
+模型设定为，不同字母开头的题项分别对应各自的潜变量（一共$6$个），每对潜变量之间存在相关性，测量残差不存在相关性。具体设置参见原书99页的图5.4。
+
+## 模型识别
+
+- 根据公式\@ref(eq:dp)，测量数据数为$\text{DP} = 18 \times (18 + 1) / 2 = 171$个。
+- 模型的待估参数为：
+  - $18$个因子载荷。
+  - $18$个测量残差。
+  - $6-6=0$个潜变量方差（为了确定潜变量的量纲，我们设定其方差都等于1，因此不需要被估计）。
+  - $\left(\begin{array}{l}6 \\2\end{array}\right)=\frac{5 \times 6}{2} = 15$个潜变量的协方差。
+  - 总共有$18 + 18 + 15 = 51<171$个待估参数，因此可以识别。
+
+
+## 执行CFA分析并报告
+
+`lavaan`包的模型设定是以字符串形式完成的。其中，`=~`表示测量模型中潜变量和测量变量之间的关系。程序默认（1）不同潜变量之间具有相关性；（2）不同测量残差之间不具有相关性，因此不再用手动设定这些细节了。如果我们想让潜变量之间不具有相关性，可以用`orthogonal = T`来关闭潜变量间的协方差估计（或者说将其统统约束为$0$）。
+
+原书用`LISREL`进行估计时，为了确定潜变量的量纲，使用的是将其方差固定为$1$，而`lavaan`默认的是将第一个因子的载荷固定为$1$。为了复现书中`LISREL`给出的结果，需要用到`std.lv = TRUE`参数来手动设置，也就是使用固定方差为$1$的方法。
+
+用`cfa()`命令进行拟合就可以了。
+
+```{r}
+cfa_model  <-'
+#define the measurement model  
+  FA =~ L11*A1 + L21*A2 + L31*A3
+  FB =~ L12*B1 + L22*B2 + L32*B3
+  FC =~ L13*C1 + L23*C2 + L33*C3
+  FD =~ L14*D1 + L24*D2 + L34*D3
+  FE =~ L15*E1 + L25*E2 + L35*E3
+  FF =~ L16*F1 + L26*F2 + L36*F3'
+
+cfa_fit <- cfa(model = cfa_model, 
+               data = dat,
+               std.lv = TRUE) # 固定潜变量方差为1
+```
+
+最后，我们查看拟合的结果，对于拟合指标的解读，可以参见本册的\@ref(index-explanations)。而对于其他参数的估计，有两点值得特别说明一下：
+
+1. 当我们在`summary`中添加`standard = TRUE`之后，因子载荷会多了Std.lv，Std.all两列，前者为只有潜变量被标准化时的载荷，后者为所有变量都被标准化时的载荷。
+2.  `summary`输出的倒数第二项为Covariances。由于该模型限定潜变量的方差都为1，所以这里的协方差就等于相关系数。
+3. `summary`输出的最后一项为Variances。注意，前面带`.`的方差指的是残差的方差，也就是内生变量不能被解释的那部分。不带`.`的方差就是该变量的方差。
+
+```{r}
+cfa_res <- summary(cfa_fit, 
+        fit.measures = T, # 输出拟合指标
+        standard = T)  # 输出标准化解
+print(cfa_res)
+```
+
+特别的，如果我们想要检视哪些参数得到了估计，可以:
+
+```{r}
+inspect(cfa_fit)
+```
+
+## 路径图
+
+绘图是展示SEM分析结果最重要且最直观的方式，这里需要用到`semplot`包，结果参见图 \@ref(fig:cfa-paths)。
+
+```{r cfa-paths, fig.cap="以R进行CFA的结果图示", fig.width=8, fig.height=4, cache=TRUE}
+semPaths(cfa_fit, 
+         what = "std") # 输出标准化的各项系数，也就是之前的Std.all
+```
+
+## 残差分析
+
+通过估计得到的CFA模型，可以导出一个观测变量间的协方差矩阵，也称导出矩阵（reproduced matrix，记为$\mathbf{\Sigma}$），用实际观测到的协方差矩阵(记为$\mathbf{S}$)减去这个矩阵，就是拟合的残差矩阵，通过分析残差的分布情况，可以对拟合优度进行检验。
+
+下面计算了计算残差分布，残差最大值为0.187，最小值为-0.122，和原书112页的结果基本一致。
+
+```{r}
+resid(cfa_fit, type = "raw")$cov |> 
+  range() |>
+  round(3)
+```
+
+考虑到各变量的量纲上的差异，可以对残差进行标准化。得到的标准化残差的绝对值大于$1.96$时，可以认为模型推导出的该协方差与实际协方差的差异，在$0.05$的水平上显著存在。
+
+> lavaan 对于resid命令的说明上说：If type="standardized", the residuals are divided by the square root of the asymptotic variance of these residuals. The resulting standardized residuals elements can be interpreted as z-scores.感觉应该和原书上所说的标准化残差是一个意思，但是不知道出于什么原因，这里的结果和书上的差距有些大。
+
+```{r}
+resid(cfa_fit, type = "standardized")$cov |>
+  range() |>
+  round(3)
+```
+
+通过绘制标准化残差的QQ图，可以帮助我们了解残差的分布情况，见图\@ref(fig:qq-residuals)。
+
+```{r qq-residuals, fig.cap="Qplot of standardized residuals", fig.height=5, fig.width=4, fig.align='center'}
+# 提取标准化残差
+res_std <- resid(cfa_fit, type = "standardized")$cov |>
+  unclass()
+# 转化为向量形式
+res_std <- res_std[lower.tri(res_std, diag = F)]
+# 绘图
+ggplot(mapping = aes(sample = res_std)) + 
+  geom_qq() + 
+  geom_qq_line() + 
+  labs(x = "Standardized Residuals", y = "Normal Quantiles")
+```
+
+## 模型修饰指数的检查
+
+当MI指数高于$5$，意味着该残差有修正的必要，也就是测量变量还可能受到对应潜变量的影响。
+
+表\@ref(tab:mi-max)给出了MI指数最高的5个潜变量-测量变量对。
+
+```{r mi-max, message=FALSE, warning=FALSE}
+modificationIndices(cfa_fit) |>
+  as_tibble() |>
+  select(1:4) |>
+  filter(mi >= 5) |>
+  arrange(desc(mi)) |>
+  head(5) |>
+  knitr::kable(
+    caption = "MI指数最高的5个潜变量测量变量对"
+  )
+```
+
+## 内在拟合检测
+
+原书的内在拟合检测结果为123页的表5.5，这里对其进行复现，结果见表 \@ref(tab:CR-AVE)。
+
+```{r CR-AVE, message=FALSE, warning=FALSE, cache=TRUE}
+# 首先提取完全标准化的因子载荷
+lambda <- cfa_res$pe |> 
+  select(1:3, std.all) |>
+  filter(op == "=~")
+
+# 然后提取完全标准化的残差
+resi <- cfa_res$pe |>
+  filter(lhs == rhs & str_detect(lhs, pattern = "\\d")) |>
+  select(std.all) |>
+  pull()
+
+# 合并
+tab5_5 <- lambda |>
+  mutate(resi = resi) |>
+  mutate(across(.cols = is.numeric, .fns =  ~round(., 3)))
+
+# 计算rho_c，即组合信度composite reliability
+# 代表测量变量的变异量能够被潜在变量解释的百分比
+# 注意，下面的算式只适用于残差项不相关的情况
+rho_c <- tab5_5 |>
+  group_by(lhs) |>
+  summarise(
+    CR = sum(std.all)^2 / ( sum(std.all)^2 + sum(resi) )
+  ) |> 
+  pull(CR)
+
+# 计算rho_v，即平均变异萃取量
+# 代表潜在变量对每个测量变量的变异量的平均解释程度
+rho_v <- tab5_5 |>
+  group_by(lhs) |>
+  summarise(
+    AVE = sum(std.all^2) / ( sum(std.all^2) + sum(resi) )
+  ) |> 
+  pull(AVE)
+
+# 合并结果
+tibble(
+  lv = unique(tab5_5$lhs),
+  CR = round(rho_c, 3),
+  AVE = round(rho_v,3)) |>
+  knitr::kable(
+    caption = "验证性因分析结果摘要"
+  )
+```
+
+## 模型修饰
+
+但理论模型的参数估计或拟合情况不理想，需要对模型进行修正，以求改进，这一过程即为模型修饰。
+
+原书128页，基于MI指标和模型可解释性，建立了第一个因子F1和C3变量之间的联系。结果如图 \@ref(fig:new_fit)所示。
+
+```{r new-fit, fig.cap="修饰后的新模型", fig.width=8, fig.height=4}
+new_model <-' 
+#define the measurement model  
+  FA =~ L11*A1 + L21*A2 + L31*A3 + L37 * C3
+  FB =~ L12*B1 + L22*B2 + L32*B3
+  FC =~ L13*C1 + L23*C2 + L33*C3
+  FD =~ L14*D1 + L24*D2 + L34*D3
+  FE =~ L15*E1 + L25*E2 + L35*E3
+  FF =~ L16*F1 + L26*F2 + L36*F3'
+
+new_fit <- cfa(new_model,
+               data = dat,
+               std.lv = TRUE)
+
+semPaths(new_fit, 
+         what = "std") 
+```
+
+
+原书136页表5.9给出了修饰前后因素间相关系数的比较，我们可以用图\@ref(fig:diff)以更直观的形式来展现：
+
+```{r diff, fig.cap="修饰后与修饰前的因子协方差变化", fig.width=5, fig.height=8, fig.align='center'}
+
+new_res <- summary(new_fit, 
+        fit.measures = T, # 输出拟合指标
+        standard = T)
+
+#修饰模型的因子间协方差（相关系数）
+new_fit_est <- new_res$pe |>
+  filter(op == "~~") |>
+  filter(!str_detect(lhs, "\\d") & !str_detect(rhs, "\\d")) |>
+  filter(lhs != rhs) |>
+  select(1:3, est)
+
+# 原模型的因子间协方差
+cfa_fit_est <- cfa_res$pe |>
+  filter(op == "~~") |>
+  filter(!str_detect(lhs, "\\d") & !str_detect(rhs, "\\d")) |>
+  filter(lhs != rhs) |>
+  select(1:3, est)
+
+# 合并
+res <- new_fit_est |>
+  left_join(cfa_fit_est, by = join_by(lhs == lhs, rhs == rhs),
+            suffix = c(".new", ".old")) |>
+  select(1:3, 4, 6) |>
+  mutate(label = str_c(lhs, "-", rhs),
+         diff = abs(est.new - est.old)) |> # 新的系数减去老系数的差值
+  select(label, est.new, est.old, diff) |>
+  pivot_longer(-c(1, 4))
+
+# 绘制结果(按变化的绝对值大小排序)
+ggplot(data = res, aes(y = reorder(label, diff))) + 
+  geom_point(aes(x = value, color = name), size = 5, alpha = .3) + 
+  labs(x = "Covariance", y = NULL, color = NULL)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

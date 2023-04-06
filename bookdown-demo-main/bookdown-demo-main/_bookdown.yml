@@ -13,5 +13,6 @@ rmd_files: [
   "01-theory.Rmd",
 
   # 实操篇
-  "02-cfa.Rmd"
+  "02-cfa.Rmd",
+  "03-advancedCfa.Rmd"
   ]

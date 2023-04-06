@@ -1,0 +1,198 @@
+
+                                DATE:  4/ 5/2018
+                                  TIME: 22:17
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch11\LISREL\Ch11e.spl:
+
+ Ch11 Two factor latent change model using SIMPLIS syntax
+ Observed Variables: RT1-RT4
+ Covariance matrix from file=Ch11a.cov
+ means from file=Ch11a.cov
+ Sample Size = 200
+ Latent Variables  Intercept Slope Quadratic Cubic
+ Relationships
+ RT1 = 1*Intercept 0*Slope  0*Quadratic 0*Cubic
+ RT2 = 1*Intercept 1*Slope  1*Quadratic 1*Cubic
+ RT3 = 1*Intercept 2*Slope  4*Quadratic 8*Cubic
+ RT4 = 1*Intercept 3*Slope  9*Quadratic 27*Cubic
+ Intercept Slope Quadratic Cubic=CONST
+ Set the error variance of RT1 and RT2 and RT3 and RT4 equal
+ Set the covariance of Intercept-Cubic to 0
+ Path Diagram
+ LISREL output
+ End of Problem
+
+ Ch11 Two factor latent change model using SIMPLIS syntax                       
+
+         Covariance Matrix       
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+      RT1    307.460
+      RT2    296.520    377.210
+      RT3    295.020    365.100    392.470
+      RT4    291.020    355.880    358.250    376.840
+
+ Total Variance = 1453.980 Generalized Variance = 37786493.359                            
+
+ Largest Eigenvalue = 1350.649 Smallest Eigenvalue = 18.007                                  
+
+ Condition Number = 8.661
+
+         Means   
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              37.480     53.300     54.820     52.630
+
+
+ Ch11 Two factor latent change model using SIMPLIS syntax                       
+
+ Parameter Specifications
+
+         PHI         
+
+            Intercep      Slope   Quadrati      Cubic
+            --------   --------   --------   --------
+                   1          2          3          4
+
+         THETA-DELTA 
+
+                 RT1        RT2        RT3        RT4
+            --------   --------   --------   --------
+                   5          5          5          5
+
+         KAPPA       
+
+            Intercep      Slope   Quadrati      Cubic
+            --------   --------   --------   --------
+                   6          7          8          9
+ 
+
+
+ Ch11 Two factor latent change model using SIMPLIS syntax                       
+
+ Number of Iterations = 41          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-X    
+
+            Intercep      Slope   Quadrati      Cubic   
+            --------   --------   --------   --------
+      RT1      1.000       - -        - -        - - 
+ 
+      RT2      1.000      1.000      1.000      1.000
+ 
+      RT3      1.000      2.000      4.000      8.000
+ 
+      RT4      1.000      3.000      9.000     27.000
+ 
+
+         PHI         
+         Note: This matrix is diagonal.
+
+            Intercep      Slope   Quadrati      Cubic   
+            --------   --------   --------   --------
+             293.848     27.182     -5.509      0.340
+            (31.103)    (3.668)    (0.851)    (0.060)
+               9.448      7.411     -6.474      5.622
+ 
+
+ W_A_R_N_I_N_G: PHI is not positive definite
+
+         THETA-DELTA 
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+              27.364     27.364     27.364     27.364
+             (2.062)    (2.062)    (2.062)    (2.062)
+              13.270     13.270     13.270     13.270
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                 RT1        RT2        RT3        RT4   
+            --------   --------   --------   --------
+               0.915      0.920      0.925      0.926
+
+         KAPPA       
+
+            Intercep      Slope   Quadrati      Cubic   
+            --------   --------   --------   --------
+              37.480     26.500    -12.445      1.765
+             (1.267)    (1.466)    (1.243)    (0.279)
+              29.575     18.072    -10.009      6.332
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)         9                       14
+ -2ln(L)                       4308.556                 4289.492
+ AIC (Akaike, 1974)*           4326.556                 4317.492
+ BIC (Schwarz, 1978)*          4356.240                 4363.669
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      5
+ Maximum Likelihood Ratio Chi-Square (C1)              19.063 (P = 0.0019)
+ Due to Covariance Structure                           19.063
+ Due to Mean Structure                                 0.00
+ Browne's (1984) ADF Chi-Square (C2_NT)                19.452 (P = 0.0016)
+ 
+ Estimated Non-centrality Parameter (NCP)              14.063
+ 90 Percent Confidence Interval for NCP                (4.260 ; 31.413)
+ 
+ Minimum Fit Function Value                            0.0953
+ Population Discrepancy Function Value (F0)            0.0703
+ 90 Percent Confidence Interval for F0                 (0.0213 ; 0.157)
+ Root Mean Square Error of Approximation (RMSEA)       0.119
+ 90 Percent Confidence Interval for RMSEA              (0.0653 ; 0.177)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.0202
+ 
+ Expected Cross-Validation Index (ECVI)                0.185
+ 90 Percent Confidence Interval for ECVI               (0.116 ; 0.252)
+ ECVI for Saturated Model                              0.1000
+ ECVI for Independence Model                           6.158
+ 
+ Chi-Square for Independence Model (6 df)            1223.593
+ 
+ Normed Fit Index (NFI)                                0.984
+ Non-Normed Fit Index (NNFI)                           0.986
+ Parsimony Normed Fit Index (PNFI)                     0.820
+ Comparative Fit Index (CFI)                           0.988
+ Incremental Fit Index (IFI)                           0.988
+ Relative Fit Index (RFI)                              0.981
+ 
+ Critical N (CN)                                     158.510
+ 
+ 
+ Root Mean Square Residual (RMR)                       21.729
+ Standardized RMR                                      0.0616
+ Goodness of Fit Index (GFI)                           0.954
+ Adjusted Goodness of Fit Index (AGFI)                 0.907
+ Parsimony Goodness of Fit Index (PGFI)                0.477
+
+                           Time used 0.000 seconds

@@ -1,0 +1,12 @@
+Ch11 Two factorUTM using LISREL syntax
+DATA    NI=4 NO=200
+CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+LA;     RT1 RT2 RT3 RT4
+MODEL   NY=4 NE=2 PS=SY,FR TE=SY TY=FI AL=FR 
+LE;     Level Shape
+FR  LY 2 2 LY 3 2
+VA    1 LY 1 1 LY 2 1 Ly 3 1 Ly 4 1
+VA    0 LY 1 2  
+VA    1 LY 4 2
+PD
+OU

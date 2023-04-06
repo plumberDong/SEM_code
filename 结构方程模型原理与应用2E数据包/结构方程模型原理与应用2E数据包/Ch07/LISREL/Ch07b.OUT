@@ -1,0 +1,883 @@
+
+                                DATE:  4/ 2/2018
+                                  TIME: 14:05
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch07\LISREL\Ch07b.LIS:
+
+ Ch7b Path Modelb Modified Model using LISREL syntax
+ DATA  NI=9 NO=281 MA=CM
+ CM SY
+ .402
+ .466 2.537
+ .185 .667 .649
+ .174 .704 .368 .910
+ .167 .578 .272 .421 .693
+ .157 .483 .207 .330 .320 .600
+ .221 .730 .346 .463 .392 .387 .779
+ .172 .647 .370 .270 .369 .250 .333 .768
+ 1.406 2.883 .949 .154 .347 .274 .527 1.116 85.137
+ LA; OUTCOME COMMIT VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM TENURE
+ MODEL NY=2 NX=7 PS=DI,FR PH=SY,FR BE=FU,FI GA=FU,FI
+ FREE  BE(1,2) GA(2,1) GA(2,2) GA(2,3) GA(2,4) GA(2,5) GA(2,6) GA(2,7) GA(1,7)
+ FREE  GA(1,5)
+ FIX   PH(1,7) PH(2,7) PH(3,7) PH(4,7) PH(5,7) PH(6,7)
+ PD
+ OUTPUT  SE TV RS MR FS EF SS SC MI
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+                           Number of Input Variables  9
+                           Number of Y - Variables    2
+                           Number of X - Variables    7
+                           Number of ETA - Variables  2
+                           Number of KSI - Variables  7
+                           Number of Observations   281
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+         Covariance Matrix       
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.402
+   COMMIT      0.466      2.537
+    VALUE      0.185      0.667      0.649
+ JOBSTYLE      0.174      0.704      0.368      0.910
+ TEAMWORK      0.167      0.578      0.272      0.421      0.693
+ LEADERSH      0.157      0.483      0.207      0.330      0.320      0.600
+ LEARNING      0.221      0.730      0.346      0.463      0.392      0.387
+ ENVIRONM      0.172      0.647      0.370      0.270      0.369      0.250
+   TENURE      1.406      2.883      0.949      0.154      0.347      0.274
+
+         Covariance Matrix       
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING      0.779
+ ENVIRONM      0.333      0.768
+   TENURE      0.527      1.116     85.137
+
+ Total Variance = 92.475 Generalized Variance = 0.584                                   
+
+ Largest Eigenvalue = 85.295 Smallest Eigenvalue = 0.245                                   
+
+ Condition Number = 18.647
+
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Parameter Specifications
+
+         BETA        
+
+             OUTCOME     COMMIT
+            --------   --------
+  OUTCOME          0          1
+   COMMIT          0          0
+
+         GAMMA       
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM
+            --------   --------   --------   --------   --------   --------
+  OUTCOME          0          0          0          0          2          0
+   COMMIT          4          5          6          7          8          9
+
+         GAMMA       
+
+              TENURE
+            --------
+  OUTCOME          3
+   COMMIT         10
+
+         PHI         
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM
+            --------   --------   --------   --------   --------   --------
+    VALUE         11
+ JOBSTYLE         12         13
+ TEAMWORK         14         15         16
+ LEADERSH         17         18         19         20
+ LEARNING         21         22         23         24         25
+ ENVIRONM         26         27         28         29         30         31
+   TENURE          0          0          0          0          0          0
+
+         PHI         
+
+              TENURE
+            --------
+   TENURE         32
+
+         PSI         
+
+             OUTCOME     COMMIT
+            --------   --------
+                  33         34
+ 
+
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Number of Iterations = 5           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         BETA        
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -       0.125
+                        (0.024)
+                          5.117
+ 
+   COMMIT       - -        - - 
+ 
+
+         GAMMA       
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME       - -        - -        - -        - -       0.159       - - 
+                                                         (0.043)
+                                                           3.660
+ 
+   COMMIT      0.429      0.242      0.106      0.109      0.363      0.275
+             (0.118)    (0.102)    (0.120)    (0.120)    (0.116)    (0.107)
+               3.639      2.378      0.884      0.904      3.118      2.562
+ 
+
+         GAMMA       
+
+              TENURE   
+            --------
+  OUTCOME      0.011
+             (0.004)
+               3.123
+ 
+   COMMIT      0.022
+             (0.008)
+               2.743
+ 
+
+         Covariance Matrix of Y and X            
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.402
+   COMMIT      0.466      2.537
+    VALUE      0.149      0.667      0.649
+ JOBSTYLE      0.163      0.704      0.368      0.910
+ TEAMWORK      0.138      0.578      0.272      0.421      0.693
+ LEADERSH      0.125      0.483      0.207      0.330      0.320      0.600
+ LEARNING      0.221      0.730      0.346      0.463      0.392      0.387
+ ENVIRONM      0.146      0.647      0.370      0.270      0.369      0.250
+   TENURE      1.406      2.883      0.949      0.154      0.347      0.274
+
+         Covariance Matrix of Y and X            
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING      0.779
+ ENVIRONM      0.333      0.768
+   TENURE      0.527      1.116     85.137
+
+         PHI         
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE      0.649
+             (0.055)
+              11.897
+ 
+ JOBSTYLE      0.368      0.910
+             (0.051)    (0.078)
+               7.204     11.708
+ 
+ TEAMWORK      0.272      0.421      0.693
+             (0.043)    (0.054)    (0.059)
+               6.283      7.763     11.729
+ 
+ LEADERSH      0.207      0.330      0.320      0.600
+             (0.039)    (0.049)    (0.043)    (0.051)
+               5.262      6.757      7.374     11.722
+ 
+ LEARNING      0.346      0.463      0.392      0.387      0.779
+             (0.047)    (0.058)    (0.050)    (0.047)    (0.066)
+               7.327      7.994      7.820      8.180     11.754
+ 
+ ENVIRONM      0.370      0.270      0.369      0.250      0.333      0.768
+             (0.047)    (0.053)    (0.049)    (0.043)    (0.050)    (0.064)
+               7.847      5.136      7.554      5.783      6.632     11.930
+ 
+   TENURE      0.949      0.154      0.347      0.274      0.527      1.116
+ 
+
+         PHI         
+
+              TENURE   
+            --------
+   TENURE     85.137
+             (7.079)
+              12.027
+ 
+
+         PSI         
+         Note: This matrix is diagonal.
+
+             OUTCOME     COMMIT   
+            --------   --------
+               0.293      1.460
+             (0.025)    (0.125)
+              11.705     11.705
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+             OUTCOME     COMMIT   
+            --------   --------
+               0.272      0.424
+
+ NOTE: R² for Structural Equatios are Hayduk's (2006) Blocked-Error R²
+
+         Reduced Form                
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.054      0.030      0.013      0.014      0.204      0.034
+             (0.018)    (0.014)    (0.015)    (0.015)    (0.042)    (0.015)
+               2.960      2.152      0.869      0.889      4.840      2.286
+ 
+   COMMIT      0.429      0.242      0.106      0.109      0.363      0.275
+             (0.118)    (0.102)    (0.120)    (0.120)    (0.117)    (0.108)
+               3.633      2.374      0.882      0.903      3.113      2.557
+ 
+
+         Reduced Form                
+
+              TENURE   
+            --------
+  OUTCOME      0.014
+             (0.004)
+               3.798
+ 
+   COMMIT      0.022
+             (0.008)
+               2.738
+ 
+
+         Squared Multiple Correlations for Reduced Form          
+
+             OUTCOME     COMMIT   
+            --------   --------
+               0.215      0.424
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        34                       45
+ -2ln(L)                       2383.956                 2378.066
+ AIC (Akaike, 1974)*           2451.956                 2468.066
+ BIC (Schwarz, 1978)*          2575.660                 2631.792
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      11
+ Maximum Likelihood Ratio Chi-Square (C1)              5.890 (P = 0.8806)
+ Browne's (1984) ADF Chi-Square (C2_NT)                5.829 (P = 0.8846)
+ 
+ Estimated Non-centrality Parameter (NCP)              0.0
+ 90 Percent Confidence Interval for NCP                (0.0 ; 2.923)
+ 
+ Minimum Fit Function Value                            0.0210
+ Population Discrepancy Function Value (F0)            0.0
+ 90 Percent Confidence Interval for F0                 (0.0 ; 0.0104)
+ Root Mean Square Error of Approximation (RMSEA)       0.0
+ 90 Percent Confidence Interval for RMSEA              (0.0 ; 0.0308)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.989
+ 
+ Expected Cross-Validation Index (ECVI)                0.281
+ 90 Percent Confidence Interval for ECVI               (0.281 ; 0.292)
+ ECVI for Saturated Model                              0.320
+ ECVI for Independence Model                           3.147
+ 
+ Chi-Square for Independence Model (36 df)           866.373
+ 
+ Normed Fit Index (NFI)                                0.993
+ Non-Normed Fit Index (NNFI)                           1.020
+ Parsimony Normed Fit Index (PNFI)                     0.303
+ Comparative Fit Index (CFI)                           1.000
+ Incremental Fit Index (IFI)                           1.006
+ Relative Fit Index (RFI)                              0.978
+ 
+ Critical N (CN)                                    1176.469
+ 
+ 
+ Root Mean Square Residual (RMR)                       0.00930
+ Standardized RMR                                      0.0180
+ Goodness of Fit Index (GFI)                           0.995
+ Adjusted Goodness of Fit Index (AGFI)                 0.981
+ Parsimony Goodness of Fit Index (PGFI)                0.243
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+         Fitted Covariance Matrix
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.402
+   COMMIT      0.466      2.537
+    VALUE      0.149      0.667      0.649
+ JOBSTYLE      0.163      0.704      0.368      0.910
+ TEAMWORK      0.138      0.578      0.272      0.421      0.693
+ LEADERSH      0.125      0.483      0.207      0.330      0.320      0.600
+ LEARNING      0.221      0.730      0.346      0.463      0.392      0.387
+ ENVIRONM      0.146      0.647      0.370      0.270      0.369      0.250
+   TENURE      1.406      2.883      0.949      0.154      0.347      0.274
+
+         Fitted Covariance Matrix
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING      0.779
+ ENVIRONM      0.333      0.768
+   TENURE      0.527      1.116     85.137
+
+         Fitted Residuals
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.000
+   COMMIT      0.000       - - 
+    VALUE      0.036       - -        - - 
+ JOBSTYLE      0.011       - -        - -        - - 
+ TEAMWORK      0.029       - -        - -        - -        - - 
+ LEADERSH      0.032      0.000       - -        - -        - -        - - 
+ LEARNING       - -       0.000       - -        - -        - -        - - 
+ ENVIRONM      0.026       - -        - -        - -        - -        - - 
+   TENURE      0.000       - -        - -        - -        - -        - - 
+
+         Fitted Residuals
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING       - - 
+ ENVIRONM       - -        - - 
+   TENURE       - -        - -        - - 
+
+ Summary Statistics for Fitted Residuals
+
+ Smallest Fitted Residual =    0.000
+   Median Fitted Residual =    0.000
+  Largest Fitted Residual =    0.036
+
+ Stemleaf Plot
+
+ - 0|0000000000000000000000000000000000000000 
+   0| 
+   0| 
+   1|1 
+   1| 
+   2| 
+   2|69 
+   3|2 
+   3|6
+
+         Standardized Residuals  
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.000
+   COMMIT      0.000       - - 
+    VALUE      1.407       - -        - - 
+ JOBSTYLE      0.407       - -        - -        - - 
+ TEAMWORK      3.813       - -        - -        - -        - - 
+ LEADERSH      1.565      0.000       - -        - -        - -        - - 
+ LEARNING       - -       0.000       - -        - -        - -        - - 
+ ENVIRONM      0.963       - -        - -        - -        - -        - - 
+   TENURE      0.000       - -        - -        - -        - -        - - 
+
+         Standardized Residuals  
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING       - - 
+ ENVIRONM       - -        - - 
+   TENURE       - -        - -        - - 
+
+ Summary Statistics for Standardized Residuals
+
+ Smallest Standardized Residual =    0.000
+   Median Standardized Residual =    0.000
+  Largest Standardized Residual =    3.813
+
+ Stemleaf Plot
+
+ - 0|0000000000000000000000000000000000000000 
+   0|4 
+   0| 
+   1|04 
+   1|6 
+   2| 
+   2| 
+   3| 
+   3|8
+ Largest Positive Standardized Residuals
+ Residual for TEAMWORK and  OUTCOME   3.813
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+                         Qplot of Standardized Residuals
+
+  3.5..........................................................................
+     .                                                                       ..
+     .                                                                      . .
+     .                                                                    .   .
+     .                                                                  .     .
+     .                                                                 .      .
+     .                                                               .        .
+     .                                                             .          .
+     .                                                            .           .
+     .                                                          .             .
+     .                                                        .               .
+     .                                                       .                .
+     .                                                     .                  .
+     .                                                   .                    .
+     .                                                  .                     .
+ N   .                                                .                       .
+ o   .                                              .                         x
+ r   .                                             .                          .
+ m   .                                           .                            .
+ a   .                                         .                              .
+ l   .                                        .           x                   .
+     .                                      .                                 .
+ Q   .                                    .             x                     .
+ u   .                                   .                                    .
+ a   .                                 .                                      .
+ n   .                               .              x                         .
+ t   .                              .                                         .
+ i   .                            .                                           .
+ l   .                          .                                             .
+ e   .                         .              x                               .
+ s   .                       .                                                .
+     .                     .                                                  .
+     .                    .                                                   .
+     .                  .                                                     .
+     .                .                                                       .
+     .               .                                                        .
+     .             .                                                          .
+     .           .                                                            .
+     .          .                                                             .
+     .        .                                                               .
+     .      .                                                                 .
+     .     .                                                                  .
+     .   .                                                                    .
+     . .                                                                      .
+ -3.5..........................................................................
+   -3.5                                                                      3.5
+                             Standardized Residuals
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Modification Indices and Expected Change
+
+         Modification Indices for BETA           
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -        - - 
+   COMMIT      3.565       - - 
+
+         Expected Change for BETA        
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -        - - 
+   COMMIT     -0.591       - - 
+
+         Standardized Expected Change for BETA           
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -        - - 
+   COMMIT     -0.585       - - 
+
+         Modification Indices for GAMMA          
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      2.855      0.183      1.648      2.452       - -       1.110
+   COMMIT       - -        - -        - -        - -        - -        - - 
+
+         Modification Indices for GAMMA          
+
+              TENURE   
+            --------
+  OUTCOME       - - 
+   COMMIT       - - 
+
+         Expected Change for GAMMA       
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.083      0.018      0.060      0.080       - -       0.045
+   COMMIT       - -        - -        - -        - -        - -        - - 
+
+         Expected Change for GAMMA       
+
+              TENURE   
+            --------
+  OUTCOME       - - 
+   COMMIT       - - 
+
+         Standardized Expected Change for GAMMA          
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.106      0.027      0.079      0.098       - -       0.063
+   COMMIT       - -        - -        - -        - -        - -        - - 
+
+         Standardized Expected Change for GAMMA          
+
+              TENURE   
+            --------
+  OUTCOME       - - 
+   COMMIT       - - 
+
+ No Non-Zero Modification Indices for PHI         
+
+         Modification Indices for PSI            
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - - 
+   COMMIT      3.565       - - 
+
+         Expected Change for PSI         
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - - 
+   COMMIT     -0.173       - - 
+
+         Standardized Expected Change for PSI            
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - - 
+   COMMIT     -0.171       - - 
+
+         Modification Indices for THETA-EPS      
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - - 
+   COMMIT      3.565      3.565
+
+         Expected Change for THETA-EPS   
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - - 
+   COMMIT     -0.173      1.381
+
+         Modification Indices for THETA-DELTA-EPS
+
+             OUTCOME     COMMIT   
+            --------   --------
+    VALUE      2.152      2.152
+ JOBSTYLE      0.139      0.139
+ TEAMWORK      0.513      0.513
+ LEADERSH      1.701      1.701
+ LEARNING      3.975      4.200
+ ENVIRONM      0.011      0.011
+   TENURE      0.200      3.318
+
+         Expected Change for THETA-DELTA-EPS 
+
+             OUTCOME     COMMIT   
+            --------   --------
+    VALUE      0.029     -0.229
+ JOBSTYLE     -0.009      0.069
+ TEAMWORK      0.014     -0.113
+ LEADERSH      0.026     -0.204
+ LEARNING     -0.069      0.400
+ ENVIRONM      0.002     -0.018
+   TENURE     -1.124     13.004
+
+         Modification Indices for THETA-DELTA    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE       - - 
+ JOBSTYLE       - -        - - 
+ TEAMWORK       - -        - -        - - 
+ LEADERSH       - -        - -        - -        - - 
+ LEARNING      2.152      0.139      0.513      1.701      3.975
+ ENVIRONM       - -        - -        - -        - -       0.011       - - 
+   TENURE      0.082      0.005      0.018      0.061      0.055      0.000
+
+         Modification Indices for THETA-DELTA    
+
+              TENURE   
+            --------
+   TENURE       - - 
+
+         Expected Change for THETA-DELTA 
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+    VALUE       - - 
+ JOBSTYLE       - -        - - 
+ TEAMWORK       - -        - -        - - 
+ LEADERSH       - -        - -        - -        - - 
+ LEARNING     -0.181      0.054     -0.089     -0.161      0.434
+ ENVIRONM       - -        - -        - -        - -      -0.015       - - 
+   TENURE     -0.096      0.028     -0.045     -0.081      0.080     -0.008
+
+         Expected Change for THETA-DELTA 
+
+              TENURE   
+            --------
+   TENURE       - - 
+
+ Maximum Modification Index is    4.20 for Element ( 5, 2) of THETA DELTA-EPSILON
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Covariances
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Factor Scores Regressions
+
+         Y   
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      1.000      0.000      0.000      0.000      0.000      0.000
+   COMMIT      0.000      1.000      0.000      0.000      0.000      0.000
+
+         Y   
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+  OUTCOME      0.000      0.000       - - 
+   COMMIT      0.000      0.000      0.000
+
+         X   
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+    VALUE      0.000      0.000      1.000      0.000      0.000      0.000
+ JOBSTYLE      0.000      0.000      0.000      1.000      0.000      0.000
+ TEAMWORK      0.000      0.000      0.000      0.000      1.000      0.000
+ LEADERSH      0.000      0.000      0.000      0.000      0.000      1.000
+ LEARNING      0.000      0.000      0.000      0.000      0.000      0.000
+ ENVIRONM      0.000      0.000      0.000      0.000      0.000      0.000
+   TENURE       - -       0.000       - -       0.000      0.000      0.000
+
+         X   
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+    VALUE      0.000      0.000      0.000
+ JOBSTYLE      0.000      0.000      0.000
+ TEAMWORK      0.000      0.000      0.000
+ LEADERSH      0.000      0.000       - - 
+ LEARNING      1.000      0.000      0.000
+ ENVIRONM      0.000      1.000       - - 
+   TENURE      0.000      0.000      1.000
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Standardized Solution           
+
+         BETA        
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -       0.314
+   COMMIT       - -        - - 
+
+         GAMMA       
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME       - -        - -        - -        - -       0.221       - - 
+   COMMIT      0.217      0.145      0.055      0.053      0.201      0.151
+
+         GAMMA       
+
+              TENURE   
+            --------
+  OUTCOME      0.164
+   COMMIT      0.127
+
+         Correlation Matrix of Y and X           
+
+             OUTCOME     COMMIT      VALUE   JOBSTYLE   TEAMWORK   LEADERSH   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      1.000
+   COMMIT      0.461      1.000
+    VALUE      0.292      0.520      1.000
+ JOBSTYLE      0.270      0.463      0.479      1.000
+ TEAMWORK      0.262      0.436      0.406      0.530      1.000
+ LEADERSH      0.255      0.391      0.332      0.447      0.496      1.000
+ LEARNING      0.395      0.519      0.487      0.550      0.534      0.566
+ ENVIRONM      0.264      0.464      0.524      0.323      0.506      0.368
+   TENURE      0.240      0.196      0.128      0.017      0.045      0.038
+
+         Correlation Matrix of Y and X           
+
+            LEARNING   ENVIRONM     TENURE   
+            --------   --------   --------
+ LEARNING      1.000
+ ENVIRONM      0.431      1.000
+   TENURE      0.065      0.138      1.000
+
+         PSI         
+         Note: This matrix is diagonal.
+
+             OUTCOME     COMMIT   
+            --------   --------
+               0.728      0.576
+
+         Regression Matrix Y on X (Standardized)     
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.068      0.046      0.017      0.017      0.284      0.048
+   COMMIT      0.217      0.145      0.055      0.053      0.201      0.151
+
+         Regression Matrix Y on X (Standardized)     
+
+              TENURE   
+            --------
+  OUTCOME      0.204
+   COMMIT      0.127
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Total and Indirect Effects
+
+         Total Effects of X on Y     
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.054      0.030      0.013      0.014      0.204      0.034
+             (0.018)    (0.014)    (0.015)    (0.015)    (0.042)    (0.015)
+               3.004      2.184      0.882      0.902      4.911      2.320
+ 
+   COMMIT      0.429      0.242      0.106      0.109      0.363      0.275
+             (0.116)    (0.100)    (0.118)    (0.119)    (0.115)    (0.106)
+               3.686      2.408      0.895      0.916      3.158      2.594
+ 
+
+         Total Effects of X on Y     
+
+              TENURE   
+            --------
+  OUTCOME      0.014
+             (0.004)
+               3.853
+ 
+   COMMIT      0.022
+             (0.008)
+               2.778
+ 
+
+         Indirect Effects of X on Y      
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.054      0.030      0.013      0.014      0.045      0.034
+             (0.018)    (0.014)    (0.015)    (0.015)    (0.017)    (0.015)
+               3.004      2.184      0.882      0.902      2.697      2.320
+ 
+   COMMIT       - -        - -        - -        - -        - -        - - 
+ 
+
+         Indirect Effects of X on Y      
+
+              TENURE   
+            --------
+  OUTCOME      0.003
+             (0.001)
+               2.448
+ 
+   COMMIT       - - 
+ 
+
+         Total Effects of Y on Y     
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -       0.125
+                        (0.024)
+                          5.182
+ 
+   COMMIT       - -        - - 
+ 
+
+    Largest Eigenvalue of B*B' (Stability Index) is   0.016
+
+ Ch7b Path Modelb Modified Model using LISREL syntax                            
+
+ Standardized Total and Indirect Effects
+
+         Standardized Total Effects of X on Y    
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.068      0.046      0.017      0.017      0.284      0.048
+   COMMIT      0.217      0.145      0.055      0.053      0.201      0.151
+
+         Standardized Total Effects of X on Y    
+
+              TENURE   
+            --------
+  OUTCOME      0.204
+   COMMIT      0.127
+
+         Standardized Indirect Effects of X on Y     
+
+               VALUE   JOBSTYLE   TEAMWORK   LEADERSH   LEARNING   ENVIRONM   
+            --------   --------   --------   --------   --------   --------
+  OUTCOME      0.068      0.046      0.017      0.017      0.063      0.048
+   COMMIT       - -        - -        - -        - -        - -        - - 
+
+         Standardized Indirect Effects of X on Y     
+
+              TENURE   
+            --------
+  OUTCOME      0.040
+   COMMIT       - - 
+
+         Standardized Total Effects of Y on Y    
+
+             OUTCOME     COMMIT   
+            --------   --------
+  OUTCOME       - -       0.314
+   COMMIT       - -        - - 
+
+                           Time used 0.016 seconds

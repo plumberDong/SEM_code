@@ -1,0 +1,492 @@
+
+                                DATE:  4/ 4/2018
+                                  TIME: 19:52
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch06\LISREL\ch6m2.LIS:
+
+ Title ch6 Model 2 Two-factor CFA using LISREL syntax
+ DATA   NI=10 NO=804
+ RA FI=ch6.dat
+ LA
+ FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+ MO  NY=10 NE=2 PS=SY,FR
+
+ W_A_R_N_I_N_G:     FF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF4 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF3 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     VF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     FF2 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+ W_A_R_N_I_N_G:     PF1 has more than 15 categories and will be
+                          treated as continuous. ERROR CODE 201.
+
+
+ Total Sample Size(N) =    804
+
+ Univariate Summary Statistics for Continuous Variables
+
+ Variable     Mean  St. Dev.  Skewness  Kurtosis  Minimum Freq.  Maximum Freq.
+ --------     ----  --------   -------  --------  ------- -----  ------- -----
+      FF1   11.762     5.621     0.779     0.504    1.000     1   30.000     7
+      FF2    8.748     3.847     0.577     0.491    1.000     3   24.000     1
+      FF3   16.668     9.907     0.880     0.835    0.000     6   56.000     1
+      VF1   14.160     7.792     1.187     2.080    1.000     6   50.000     3
+      VF2    8.935     3.774     0.426    -0.046    1.000     7   22.000     1
+      VF3    8.856     8.422     2.027     6.491    0.000    46   66.000     1
+      PF1   31.067     4.103     0.001    -0.055   17.000     1   44.000     1
+      PF2   43.004     6.146    -0.064     0.120   19.000     1   65.000     1
+      PF3   34.356     6.259     0.085    -0.013   16.000     1   62.000     1
+      PF4   36.542     4.525    -0.122     0.080   19.000     1   50.000     1
+
+ Test of Univariate Normality for Continuous Variables
+
+              Skewness         Kurtosis      Skewness and Kurtosis
+
+ Variable Z-Score P-Value   Z-Score P-Value   Chi-Square P-Value
+
+      FF1   8.104   0.000     2.474   0.013       71.792   0.000
+      FF2   6.276   0.000     2.424   0.015       45.270   0.000
+      FF3   8.933   0.000     3.622   0.000       92.915   0.000
+      VF1  11.181   0.000     6.482   0.000      167.025   0.000
+      VF2   4.770   0.000    -0.193   0.847       22.789   0.000
+      VF3  15.725   0.000    10.750   0.000      362.826   0.000
+      PF1   0.006   0.995    -0.249   0.804        0.062   0.970
+      PF2  -0.743   0.458     0.749   0.454        1.113   0.573
+      PF3   0.994   0.320     0.006   0.995        0.989   0.610
+      PF4  -1.416   0.157     0.532   0.595        2.290   0.318
+
+ Means
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+              11.762      8.748     16.668     14.160      8.935      8.856
+
+ Means
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+              31.067     43.004     34.356     36.542
+
+ Standard Deviations
+
+            FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+               5.621      3.847      9.907      7.792      3.774      8.422
+
+ Standard Deviations
+
+            PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+               4.103      6.146      6.259      4.525
+ 
+ MO  NY=10 NE=2 PS=SY,FR
+ LE
+ Cognitive Affect
+ FR       LY 2 1 LY 3 1 LY 4 1 LY 5 1 LY 6 1 LY 8 2 LY 9 2 LY 10 2
+ VA  1   LY 1 1 LY 7 2
+ PD
+ OUTPUT AD=OFF SE TV SS MI
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+                           Number of Input Variables 10
+                           Number of Y - Variables   10
+                           Number of X - Variables    0
+                           Number of ETA - Variables  2
+                           Number of KSI - Variables  0
+                           Number of Observations   804
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+         Covariance Matrix       
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1     31.596
+      FF2     19.183     14.799
+      FF3     49.143     30.882     98.140
+      VF1     19.216     11.630     31.473     60.718
+      VF2      7.721      5.060     12.589     25.256     14.240
+      VF3     16.700     10.662     30.809     56.914     23.915     70.923
+      PF1      2.670      1.536      4.763      5.720      2.798      4.717
+      PF2      4.208      3.069      9.463      8.017      5.030      8.017
+      PF3      4.377      2.419      8.148      9.869      5.099     10.416
+      PF4      3.408      2.584      7.333      7.588      3.888      6.991
+
+         Covariance Matrix       
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1     16.837
+      PF2     12.376     37.775
+      PF3     10.248     18.779     39.178
+      PF4      8.927     15.978     13.009     20.478
+
+ Total Variance = 404.683 Generalized Variance = 0.961880D+12                            
+
+ Largest Eigenvalue = 196.368 Smallest Eigenvalue = 2.012                                   
+
+ Condition Number = 9.879
+
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+            Cognitiv     Affect
+            --------   --------
+      FF1          0          0
+      FF2          1          0
+      FF3          2          0
+      VF1          3          0
+      VF2          4          0
+      VF3          5          0
+      PF1          0          0
+      PF2          0          6
+      PF3          0          7
+      PF4          0          8
+
+         PSI         
+
+            Cognitiv     Affect
+            --------   --------
+ Cognitiv          9
+   Affect         10         11
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3
+            --------   --------   --------   --------   --------   --------
+                  12         13         14         15         16         17
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4
+            --------   --------   --------   --------
+                  18         19         20         21
+ 
+
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+ Number of Iterations = 14          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+            Cognitiv     Affect   
+            --------   --------
+      FF1      1.000       - - 
+ 
+      FF2      0.638       - - 
+             (0.013)
+              49.774
+ 
+      FF3      1.639       - - 
+             (0.033)
+              49.201
+ 
+      VF1      0.674       - - 
+             (0.046)
+              14.747
+ 
+      VF2      0.278       - - 
+             (0.023)
+              12.167
+ 
+      VF3      0.613       - - 
+             (0.051)
+              11.985
+ 
+      PF1       - -       1.000
+ 
+      PF2       - -       1.807
+                        (0.114)
+                         15.908
+ 
+      PF3       - -       1.492
+                        (0.106)
+                         14.029
+ 
+      PF4       - -       1.283
+                        (0.082)
+                         15.694
+ 
+
+         Covariance Matrix of ETA                
+
+            Cognitiv     Affect   
+            --------   --------
+ Cognitiv     29.866
+   Affect      2.881      6.891
+
+         PSI         
+
+            Cognitiv     Affect   
+            --------   --------
+ Cognitiv     29.866
+             (1.595)
+              18.727
+ 
+   Affect      2.881      6.891
+             (0.599)    (0.759)
+               4.809      9.079
+ 
+
+         THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               1.730      2.628     17.948     47.158     11.925     59.684
+             (0.274)    (0.171)    (1.149)    (2.378)    (0.599)    (2.998)
+               6.313     15.407     15.616     19.833     19.904     19.909
+ 
+
+         THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               9.946     15.281     23.839      9.129
+             (0.603)    (1.238)    (1.421)    (0.677)
+              16.508     12.343     16.771     13.484
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+               0.945      0.822      0.817      0.223      0.163      0.158
+
+         Squared Multiple Correlations for Y - Variables         
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+               0.409      0.595      0.392      0.554
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        21                       55
+ -2ln(L)                      32281.323                30224.093
+ AIC (Akaike, 1974)*          32323.323                30334.093
+ BIC (Schwarz, 1978)*         32421.805                30592.021
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      34
+ Maximum Likelihood Ratio Chi-Square (C1)              2057.230 (P = 0.0000)
+ Browne's (1984) ADF Chi-Square (C2_NT)                1701.803 (P = 0.0000)
+ 
+ Estimated Non-centrality Parameter (NCP)              2023.230
+ 90 Percent Confidence Interval for NCP                (1878.259 ; 2175.546)
+ 
+ Minimum Fit Function Value                            2.559
+ Population Discrepancy Function Value (F0)            2.516
+ 90 Percent Confidence Interval for F0                 (2.336 ; 2.706)
+ Root Mean Square Error of Approximation (RMSEA)       0.272
+ 90 Percent Confidence Interval for RMSEA              (0.262 ; 0.282)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.000
+ 
+ Expected Cross-Validation Index (ECVI)                2.611
+ 90 Percent Confidence Interval for ECVI               (2.431 ; 2.800)
+ ECVI for Saturated Model                              0.137
+ ECVI for Independence Model                           7.333
+ 
+ Chi-Square for Independence Model (45 df)          5875.961
+ 
+ Normed Fit Index (NFI)                                0.650
+ Non-Normed Fit Index (NNFI)                           0.541
+ Parsimony Normed Fit Index (PNFI)                     0.491
+ Comparative Fit Index (CFI)                           0.653
+ Incremental Fit Index (IFI)                           0.654
+ Relative Fit Index (RFI)                              0.537
+ 
+ Critical N (CN)                                      22.882
+ 
+ 
+ Root Mean Square Residual (RMR)                       7.394
+ Standardized RMR                                      0.164
+ Goodness of Fit Index (GFI)                           0.703
+ Adjusted Goodness of Fit Index (AGFI)                 0.519
+ Parsimony Goodness of Fit Index (PGFI)                0.434
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+ Modification Indices and Expected Change
+
+         Modification Indices for LAMBDA-Y       
+
+            Cognitiv     Affect   
+            --------   --------
+      FF1       - -      13.796
+      FF2       - -       0.313
+      FF3       - -       2.471
+      VF1       - -      25.598
+      VF2       - -      38.124
+      VF3       - -      19.220
+      PF1      0.015       - - 
+      PF2      0.439       - - 
+      PF3      0.191       - - 
+      PF4      0.196       - - 
+
+         Expected Change for LAMBDA-Y    
+
+            Cognitiv     Affect   
+            --------   --------
+      FF1       - -      -0.126
+      FF2       - -      -0.015
+      FF3       - -       0.112
+      VF1       - -       0.538
+      VF2       - -       0.329
+      VF3       - -       0.523
+      PF1     -0.003       - - 
+      PF2     -0.022       - - 
+      PF3      0.016       - - 
+      PF4      0.011       - - 
+
+         Standardized Expected Change for LAMBDA-Y       
+
+            Cognitiv     Affect   
+            --------   --------
+      FF1       - -      -0.330
+      FF2       - -      -0.040
+      FF3       - -       0.295
+      VF1       - -       1.412
+      VF2       - -       0.865
+      VF3       - -       1.374
+      PF1     -0.016       - - 
+      PF2     -0.121       - - 
+      PF3      0.086       - - 
+      PF4      0.060       - - 
+
+ No Non-Zero Modification Indices for PSI         
+
+         Modification Indices for THETA-EPS      
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2     79.611       - - 
+      FF3     33.348     13.287       - - 
+      VF1     24.747     12.089      2.673       - - 
+      VF2     40.687      1.971      4.972    561.917       - - 
+      VF3     60.152      6.782      0.573    577.262    405.268       - - 
+      PF1      1.145      1.618      0.728      2.114      0.687      0.106
+      PF2      4.131      0.396      2.174      0.129      2.111      0.019
+      PF3      0.303      3.646      0.121      5.416      4.993      7.904
+      PF4      6.324      1.707      0.745      4.695      3.501      2.353
+
+         Modification Indices for THETA-EPS      
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2      0.099       - - 
+      PF3      0.007      0.291       - - 
+      PF4      0.180       - -       0.340       - - 
+
+         Expected Change for THETA-EPS   
+
+                 FF1        FF2        FF3        VF1        VF2        VF3   
+            --------   --------   --------   --------   --------   --------
+      FF1       - - 
+      FF2      3.855       - - 
+      FF3      6.335     -2.174       - - 
+      VF1     -2.769     -1.533     -1.875       - - 
+      VF2     -1.756     -0.309     -1.277     20.023       - - 
+      VF3     -4.772     -1.282      0.969     45.398     19.092       - - 
+      PF1      0.272     -0.270     -0.472      1.202      0.344      0.303
+      PF2     -0.708      0.183      1.115     -0.406      0.824      0.175
+      PF3      0.215     -0.625     -0.296      2.961      1.427      4.017
+      PF4     -0.656      0.284      0.489      1.834      0.795      1.458
+
+         Expected Change for THETA-EPS   
+
+                 PF1        PF2        PF3        PF4   
+            --------   --------   --------   --------
+      PF1       - - 
+      PF2     -0.252       - - 
+      PF3     -0.058      0.646       - - 
+      PF4      0.242       - -      -0.498       - - 
+
+ Maximum Modification Index is  577.26 for Element ( 6, 4) of THETA-EPS
+
+ ch6 Model 2 Two-factor CFA using LISREL syntax                                 
+
+ Standardized Solution           
+
+         LAMBDA-Y    
+
+            Cognitiv     Affect   
+            --------   --------
+      FF1      5.465       - - 
+      FF2      3.489       - - 
+      FF3      8.955       - - 
+      VF1      3.682       - - 
+      VF2      1.522       - - 
+      VF3      3.352       - - 
+      PF1       - -       2.625
+      PF2       - -       4.743
+      PF3       - -       3.917
+      PF4       - -       3.369
+
+         Correlation Matrix of ETA               
+
+            Cognitiv     Affect   
+            --------   --------
+ Cognitiv      1.000
+   Affect      0.201      1.000
+
+         PSI         
+
+            Cognitiv     Affect   
+            --------   --------
+ Cognitiv      1.000
+   Affect      0.201      1.000
+
+                           Time used 0.016 seconds

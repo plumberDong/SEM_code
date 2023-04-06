@@ -1,0 +1,147 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+ Ch06 Higher-Order CFA Model 6
+DATA:
+    FILE IS ch6.dat;
+VARIABLE:
+ NAMES ARE FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4;
+OUTPUT:
+STANDARDIZED;
+MODEL:
+ Figural by FF1 FF2 FF3;
+ Verbal  by VF2 VF1 VF3;
+ Affect  by PF1-PF4;
+ Crea    by Figural* Verbal Affect;
+ Crea@1;
+INPUT_END
+2
+2
+2
+2
+ML
+1
+GENERAL
+0
+10
+4
+0
+ff1 ff2 ff3 vf1 vf2 vf3 pf1 pf2 pf3 pf4 figural verbal affect crea
+2
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 0
+0
+3
+figural
+ff1 ff2 ff3
+verbal
+vf2 vf1 vf3
+affect
+pf1 pf2 pf3 pf4
+1 1 figural ff1    1.000    0.000
+1 1 figural ff2    0.628    0.013
+1 1 figural ff3    1.611    0.033
+1 1 verbal vf2    1.000    0.000
+1 1 verbal vf1    2.385    0.057
+1 1 verbal vf3    2.253    0.065
+1 1 affect pf1    1.000    0.000
+1 1 affect pf2    1.790    0.112
+1 1 affect pf3    1.496    0.106
+1 1 affect pf4    1.285    0.081
+1 1 crea figural    3.057    0.350
+1 1 crea verbal    2.620    0.280
+1 1 crea affect    0.882    0.139
+4 1 ff1    1.074    0.280
+4 1 ff2    2.746    0.175
+4 1 ff3   18.948    1.193
+4 1 vf1    0.482    0.669
+4 1 vf2    3.643    0.219
+4 1 vf3   17.133    1.038
+4 1 pf1    9.906    0.600
+4 1 pf2   15.585    1.227
+4 1 pf3   23.664    1.414
+4 1 pf4    9.042    0.671
+4 1 figural   21.136    2.156
+4 1 verbal    3.714    1.363
+4 1 affect    6.132    0.695
+5 1 crea    1.000    0.000
+11 1 figural ff1    0.983    0.005
+11 1 figural ff2    0.902    0.008
+11 1 figural ff3    0.898    0.008
+11 1 verbal vf2    0.862    0.010
+11 1 verbal vf1    0.996    0.006
+11 1 verbal vf3    0.871    0.010
+11 1 affect pf1    0.641    0.026
+11 1 affect pf2    0.766    0.022
+11 1 affect pf3    0.629    0.027
+11 1 affect pf4    0.747    0.023
+11 1 crea figural    0.554    0.060
+11 1 crea verbal    0.806    0.080
+11 1 crea affect    0.336    0.048
+14 1 ff1    0.034    0.009
+14 1 ff2    0.186    0.014
+14 1 ff3    0.193    0.014
+14 1 vf1    0.008    0.011
+14 1 vf2    0.256    0.018
+14 1 vf3    0.242    0.017
+14 1 pf1    0.589    0.033
+14 1 pf2    0.413    0.034
+14 1 pf3    0.605    0.033
+14 1 pf4    0.442    0.034
+14 1 figural    0.693    0.066
+14 1 verbal    0.351    0.129
+14 1 affect    0.887    0.032
+15 1 crea    1.000    0.000
+21 1 figural ff1    0.983    0.005
+21 1 figural ff2    0.902    0.008
+21 1 figural ff3    0.898    0.008
+21 1 verbal vf2    0.862    0.010
+21 1 verbal vf1    0.996    0.006
+21 1 verbal vf3    0.871    0.010
+21 1 affect pf1    0.641    0.026
+21 1 affect pf2    0.766    0.022
+21 1 affect pf3    0.629    0.027
+21 1 affect pf4    0.747    0.023
+21 1 crea figural    0.554    0.060
+21 1 crea verbal    0.806    0.080
+21 1 crea affect    0.336    0.048
+24 1 ff1    0.034    0.009
+24 1 ff2    0.186    0.014
+24 1 ff3    0.193    0.014
+24 1 vf1    0.008    0.011
+24 1 vf2    0.256    0.018
+24 1 vf3    0.242    0.017
+24 1 pf1    0.589    0.033
+24 1 pf2    0.413    0.034
+24 1 pf3    0.605    0.033
+24 1 pf4    0.442    0.034
+24 1 figural    0.693    0.066
+24 1 verbal    0.351    0.129
+24 1 affect    0.887    0.032
+25 1 crea    1.000    0.000
+31 1 figural ff1    5.521    0.145
+31 1 figural ff2    3.469    0.106
+31 1 figural ff3    8.892    0.273
+31 1 verbal vf2    3.253    0.107
+31 1 verbal vf1    7.756    0.200
+31 1 verbal vf3    7.328    0.237
+31 1 affect pf1    2.629    0.144
+31 1 affect pf2    4.706    0.208
+31 1 affect pf3    3.933    0.221
+31 1 affect pf4    3.378    0.154
+31 1 crea figural    0.554    0.060
+31 1 crea verbal    0.806    0.080
+31 1 crea affect    0.336    0.048
+34 1 ff1    1.074    0.280
+34 1 ff2    2.746    0.175
+34 1 ff3   18.948    1.193
+34 1 vf1    0.482    0.669
+34 1 vf2    3.643    0.219
+34 1 vf3   17.133    1.038
+34 1 pf1    9.906    0.600
+34 1 pf2   15.585    1.227
+34 1 pf3   23.664    1.414
+34 1 pf4    9.042    0.671
+34 1 figural    0.693    0.066
+34 1 verbal    0.351    0.129
+34 1 affect    0.887    0.032
+35 1 crea    1.000    0.000

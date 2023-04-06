@@ -1,0 +1,27 @@
+Group:  Manager 
+DA       NI=6 NO=121 NG=2
+CM SY FI=Ch10bm.cov; ME FI=Ch10bm.cov
+LA;     	
+out1 out2 out3 co1 co2 co3
+MO NX=3 NY=3 NK=1 NE=1 GA=FI PS=SY TE=SY TD=SY 
+LE;     	Outcome
+LK;     	Commit
+FR LY(2,1) LY(3,1) LX(2,1) LX(3,1) GA(1,1) 
+VA 1 LY(1,1) 
+VA 1 LX(1,1) 
+OU  	SS SC
+Group:  Emplyee
+DA       NI=6 NO=215
+CM SY FI=Ch10be.cov; ME FI=Ch10be.cov
+MO NX=3 NY=3 NK=1 NE=1 GA=FI PS=SY TE=SY TD=SY 
+FR LY(2,1) LY(3,1) LX(2,1) LX(3,1) GA(1,1) PS(1,1) TE(1,1) TE(2,2) TE(3,3) 
+FR TD(1,1) TD(2,2) TD(3,3) 
+VA 1 LY(1,1) 
+VA 1 LX(1,1)
+EQ GA(1,1) GA(1,1,1) 
+EQ LX(3,1) LX(1,3,1) 
+EQ LX(2,1) LX(1,2,1) 
+EQ LY(3,1) LY(1,3,1) 
+EQ LY(2,1) LY(1,2,1) 
+PD
+OU   	SS SC 

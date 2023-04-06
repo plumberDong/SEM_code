@@ -1,0 +1,16 @@
+Ch5a Confirmatory Factor Analysis using SIMPLIS syntax
+Observed Variables: A1 A2 A3 B1 B2 B3 C1 C2 C3 D1-D3 E1-E3 F1-F3
+Covariance Matrix from File ch5a.cov
+Sample Size equal to 313
+Latent Variables  VALUE JOBSTYLE TEAMWORK LEADERSH LEARNING ENVIRONM 
+Relationships
+A1-A3 = VALUE 
+B1-B3 = JOBSTYLE
+C1-C3 = TEAMWORK
+D1-D3 = LEADERSH
+E1-E3 = LEARNING
+F1-F3 = ENVIRONM
+Set the Variance of VALUE-ENVIRONM equal 1
+Path Diagram
+LISREL Output All FT
+End of Program

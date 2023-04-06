@@ -1,0 +1,10 @@
+Ch11 One factor latent change model using LISREL syntax
+DA NI=4 NO=200 
+CM SY FI=Ch11a.COV; ME FI=Ch11a.COV
+LA;   RT1 RT2 RT3 RT4
+MO   NY=4 NE=1 AL=FR
+LE;   Time
+FI  LY 1 1 LY 2 1 LY 3 1 LY 4 1
+VA 1 LY 1 1 LY 2 1 LY 3 1 LY 4 1
+PD
+OU

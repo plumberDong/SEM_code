@@ -1,0 +1,12 @@
+Title Model 6 three-factor HCFA model using LISREL syntax
+DATA   NI=10 NO=804
+RA FI=ch6.dat
+LA
+FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4
+MO    NY=10 NE=3 NK=1 LY=FU,FI GA=FU,FR
+LE;   Figual Verbal Affect 
+LK;   Crea
+FR   LY 2 1 LY 3 1 LY 4 2 LY 6 2 LY 8 3 LY 9 3 LY 10 3
+VA 1 LY 1 1 LY 5 2  LY 7 3
+PD
+OUTPUT SS SC MI

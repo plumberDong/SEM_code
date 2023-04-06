@@ -1,0 +1,928 @@
+
+                                DATE:  4/ 4/2018
+                                  TIME: 22:48
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch10\LISREL\Ch10b.LIS:
+
+ Group:  Manager
+ DA       NI=6 NO=121 NG=2
+ CM SY FI=Ch10bm.cov; ME FI=Ch10bm.cov
+ LA;
+ out1 out2 out3 co1 co2 co3
+ MO    NY=3 NE=1 NK=1 NX=3 PS=DI,FR PH=SY,FR GA=FU,FR TY=FR TX=FR AL=FR KA=FR
+ LE;      Outcome
+ LK;      Commit
+ FR      LX(2,1) LX(3,1) LY(2,1) LY(3,1)
+ FI       LX(1,1) LY(1,1)
+ VA 1  LX(1,1) LY(1,1)
+ OU   SS SC
+
+ Group: Manager                                                                 
+
+                           Number of Input Variables  6
+                           Number of Y - Variables    3
+                           Number of X - Variables    3
+                           Number of ETA - Variables  1
+                           Number of KSI - Variables  1
+                           Number of Observations   121
+                           Number of Groups           2
+ Group:  Emplyee
+ DA       NI=6 NO=215
+ CM SY FI=Ch10be.cov; ME FI=Ch10be.cov
+ MO    LX=IN LY=IN GA=IN TD=SP TE=SP TY=IN TX=IN AL=FI KA=FI
+ PD
+ OU    SS SC
+
+ Group:  Emplyee                                                                
+
+                           Number of Input Variables  6
+                           Number of Y - Variables    3
+                           Number of X - Variables    3
+                           Number of ETA - Variables  1
+                           Number of KSI - Variables  1
+                           Number of Observations   215
+                           Number of Groups           2
+
+ Group: Manager                                                                 
+
+         Covariance Matrix       
+
+                out1       out2       out3        co1        co2        co3   
+            --------   --------   --------   --------   --------   --------
+     out1      0.323
+     out2     -0.078      1.479
+     out3      0.129      0.011      0.344
+      co1      0.272     -0.378      0.142      2.673
+      co2      0.192     -0.478      0.121      1.840      2.264
+      co3      0.242     -0.325      0.230      1.694      1.812      2.405
+
+ Total Variance = 9.489 Generalized Variance = 0.271                                   
+
+ Largest Eigenvalue = 6.159 Smallest Eigenvalue = 0.195                                   
+
+ Condition Number = 5.613
+
+         Means   
+
+                out1       out2       out3        co1        co2        co3   
+            --------   --------   --------   --------   --------   --------
+               4.669      2.066      4.587     10.041     10.050      9.752
+
+ Group:  Emplyee                                                                
+
+         Covariance Matrix       
+
+               VAR 1      VAR 2      VAR 3      VAR 4      VAR 5      VAR 6   
+            --------   --------   --------   --------   --------   --------
+    VAR 1      0.472
+    VAR 2     -0.335      1.946
+    VAR 3      0.154     -0.006      0.476
+    VAR 4      0.413     -0.898      0.040      3.348
+    VAR 5      0.486     -0.913      0.106      2.495      3.677
+    VAR 6      0.397     -0.905      0.065      2.330      2.661      3.093
+
+ Total Variance = 13.012 Generalized Variance = 1.591                                   
+
+ Largest Eigenvalue = 8.820 Smallest Eigenvalue = 0.271                                   
+
+ Condition Number = 5.710
+
+         Means   
+
+               VAR 1      VAR 2      VAR 3      VAR 4      VAR 5      VAR 6   
+            --------   --------   --------   --------   --------   --------
+               4.437      2.623      4.405      9.293      9.256      8.991
+
+
+ Group: Manager                                                                 
+
+ Parameter Specifications
+
+ LAMBDA-Y EQUALS LAMBDA-Y IN THE FOLLOWING GROUP
+
+ LAMBDA-X EQUALS LAMBDA-X IN THE FOLLOWING GROUP
+
+ GAMMA EQUALS GAMMA IN THE FOLLOWING GROUP
+
+         PHI         
+
+              Commit
+            --------
+                   6
+
+         PSI         
+
+             Outcome
+            --------
+                   7
+
+         THETA-EPS   
+
+                out1       out2       out3
+            --------   --------   --------
+                   8          9         10
+
+         THETA-DELTA 
+
+                 co1        co2        co3
+            --------   --------   --------
+                  11         12         13
+
+ TAU-Y EQUALS TAU-Y IN THE FOLLOWING GROUP
+
+ TAU-X EQUALS TAU-X IN THE FOLLOWING GROUP
+
+         ALPHA       
+
+             Outcome
+            --------
+                  20
+
+         KAPPA       
+
+              Commit
+            --------
+                  21
+
+
+ Group:  Emplyee                                                                
+
+ Parameter Specifications
+
+         LAMBDA-Y    
+
+               ETA 1
+            --------
+    VAR 1          0
+    VAR 2          1
+    VAR 3          2
+
+         LAMBDA-X    
+
+               KSI 1
+            --------
+    VAR 4          0
+    VAR 5          3
+    VAR 6          4
+
+         GAMMA       
+
+               KSI 1
+            --------
+    ETA 1          5
+
+         PHI         
+
+               KSI 1
+            --------
+                  22
+
+         PSI         
+
+               ETA 1
+            --------
+                  23
+
+         THETA-EPS   
+
+               VAR 1      VAR 2      VAR 3
+            --------   --------   --------
+                  24         25         26
+
+         THETA-DELTA 
+
+               VAR 4      VAR 5      VAR 6
+            --------   --------   --------
+                  27         28         29
+
+         TAU-Y       
+
+               VAR 1      VAR 2      VAR 3
+            --------   --------   --------
+                  14         15         16
+
+         TAU-X       
+
+               VAR 4      VAR 5      VAR 6
+            --------   --------   --------
+                  17         18         19
+ 
+
+
+ Group: Manager                                                                 
+
+ Number of Iterations = 10          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+ LAMBDA-Y EQUALS LAMBDA-Y IN THE FOLLOWING GROUP
+
+ LAMBDA-X EQUALS LAMBDA-X IN THE FOLLOWING GROUP
+
+ GAMMA EQUALS GAMMA IN THE FOLLOWING GROUP
+
+         Covariance Matrix of ETA and KSI        
+
+             Outcome     Commit   
+            --------   --------
+  Outcome      0.118
+   Commit      0.270      1.596
+
+         Mean Vector of Eta-Variables
+
+             Outcome   
+            --------
+               0.279
+
+         PHI         
+
+              Commit   
+            --------
+               1.596
+             (0.258)
+               6.174
+ 
+
+         PSI         
+
+             Outcome   
+            --------
+               0.072
+             (0.036)
+               1.989
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+             Outcome   
+            --------
+               0.387
+
+         THETA-EPS   
+
+                out1       out2       out3   
+            --------   --------   --------
+               0.220      1.330      0.300
+             (0.045)    (0.192)    (0.041)
+               4.857      6.940      7.310
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+                out1       out2       out3   
+            --------   --------   --------
+               0.348      0.159      0.098
+
+         THETA-DELTA 
+
+                 co1        co2        co3   
+            --------   --------   --------
+               0.951      0.334      0.703
+             (0.149)    (0.104)    (0.125)
+               6.388      3.227      5.631
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+                 co1        co2        co3   
+            --------   --------   --------
+               0.627      0.854      0.708
+
+ TAU-Y EQUALS TAU-Y IN THE FOLLOWING GROUP
+
+ TAU-X EQUALS TAU-X IN THE FOLLOWING GROUP
+
+         ALPHA       
+
+             Outcome   
+            --------
+               0.156
+             (0.060)
+               2.596
+ 
+
+         KAPPA       
+
+              Commit   
+            --------
+               0.730
+             (0.165)
+               4.410
+ 
+
+
+                         Group Goodness of Fit Statistics
+
+ Contribution to Chi-Square                            23.972
+ Percentage Contribution to Chi-Square                 48.329
+ 
+ Root Mean Square Residual (RMR)                       0.0643
+ Standardized RMR                                      0.0741
+ Goodness of Fit Index (GFI)                           0.937
+
+ Group: Manager                                                                 
+
+ Within Group Standardized Solution           
+
+         LAMBDA-Y    
+
+             Outcome   
+            --------
+     out1      0.343
+     out2     -0.502
+     out3      0.181
+
+         LAMBDA-X    
+
+              Commit   
+            --------
+      co1      1.263
+      co2      1.397
+      co3      1.307
+
+         GAMMA       
+
+              Commit   
+            --------
+  Outcome      0.622
+
+         Correlation Matrix of ETA and KSI       
+
+             Outcome     Commit   
+            --------   --------
+  Outcome      1.000
+   Commit      0.622      1.000
+
+         PSI         
+
+             Outcome   
+            --------
+               0.613
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Commit   
+            --------
+  Outcome      0.622
+
+ Group: Manager                                                                 
+
+ Within Group Completely Standardized Solution
+
+         LAMBDA-Y    
+
+             Outcome   
+            --------
+     out1      0.590
+     out2     -0.399
+     out3      0.313
+
+         LAMBDA-X    
+
+              Commit   
+            --------
+      co1      0.792
+      co2      0.924
+      co3      0.842
+
+         GAMMA       
+
+              Commit   
+            --------
+  Outcome      0.622
+
+         Correlation Matrix of ETA and KSI       
+
+             Outcome     Commit   
+            --------   --------
+  Outcome      1.000
+   Commit      0.622      1.000
+
+         PSI         
+
+             Outcome   
+            --------
+               0.613
+
+         THETA-EPS   
+
+                out1       out2       out3   
+            --------   --------   --------
+               0.652      0.841      0.902
+
+         THETA-DELTA 
+
+                 co1        co2        co3   
+            --------   --------   --------
+               0.373      0.146      0.292
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Commit   
+            --------
+  Outcome      0.622
+
+
+ Group:  Emplyee                                                                
+
+ Number of Iterations = 10          
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         LAMBDA-Y    
+
+               ETA 1   
+            --------
+    VAR 1      1.000
+ 
+    VAR 2     -1.464
+             (0.257)
+              -5.698
+ 
+    VAR 3      0.527
+             (0.112)
+               4.701
+ 
+
+         LAMBDA-X    
+
+               KSI 1   
+            --------
+    VAR 4      1.000
+ 
+    VAR 5      1.106
+             (0.058)
+              19.083
+ 
+    VAR 6      1.034
+             (0.055)
+              18.769
+ 
+
+         GAMMA       
+
+               KSI 1   
+            --------
+    ETA 1      0.169
+             (0.024)
+               7.051
+ 
+
+         Covariance Matrix of ETA and KSI        
+
+               ETA 1      KSI 1   
+            --------   --------
+    ETA 1      0.222
+    KSI 1      0.389      2.303
+
+         PHI         
+
+               KSI 1   
+            --------
+               2.303
+             (0.299)
+               7.704
+ 
+
+         PSI         
+
+               ETA 1   
+            --------
+               0.156
+             (0.044)
+               3.539
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+               ETA 1   
+            --------
+               0.296
+
+         THETA-EPS   
+
+               VAR 1      VAR 2      VAR 3   
+            --------   --------   --------
+               0.229      1.456      0.428
+             (0.047)    (0.171)    (0.045)
+               4.922      8.537      9.614
+ 
+
+         Squared Multiple Correlations for Y - Variables         
+
+               VAR 1      VAR 2      VAR 3   
+            --------   --------   --------
+               0.492      0.246      0.126
+
+         THETA-DELTA 
+
+               VAR 4      VAR 5      VAR 6   
+            --------   --------   --------
+               1.142      0.819      0.630
+             (0.141)    (0.130)    (0.108)
+               8.105      6.319      5.808
+ 
+
+         Squared Multiple Correlations for X - Variables         
+
+               VAR 4      VAR 5      VAR 6   
+            --------   --------   --------
+               0.669      0.775      0.796
+
+         TAU-Y       
+
+               VAR 1      VAR 2      VAR 3   
+            --------   --------   --------
+               4.420      2.567      4.420
+             (0.045)    (0.086)    (0.040)
+              98.885     29.820    109.316
+ 
+
+         TAU-X       
+
+               VAR 4      VAR 5      VAR 6   
+            --------   --------   --------
+               9.301      9.248      8.993
+             (0.120)    (0.126)    (0.117)
+              77.355     73.343     76.552
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        29                       54
+ -2ln(L)                       2007.871                 1958.269
+ AIC (Akaike, 1974)*           2065.871                 2066.269
+ BIC (Schwarz, 1978)*          2176.481                 2272.232
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                        Global Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      25
+ Maximum Likelihood Ratio Chi-Square (C1)              49.602 (P = 0.0024)
+ Browne's (1984) ADF Chi-Square (C2_NT)                58.499 (P = 0.0002)
+ 
+ Estimated Non-centrality Parameter (NCP)              24.602
+ 90 Percent Confidence Interval for NCP                (8.341 ; 48.638)
+ 
+ Minimum Fit Function Value                            0.148
+ Population Discrepancy Function Value (F0)            0.0734
+ 90 Percent Confidence Interval for F0                 (0.0249 ; 0.145)
+ Root Mean Square Error of Approximation (RMSEA)       0.0766
+ 90 Percent Confidence Interval for RMSEA              (0.0446 ; 0.108)
+ P-Value for Test of Close Fit (RMSEA < 0.05)          0.0802
+ 
+ Expected Cross-Validation Index (ECVI)                0.321
+ 90 Percent Confidence Interval for ECVI               (0.237 ; 0.357)
+ ECVI for Saturated Model                              0.125
+ ECVI for Independence Model                           2.329
+ 
+ Chi-Square for Independence Model (30 df)           768.321
+ 
+ Normed Fit Index (NFI)                                0.940
+ Non-Normed Fit Index (NNFI)                           0.963
+ Parsimony Normed Fit Index (PNFI)                     0.783
+ Comparative Fit Index (CFI)                           0.969
+ Incremental Fit Index (IFI)                           0.969
+ Relative Fit Index (RFI)                              0.928
+ 
+ Critical N (CN)                                     299.397
+ 
+
+
+                         Group Goodness of Fit Statistics
+
+ Contribution to Chi-Square                            25.630
+ Percentage Contribution to Chi-Square                 51.671
+ 
+ Root Mean Square Residual (RMR)                       0.138
+ Standardized RMR                                      0.0771
+ Goodness of Fit Index (GFI)                           0.962
+
+ Group:  Emplyee                                                                
+
+ Within Group Standardized Solution           
+
+         LAMBDA-Y    
+
+               ETA 1   
+            --------
+    VAR 1      0.471
+    VAR 2     -0.690
+    VAR 3      0.248
+
+         LAMBDA-X    
+
+               KSI 1   
+            --------
+    VAR 4      1.518
+    VAR 5      1.678
+    VAR 6      1.570
+
+         GAMMA       
+
+               KSI 1   
+            --------
+    ETA 1      0.544
+
+         Correlation Matrix of ETA and KSI       
+
+               ETA 1      KSI 1   
+            --------   --------
+    ETA 1      1.000
+    KSI 1      0.544      1.000
+
+         PSI         
+
+               ETA 1   
+            --------
+               0.704
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+               KSI 1   
+            --------
+    ETA 1      0.544
+
+ Group:  Emplyee                                                                
+
+ Within Group Completely Standardized Solution
+
+         LAMBDA-Y    
+
+               ETA 1   
+            --------
+    VAR 1      0.701
+    VAR 2     -0.496
+    VAR 3      0.355
+
+         LAMBDA-X    
+
+               KSI 1   
+            --------
+    VAR 4      0.818
+    VAR 5      0.880
+    VAR 6      0.892
+
+         GAMMA       
+
+               KSI 1   
+            --------
+    ETA 1      0.544
+
+         Correlation Matrix of ETA and KSI       
+
+               ETA 1      KSI 1   
+            --------   --------
+    ETA 1      1.000
+    KSI 1      0.544      1.000
+
+         PSI         
+
+               ETA 1   
+            --------
+               0.704
+
+         THETA-EPS   
+
+               VAR 1      VAR 2      VAR 3   
+            --------   --------   --------
+               0.508      0.754      0.874
+
+         THETA-DELTA 
+
+               VAR 4      VAR 5      VAR 6   
+            --------   --------   --------
+               0.331      0.225      0.204
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+               KSI 1   
+            --------
+    ETA 1      0.544
+
+ Group: Manager                                                                 
+
+ Common Metric Standardized Solution           
+
+         LAMBDA-Y    
+
+             Outcome   
+            --------
+     out1      0.430
+     out2     -0.629
+     out3      0.226
+
+         LAMBDA-X    
+
+              Commit   
+            --------
+      co1      1.431
+      co2      1.583
+      co3      1.481
+
+         GAMMA       
+
+              Commit   
+            --------
+  Outcome      0.563
+
+         Covariance Matrix of ETA and KSI        
+
+             Outcome     Commit   
+            --------   --------
+  Outcome      0.637
+   Commit      0.438      0.779
+
+         PSI         
+
+             Outcome   
+            --------
+               0.390
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Commit   
+            --------
+  Outcome      0.563
+
+ Group: Manager                                                                 
+
+ Common Metric Completely Standardized Solution
+
+         LAMBDA-Y    
+
+             Outcome   
+            --------
+     out1      0.670
+     out2     -0.468
+     out3      0.344
+
+         LAMBDA-X    
+
+              Commit   
+            --------
+      co1      0.810
+      co2      0.892
+      co3      0.877
+
+         GAMMA       
+
+              Commit   
+            --------
+  Outcome      0.563
+
+         Covariance Matrix of ETA and KSI        
+
+             Outcome     Commit   
+            --------   --------
+  Outcome      0.637
+   Commit      0.438      0.779
+
+         PSI         
+
+             Outcome   
+            --------
+               0.390
+
+         THETA-EPS   
+
+                out1       out2       out3   
+            --------   --------   --------
+               0.536      0.737      0.692
+
+         THETA-DELTA 
+
+                 co1        co2        co3   
+            --------   --------   --------
+               0.305      0.106      0.247
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+              Commit   
+            --------
+  Outcome      0.563
+
+ Group:  Emplyee                                                                
+
+ Common Metric Standardized Solution           
+
+         LAMBDA-Y    
+
+               ETA 1   
+            --------
+    VAR 1      0.430
+    VAR 2     -0.629
+    VAR 3      0.226
+
+         LAMBDA-X    
+
+               KSI 1   
+            --------
+    VAR 4      1.431
+    VAR 5      1.583
+    VAR 6      1.481
+
+         GAMMA       
+
+               KSI 1   
+            --------
+    ETA 1      0.563
+
+         Covariance Matrix of ETA and KSI        
+
+               ETA 1      KSI 1   
+            --------   --------
+    ETA 1      1.204
+    KSI 1      0.633      1.124
+
+         PSI         
+
+               ETA 1   
+            --------
+               0.847
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+               KSI 1   
+            --------
+    ETA 1      0.563
+
+ Group:  Emplyee                                                                
+
+ Common Metric Completely Standardized Solution
+
+         LAMBDA-Y    
+
+               ETA 1   
+            --------
+    VAR 1      0.670
+    VAR 2     -0.468
+    VAR 3      0.344
+
+         LAMBDA-X    
+
+               KSI 1   
+            --------
+    VAR 4      0.810
+    VAR 5      0.892
+    VAR 6      0.877
+
+         GAMMA       
+
+               KSI 1   
+            --------
+    ETA 1      0.563
+
+         Covariance Matrix of ETA and KSI        
+
+               ETA 1      KSI 1   
+            --------   --------
+    ETA 1      1.204
+    KSI 1      0.633      1.124
+
+         PSI         
+
+               ETA 1   
+            --------
+               0.847
+
+         THETA-EPS   
+
+               VAR 1      VAR 2      VAR 3   
+            --------   --------   --------
+               0.559      0.806      0.988
+
+         THETA-DELTA 
+
+               VAR 4      VAR 5      VAR 6   
+            --------   --------   --------
+               0.366      0.260      0.221
+
+         Regression Matrix ETA on KSI (Standardized) 
+
+               KSI 1   
+            --------
+    ETA 1      0.563
+
+                           Time used 0.016 seconds

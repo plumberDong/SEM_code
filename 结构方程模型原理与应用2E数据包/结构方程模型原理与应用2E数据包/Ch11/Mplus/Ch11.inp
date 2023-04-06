@@ -1,0 +1,8 @@
+TITLE:	Ch11 One Factor LGM
+DATA:   	FILE IS Ch11.cov;
+            TYPE = covariance; means; NOBS = 200;
+VARIABLE:	NAMES ARE RT1-RT4;
+MODEL:     
+ TIME | 1*RT1 1*RT2 1*RT3 1*RT4;
+
+OUTPUT: 

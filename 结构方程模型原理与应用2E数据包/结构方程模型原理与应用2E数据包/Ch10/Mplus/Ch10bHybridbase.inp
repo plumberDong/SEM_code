@@ -1,0 +1,22 @@
+TITLE:	Ch10b Mean structure modeling 
+DATA:   	
+   NGROUPS=2; 
+   FILE (manager) IS Ch10bm.dat;
+   FILE (employee) IS Ch10be.dat;
+
+VARIABLE:	NAMES ARE out1-out3 co1-co3;
+
+MODEL:     
+ Commit by co1-co3;
+ Outcome by out1-out3;
+ Outcome on Commit(1);
+
+MODEL manager:     
+ [out1 out2 out3 co1 co2 co3];
+
+MODEL employee:     
+ [Commit@0 Outcome@0];
+ [out1 out2 out3 co1 co2 co3];
+
+OUTPUT: 
+STANDARDIZED;

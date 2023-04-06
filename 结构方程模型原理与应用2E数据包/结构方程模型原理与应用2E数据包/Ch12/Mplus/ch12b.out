@@ -1,0 +1,282 @@
+Mplus VERSION 8
+MUTHEN & MUTHEN
+04/07/2018   2:04 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE:      Basic moderation model (categorial Moe)
+  DATA:       FILE = Ch12a.csv;
+  VARIABLE:   NAMES = group y x m1 m gender leader;
+              USEVARIABLES=y x leader INTER1;
+  DEFINE:     CENTER x (GRANDMEAN);
+              INTER1=x*leader;
+  ANALYSIS:   ESTIMATOR IS ML;
+  MODEL:      y on x leader
+                     INTER1 (int);
+  MODEL TEST: 0 = int;
+  OUTPUT:     SAMPSTAT STDYX CINTERVAL;
+  PLOT:       TYPE = PLOT3;
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+Basic moderation model (categorial Moe)
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         681
+
+Number of dependent variables                                    1
+Number of independent variables                                  3
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   Y
+
+Observed independent variables
+   X           LEADER      INTER1
+
+Variables with special functions
+
+  Centering (GRANDMEAN)
+   X
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+
+Input data file(s)
+  Ch12a.csv
+
+Input data format  FREE
+
+
+SAMPLE STATISTICS
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              Y             X             LEADER        INTER1
+              ________      ________      ________      ________
+                4.203         0.000         0.275         0.025
+
+
+           Covariances
+              Y             X             LEADER        INTER1
+              ________      ________      ________      ________
+ Y              0.658
+ X              0.407         0.563
+ LEADER         0.040         0.025         0.199
+ INTER1         0.087         0.112         0.018         0.111
+
+
+           Correlations
+              Y             X             LEADER        INTER1
+              ________      ________      ________      ________
+ Y              1.000
+ X              0.669         1.000
+ LEADER         0.109         0.075         1.000
+ INTER1         0.320         0.447         0.123         1.000
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     Y                     4.203      -0.484       1.500    0.29%       3.500      4.000      4.167
+             681.000       0.658       0.267       5.833    1.62%       4.333      5.000
+     X                     0.000      -0.223      -2.879    0.15%      -0.612     -0.179      0.021
+             681.000       0.563       0.107       1.955    0.15%       0.221      0.655
+     LEADER                0.275       1.010       0.000   72.54%       0.000      0.000      0.000
+             681.000       0.199      -0.980       1.000   27.46%       0.000      1.000
+     INTER1                0.025       0.013      -1.879    0.15%       0.000      0.000      0.000
+             681.000       0.111       7.477       1.621    0.29%       0.000      0.000
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                        5
+
+Loglikelihood
+
+          H0 Value                        -619.159
+          H1 Value                        -619.159
+
+Information Criteria
+
+          Akaike (AIC)                    1248.318
+          Bayesian (BIC)                  1270.936
+          Sample-Size Adjusted BIC        1255.060
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+Wald Test of Parameter Constraints
+
+          Value                              0.400
+          Degrees of Freedom                     1
+          P-Value                           0.5270
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            409.663
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y        ON
+    X                  0.710      0.034     20.693      0.000
+    LEADER             0.105      0.052      2.012      0.044
+    INTER1             0.049      0.078      0.633      0.527
+
+ Intercepts
+    Y                  4.174      0.027    154.289      0.000
+
+ Residual Variances
+    Y                  0.361      0.020     18.453      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ Y        ON
+    X                  0.656      0.026     25.511      0.000
+    LEADER             0.058      0.029      2.013      0.044
+    INTER1             0.020      0.032      0.633      0.527
+
+ Intercepts
+    Y                  5.144      0.144     35.629      0.000
+
+ Residual Variances
+    Y                  0.548      0.028     19.407      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    Y                  0.452      0.028     16.010      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.189E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+CONFIDENCE INTERVALS OF MODEL RESULTS
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y        ON
+    X                0.621       0.643       0.653       0.710       0.766       0.777       0.798
+    LEADER          -0.029       0.003       0.019       0.105       0.190       0.206       0.238
+    INTER1          -0.151      -0.103      -0.079       0.049       0.177       0.201       0.249
+
+ Intercepts
+    Y                4.104       4.121       4.129       4.174       4.218       4.227       4.243
+
+ Residual Variances
+    Y                0.310       0.322       0.329       0.361       0.393       0.399       0.411
+
+
+CONFIDENCE INTERVALS OF STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                  Lower .5%  Lower 2.5%    Lower 5%    Estimate    Upper 5%  Upper 2.5%   Upper .5%
+
+ Y        ON
+    X                0.590       0.606       0.614       0.656       0.698       0.707       0.722
+    LEADER          -0.016       0.002       0.011       0.058       0.105       0.114       0.131
+    INTER1          -0.062      -0.042      -0.032       0.020       0.073       0.083       0.102
+
+ Intercepts
+    Y                4.772       4.861       4.906       5.144       5.381       5.426       5.515
+
+ Residual Variances
+    Y                0.475       0.493       0.502       0.548       0.594       0.603       0.621
+
+
+PLOT INFORMATION
+
+The following plots are available:
+
+  Histograms (sample values, estimated values, residuals)
+  Scatterplots (sample values, estimated values, residuals)
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    c:\sem\ch12\mplus\ch12b.dgm
+
+     Beginning Time:  02:04:43
+        Ending Time:  02:04:44
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2017 Muthen & Muthen

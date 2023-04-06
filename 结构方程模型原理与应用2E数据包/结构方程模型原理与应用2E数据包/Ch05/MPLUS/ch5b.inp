@@ -1,0 +1,11 @@
+TITLE:	ex5b Higher-Order CFA
+DATA:     FILE IS ch5b.dat;
+VARIABLE: NAMES ARE FF1 FF2 FF3 VF1 VF2 VF3 PF1 PF2 PF3 PF4;
+MODEL:     
+ Figural by FF1 FF2 FF3;
+ Verbal  by VF2 VF1 VF3;
+ Affect  by PF1-PF4;
+ Crea    by 1*Figural Verbal Affect;
+ Crea@1; 
+OUTPUT: 
+STANDARDIZED;

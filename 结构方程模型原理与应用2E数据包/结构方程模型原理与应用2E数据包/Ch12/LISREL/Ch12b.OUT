@@ -1,0 +1,192 @@
+
+                                DATE:  4/ 6/2018
+                                  TIME: 23:31
+
+
+                          L I S R E L  9.30 (64 Bit)
+
+                                       BY
+
+                         Karl G. Jöreskog & Dag Sörbom
+
+
+
+                    This program is published exclusively by
+                    Scientific Software International, Inc.
+                         http://www.ssicentral.com
+
+        Copyright by Scientific Software International, Inc., 1981-2017
+          Use of this program is subject to the terms specified in the
+                        Universal Copyright Convention.
+
+ The following lines were read from file C:\SEM\Ch12\LISREL\Ch12b.LIS:
+
+ TITLE   Ch12b Moderation Analysis using LISREL syntax
+ DA  NI=4
+ RA  FI=Ch12MO.csv
+           Effective sample size:      681
+
+ LA; Y X MO XMO
+ MO  NX=3 NY=1 GA=FU,FI
+ FR GA(1,1) GA(1,2) GA(1,3)
+ PD
+ OU
+
+ Ch12b Moderation Analysis using LISREL syntax                                  
+
+                           Number of Input Variables  4
+                           Number of Y - Variables    1
+                           Number of X - Variables    3
+                           Number of ETA - Variables  1
+                           Number of KSI - Variables  3
+                           Number of Observations   681
+
+ Ch12b Moderation Analysis using LISREL syntax                                  
+
+         Covariance Matrix       
+
+                   Y          X         MO        XMO   
+            --------   --------   --------   --------
+        Y      0.659
+        X      0.408      0.563
+       MO      0.040      0.025      0.199
+      XMO      0.244      0.212      0.812      3.414
+
+ Total Variance = 4.836 Generalized Variance = 0.00356                                 
+
+ Largest Eigenvalue = 3.648 Smallest Eigenvalue = 0.005                                   
+
+ Condition Number = 27.171
+
+         Means   
+
+                   Y          X         MO        XMO   
+            --------   --------   --------   --------
+               4.203      3.979      0.275      1.118
+
+
+ Ch12b Moderation Analysis using LISREL syntax                                  
+
+ Parameter Specifications
+
+         GAMMA       
+
+                   X         MO        XMO
+            --------   --------   --------
+        Y          1          2          3
+
+         PHI         
+
+                   X         MO        XMO
+            --------   --------   --------
+        X          4
+       MO          5          6
+      XMO          7          8          9
+
+         PSI         
+
+                   Y
+            --------
+                  10
+
+         ALPHA       
+
+                   Y
+            --------
+                  11
+ 
+
+
+ Ch12b Moderation Analysis using LISREL syntax                                  
+
+ Number of Iterations = 0           
+
+ LISREL Estimates (Maximum Likelihood)                           
+
+         GAMMA       
+
+                   X         MO        XMO   
+            --------   --------   --------
+        Y      0.710     -0.090      0.049
+             (0.034)    (0.319)    (0.078)
+              20.648     -0.282      0.629
+ 
+
+         Covariance Matrix of Y and X            
+
+                   Y          X         MO        XMO   
+            --------   --------   --------   --------
+        Y      0.659
+        X      0.408      0.563
+       MO      0.040      0.025      0.199
+      XMO      0.244      0.212      0.812      3.414
+
+         Mean Vector of Eta-Variables
+
+                   Y   
+            --------
+               4.203
+
+         PHI         
+
+                   X         MO        XMO   
+            --------   --------   --------
+        X      0.563
+             (0.031)
+              18.412
+ 
+       MO      0.025      0.199
+             (0.013)    (0.011)
+               1.950     18.412
+ 
+      XMO      0.212      0.812      3.414
+             (0.054)    (0.044)    (0.185)
+               3.932     18.261     18.412
+ 
+
+         PSI         
+
+                   Y   
+            --------
+               0.361
+             (0.020)
+              18.412
+ 
+
+         Squared Multiple Correlations for Structural Equations  
+
+                   Y   
+            --------
+               0.452
+
+         ALPHA       
+
+                   Y   
+            --------
+               1.349
+             (0.138)
+               9.759
+ 
+
+                                 Log-likelihood Values
+
+                        Estimated Model          Saturated Model
+                        ---------------          ---------------
+ Number of free parameters(t)        14                       14
+ -2ln(L)                      -1116.217                -1116.217
+ AIC (Akaike, 1974)*          -1088.217                -1088.217
+ BIC (Schwarz, 1978)*         -1024.887                -1024.887
+
+*LISREL uses AIC= 2t - 2ln(L) and BIC = tln(N)- 2ln(L)
+
+
+                           Goodness-of-Fit Statistics
+
+ Degrees of Freedom for (C1)-(C2)                      0
+ Due to Mean Structure                                 0.00
+ Browne's (1984) ADF Chi-Square (C2_NT)                0.0 (P = 1.0000)
+
+                  The Model is Saturated, the Fit is Perfect !
+
+
+                           Time used 0.031 seconds
